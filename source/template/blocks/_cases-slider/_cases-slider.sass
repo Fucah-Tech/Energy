@@ -1,0 +1,74 @@
+/* cases slider */
+
++screen-is-1200
+
+	.cases-slider-holder
+		width: calc(100% - 140px)
+		margin: 0 auto
+
+.cases-slider-holder
+	.slick-dots
+		display: flex!important
+		justify-content: center
+		margin-top: 40px
+
+.cases-slider
+	figure
+		position: relative
+		margin-bottom: 0
+
+	.img-holder
+		padding-top: percentage(530/575)
+
+	+screen-is-576
+
+		.img-holder
+			padding-top: percentage(430/496)
+
+	+screen-is-992
+
+		.img-holder
+			padding-top: percentage(562/705)
+
+	.overlay
+		transition: background-color $transition
+		transition-delay: 0.5s
+	.img-bg
+		z-index: -1
+	.slick-current figcaption
+		opacity: 1
+	.slick-current .overlay
+		background-color: rgba(13, 115, 252, 0.55)
+	figcaption
+		position: absolute
+		bottom: 15px
+		left: 15px
+		width: calc(100% - 30px)
+		opacity: 0
+		transition: opacity $transition
+		transition-delay: 0.5s
+		padding: 27px 15px 23px 15px
+		background-color: #FFF
+
+	+screen-is-576
+
+		figcaption
+			padding: 27px 30px 23px 30px
+
+	+screen-is-992
+
+		figcaption
+			padding: 37px 40px 33px 40px
+
+	figcaption .title
+		letter-spacing: -0.050em
+		margin-bottom: 15px
+	figcaption .title a
+		color: #333
+		text-decoration: none
+		transition: color $transition
+	figcaption .title a:hover
+		color: $blue
+	.button span,
+	.button::before
+		padding: 11px 35px

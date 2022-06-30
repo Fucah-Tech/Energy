@@ -1,0 +1,110 @@
+/* products */
+
+.products
+	position: relative
+
+/* product item */
+
+.product-item
+	padding: 30px 0
+	margin-bottom: 50px
+	transition: background-color $transition
+	width: 100%
+	max-width: 290px
+	margin: 0 auto
+
++screen-is-576
+	.product-item
+		max-width: 100%
+		margin: 0
+
+.product-item
+	&__badge
+		top: 3px
+		right: 3px
+	s
+		color: #E23F69
+		display: inline-block
+		font-weight: 700
+		margin-right: 15px
+	.img-holder
+		display: block
+		position: relative
+		outline: none
+		transform: translateZ(0)
+		max-height: 300px
+		overflow: hidden
+	.img-holder::before
+		content: ""
+		display: block
+		padding-top: percentage(235/262.5)
+	img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		max-height: 80%
+		max-width: 80%
+	figcaption
+		margin-top: 25px
+	.title
+		letter-spacing: -0.050em
+		transition: color $transition
+		margin-top: 12px
+	.title a
+		text-decoration: none
+		color: inherit
+		transition: color $transition
+	.title a:hover
+		color: $blue
+	.description,
+	.price
+		color: #C7CCD4
+		font-weight: 500
+		margin-top: 8px
+
+/* product-item--with-button */
+
+.product-item.product-item--with-button
+	figcaption
+	text-align: center
+	.button.button--black
+		margin-top: 18px
+	.button span
+		transition: all $transition
+	.button.button--black span,
+	.button.button--black::before
+		padding: 11px 49px
+
+.product-item.product-item--with-button:hover
+	background-color: #F6F8F9
+
+.product-item.product-item--with-button:hover
+	.button span
+		background-color: #F6F8F9
+
+/* product-item--primary */
+
+.product-item.product-item--primary
+	padding: 0
+	margin-bottom: 50px
+
+.product-item.product-item--primary:hover
+	background: none
+
+.product-item.product-item--primary:hover .img-holder
+	transform: scale(1.07)
+
+.product-item.product-item--primary
+	.img-holder
+		border: 5px solid #EFF2F5
+		max-height: 300px
+		transition: transform $transition
+	.img-holder::before
+		content: ""
+		display: block
+		padding-top: percentage(325/262.48)
+	figcaption
+		text-align: left

@@ -1,0 +1,62 @@
+/* project cases */
+
+.project-cases
+	.button-holder
+		margin-top: 40px
+		text-align: center
+	.button span,
+	.button::before
+		padding: 11px 40px
+
+/* cases item */
+
+.cases-item
+	position: relative
+	margin-bottom: 30px
+
+.cases-item:hover
+	.description
+		background-color: $blue
+	.description .title
+		color: #FFF
+	.description .with--line
+		color: #FFF
+	.description .with--line::after
+		background-color: #FFF
+	.img-bg
+		transform: scale(1.2)
+	.overlay
+		background-color: rgba(13, 115, 252, 0.55)
+
+.cases-item
+	.img-holder
+		min-height: 300px
+
+	+screen-is-992
+		.img-holder
+			min-height: 300px
+
+	+screen-is-1200
+		.img-holder
+			min-height: 360px
+
+	+screen-is-1366
+		.img-holder
+			min-height: 420px
+
+	.img-bg
+		z-index: -1
+		transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	.overlay
+		transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	.description
+		position: absolute
+		bottom: 15px
+		right: 15px
+		background-color: #FFF
+		width: calc(100% - 30px)
+		padding: 20px 30px 15px 30px
+		transition: background-color .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	.description .title
+		letter-spacing: -0.050em
+		transition: color .5s cubic-bezier(0.645, 0.045, 0.355, 1)

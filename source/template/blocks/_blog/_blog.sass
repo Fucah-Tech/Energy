@@ -1,0 +1,85 @@
+/* blog item */
+
+.blog-item
+	margin-bottom: 50px
+
+.blog-item
+	.img-holder
+		padding-top: percentage(393/540)
+		position: relative
+		display: block
+		overflow: hidden
+	.img-holder:hover .overlay
+		background-color: rgba(13, 115, 252, 0.55)
+	.img-holder img
+		transition: transform $transition
+		z-index: -1
+	.img-holder:hover img
+		transform: scale(1.2)
+	.content-holder
+		position: relative
+		z-index: 2
+		width: 100%
+		max-width: 100%
+		background-color: #FFF
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+		padding: 31px 30px 31px 30px
+		transition: background-color $transition
+
+	+screen-is-992
+		.content-holder
+			margin: -101px 0 0 30px
+			max-width: 380px
+
+	+screen-is-1200
+		.content-holder
+			max-width: 400px
+
+	.ribbon
+		position: absolute
+		right: 0px
+		top: -33px
+		display: flex
+		background-color: $blue
+		padding: 28px 12px 2px 20px
+
+	+screen-is-992
+		.ribbon
+			right: 20px
+
+	.ribbon p
+		margin: 0
+		font-size: 16px
+		font-weight: 700
+		color: #FFF
+		width: 100%
+	.ribbon .day
+		font-size: 20px
+	.category
+		display: inline-block
+		color: #C7CCD4
+		font-size: 11px
+		font-weight: 500
+		text-transform: uppercase
+		width: 100%
+		max-width: 240px
+		margin-bottom: 11px
+	.title
+		letter-spacing: -0.050em
+		transition: color $transition
+	.title a
+		color: #333333
+		text-decoration: none
+		transition: color $transition
+	.title a:hover
+		color: $blue
+	.text-holder
+		min-height: 48px
+
+	+screen-is-576
+
+		.text-holder
+			min-height: 60px
+
+	p:last-of-type
+		margin-bottom: 0

@@ -1,0 +1,335 @@
+include ../mixins/_mixins
+
+<!DOCTYPE html>
+html(lang="en")
+
+	block vars
+
+	head
+
+		include ../blocks/_head/_head
+
+	body
+
+		.page-wrapper
+
+			// mobile-menu start
+
+			.mobile-nav
+				.nav-inner
+
+					.nav-item
+
+						ul.intro-mobile-menu
+							li
+								a.anchor(href="#demos") Demos
+							li
+								a.anchor(href="#pages") Inner Pages
+							li
+								a.anchor(href="#features") Features
+							li
+								a.anchor(href="#used") Used Technologies
+
+
+			// mobile-menu end
+
+			header#header.intro-header
+
+				.row.align-items-center
+
+					.col-lg-3
+
+						.block-left
+
+							// logo block start
+							.logo-block
+								a.logo(href="index.html")
+									+svg('logo')
+									span R - energy
+							// logo block end
+
+							include ../blocks/_menu-trigger/_menu-trigger
+
+					.col-lg-6
+
+						ul.intro-menu
+							li
+								a.anchor(href="#demos") Demos
+							li
+								a.anchor(href="#pages") Inner Pages
+							li
+								a.anchor(href="#features") Features
+							li
+								a.anchor(href="#used") Used Technologies
+
+					.col-lg-3.text-right
+
+						+btn-transp('Buy R-energy')
+
+			main.main
+
+				section.intro-promo
+
+					picture
+						source(srcset='img/intro.jpg', media='(min-width: 992px)')
+						img.img-bg(src='img/intro.jpg', alt='img')
+
+					.container
+						.row
+
+							.col-12
+								.align-container
+									.align-item.text-center
+										h1.title R-energy | Solar & Renewable Energy #[span HTML Template]
+										a.anchor.button.button--primary.button--dark(href='#demos', data-hover="See demos")
+											span See demos
+
+				section#demos.section.intro-demos
+					.container
+						.row.align-items-end.margin-bottom
+
+							.col-sm-9
+
+								.heading.primary-heading
+									h5.subtitle #[span R-energy] #[span Awesome Demos]
+
+							.col-sm-3.text-right
+
+								.icon-block
+									+svg('logo')
+
+					.demos-holder
+
+						.row.offset-margin
+
+							.col-sm-6.col-lg-4
+								.demo-item
+									.top
+										a.trigger(href="index.html")
+											img(src="img/demo_1.jpg", alt="demo")
+										a.button.button--primary.button--dark(href='index.html', data-hover="View Demo")
+											span View Demo
+									.description
+										h6.title .01 #[span Home page]
+
+							.col-sm-6.col-lg-4
+								.demo-item
+									.top
+										a.trigger(href="index-2.html")
+											img(src="img/demo_2.jpg", alt="demo")
+										a.button.button--primary.button--dark(href='index-2.html', data-hover="View Demo")
+											span View Demo
+									.description
+										h6.title .02 #[span Home page]
+
+							.col-sm-6.col-lg-4
+								.demo-item
+									.top
+										a.trigger(href="index-3.html")
+											img(src="img/demo_3.jpg", alt="demo")
+										a.button.button--primary.button--dark(href='index-3.html', data-hover="View Demo")
+											span View Demo
+									.description
+										h6.title .03 #[span Home page]
+
+				section.section.intro-counts.no-padding-top
+					.counter-block.counter--text-lower.counter--is-blue
+						.container
+
+							.row.no-gutters.counter-holder.offset-margin
+								.col-md-4
+
+									// statistics item start
+									.statistics-item
+										div.count-holder
+											span.counter 3
+										span.description Home Pages
+									// statistics item end
+
+								.col-md-4
+
+									// statistics item start
+									.statistics-item
+										div.count-holder
+											span.counter 36
+										span.description Html Pages
+									// statistics item end
+
+								.col-md-4
+
+									// statistics item start
+									.statistics-item
+										div.count-holder
+											span.counter 100 
+											span.sub +
+										span.description Elements
+									// statistics item end
+
+				section#pages.section.intro-pages.no-padding-bottom
+					.container
+						.row.margin-bottom.align-items-center
+							.col-md-8.col-lg-7
+								.heading.primary-heading
+									h3.title Inner Pages
+									h5.subtitle Welcome to R-Energy#[br]inner pages
+
+							.col-md-4.col-lg-5.text-right
+								.top-dots
+									.pages-slider-dots
+
+					.slider-holder
+						.slider-wrapper
+
+							.pages-slider
+								.slider-item
+									a(href="about.html")
+										img(src="img/page_1.jpg", alt="img")
+
+									.description
+										h6.title .01 #[span About]
+
+								.slider-item
+									a(href="services.html")
+										img(src="img/page_2.jpg", alt="img")
+
+									.description
+										h6.title .02 #[span Services]
+
+								.slider-item
+									a(href="services-details.html")
+										img(src="img/page_3.jpg", alt="img")
+
+									.description
+										h6.title .03 #[span Services Details]
+
+								.slider-item
+									a(href="cases.html")
+										img(src="img/page_4.jpg", alt="img")
+
+									.description
+										h6.title .04 #[span Projects]
+
+								.slider-item
+									a(href="cases-details.html")
+										img(src="img/page_5.jpg", alt="img")
+
+									.description
+										h6.title .05 #[span Project Details]
+
+								.slider-item
+									a(href="products.html")
+										img(src="img/page_6.jpg", alt="img")
+
+									.description
+										h6.title .06 #[span Products]
+
+								.slider-item
+									a(href="product-details.html")
+										img(src="img/page_7.jpg", alt="img")
+
+									.description
+										h6.title .07 #[span Product Details]
+
+								.slider-item
+									a(href="faq.html")
+										img(src="img/page_8.jpg", alt="img")
+
+									.description
+										h6.title .08 #[span Faq]
+
+								.slider-item
+									a(href="blog.html")
+										img(src="img/page_9.jpg", alt="img")
+
+									.description
+										h6.title .09 #[span Blog]
+
+								.slider-item
+									a(href="contacts.html")
+										img(src="img/page_10.jpg", alt="img")
+
+									.description
+										h6.title .10 #[span Contacts]
+
+								.slider-item
+									a(href="gallery.html")
+										img(src="img/page_11.jpg", alt="img")
+
+									.description
+										h6.title .11 #[span Gallery]
+
+							.lower-dots.d-md-none
+								.lower-pages-slider-dots
+
+				section#features.section.intro-features.no-padding-bottom
+					.container
+						.row
+							.col-12
+								.heading.primary-heading
+									+primary-heading('Features', 'Explore Our', 'Features')
+
+					.container
+
+						.row.intro-features-item.align-items-center
+							.col-sm-8.col-md-6.col-xl-6
+								img(src="img/features_1.png", alt="img")
+							.col-md-6.col-xl-5.offset-xl-1
+								span.count 01
+								h3.title Pre-built shop pages for your#[br]E-commerce
+								p We created and included inner pages for E-commerce. You can use it for sale and rent your products online.
+								a.with--line(href="catalog-page.html") See pages
+
+						.row.intro-features-item.align-items-center
+							.col-md-6.col-xl-5
+								span.count 02
+								h3.title + 100 Awesome isometric #[br]& flat Icons collections
+								p We collected for you +100 different modern icons for your business. You can use it for your website and you don’t need icons on other websit
+								a.with--line(href="icon-list.html") See page
+							.col-sm-8.col-md-6.col-xl-6.offset-xl-1
+								img(src="img/features_2.png", alt="img")
+
+						.row.intro-features-item.align-items-center
+							.col-sm-8.col-md-6.col-xl-6
+								img(src="img/features_3.png", alt="img")
+							.col-md-6.col-xl-5.offset-xl-1
+								span.count 03
+								h3.title Powerful 100+ elements
+								p R-energy includes 100+ Elements for building different creative pages and blocks
+								a.with--line(href="pricing-tables.html") See pages
+
+				section#used.section.used
+					.container
+						.row
+							.col-12.text-center
+								h3.title Used Technologies
+
+					.container
+						.row
+
+							.col-6.col-md-3
+								a.technologies-item(href="#")
+									img(src="img/node.png", alt="node")
+
+							.col-6.col-md-3
+								a.technologies-item(href="#")
+									img(src="img/gulp.png", alt="gulp")
+
+							.col-6.col-md-3
+								a.technologies-item(href="#")
+									img(src="img/bootstrap.png", alt="bootstrap")
+
+							.col-6.col-md-3
+								a.technologies-item(href="#")
+									img(src="img/jquery.png", alt="jquery")
+
+			footer.section.intro-footer
+				.container
+					.row
+						.col-xl-12.text-center
+							.heading.primary-heading
+								h5.subtitle #[span You can buy] #[span R-energy HTML pack]
+							a.button.button--filled(href='#', data-hover='Buy R-energy')
+								span Buy R-energy
+							p.copyright © 2019 R-energy Template by Artureanec
+
+		include ../blocks/_scripts/_scripts

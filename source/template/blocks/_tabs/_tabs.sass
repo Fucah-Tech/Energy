@@ -1,0 +1,85 @@
+/* tabs common */
+
+.tabs
+	border-top: 2px solid #EFF2F5
+
++screen-is-768
+	.tabs
+		border-top: none
+
+.tabs
+	.tabs-header li
+		padding: 0
+	.tabs-header li::before
+		display: none
+	.r-tabs-anchor
+		display: flex
+		align-items: baseline
+		justify-content: center
+		color: #333
+		text-decoration: none
+		border: 2px solid transparent
+		border-bottom: none
+		width: 100%
+		padding: 15px 20px
+		border-width: 0px 2px 2px 2px
+		border-style: solid
+		border-color: #EFF2F5
+
+	+screen-is-768
+		.r-tabs-anchor
+			display: inline-block
+			width: auto
+			margin: 0
+			border: none
+
+	.r-tabs-anchor .icon
+		margin-right: 5px
+	.r-tabs-state-active a
+		color: $blue
+		border: 2px solid #EFF2F5
+		border-bottom: none
+		background-color: #EFF2F5
+		pointer-events: none
+
+	+screen-is-768
+		.r-tabs-state-active a
+			background-color: #FFF
+
+	.tab
+		border: 2px solid #EFF2F5
+		margin-top: -2px
+
+	+screen-is-576
+		.tab
+			padding: 47px 50px 25px 50px
+
+	/* vertical-tabs */
+
+.tabs.vertical--tabs
+	display: flex
+
+.tabs.vertical--tabs
+
+	+screen-is-768
+		.tabs-header,
+		.r-tabs-anchor
+			width: 130px
+
+	.tabs-content
+		width: 100%
+
+	+screen-is-768
+		.tabs-content
+			width: calc(100% - 130px)
+
+	.tabs-header
+		margin-top: -2px
+	.r-tabs-state-active a
+		border: 2px solid #EFF2F5
+		border-right: none
+
+	+screen-is-768
+		.r-tabs-state-active a
+			position: relative
+			right: -2px

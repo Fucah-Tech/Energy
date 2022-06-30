@@ -1,0 +1,452 @@
+// catalog start
+
+section.section.catalog.no-padding-bottom
+	.tabs-holder.catalog-tabs
+		.container
+			.row
+				.col-xl-3.col-lg-4
+
+					// catalog aside start
+					.aside-holder
+						span.close-aside.d-lg-none
+							+svg('close')
+						aside.catalog-aside
+							.catalog-aside__inner
+								h4.title.toggler Catalog
+								// tabs header start
+								.tabs-header.toggle-item
+									span.tabs-header__title #[span.item Windmill] #[span.count 57]
+									span.tabs-header__title #[span.item Solar Panels] #[span.count 90] 
+									span.tabs-header__title #[span.item Capacitor] #[span.count 25]
+									span.tabs-header__title #[span.item Inverters] #[span.count 85]
+									span.tabs-header__title #[span.item SWHS] #[span.count 61]
+									span.tabs-header__title #[span.item Heat Pumps] #[span.count 43]
+									span.tabs-header__title #[span.item Biogas Plants] #[span.count 12]
+								// tabs header end
+
+							form.form.form--primary.form--catalog(action="javascript:void(0);")
+
+								// price start
+								fieldset.price
+									h4.title.toggler Price
+									.price-block.toggle-item
+										input.range-slider(type="text" name="price")
+										.values-block
+											input(type="text" name="min-price" value="0" readonly).range-value.min
+											span.separator
+											input(type="text" name="max-price" value="10350" readonly).range-value.max
+								// price end
+
+								// brands start
+								fieldset.brands
+									h4.title.toggler Brands
+									.brands-block.toggle-item
+
+										// item start
+										.brand-item
+											label
+												input.checkbox.checkbox--rounded(type="checkbox" name="brand" value="MaxSolar" checked)
+												span.checkbox--rounded-mask
+												span.name MaxSolar
+											span.count 10
+										// item end
+
+										// item start
+										.brand-item
+											label
+												input.checkbox.checkbox--rounded(type="checkbox" name="brand" value="Solarius")
+												span.checkbox--rounded-mask
+												span.name Solarius
+											span.count 25
+										// item end
+
+										// item start
+										.brand-item
+											label
+												input.checkbox.checkbox--rounded(type="checkbox" name="brand" value="SunEnMax" checked)
+												span.checkbox--rounded-mask
+												span.name SunEnMax
+											span.count 30
+										// item end
+
+										// item start
+										.brand-item
+											label
+												input.checkbox.checkbox--rounded(type="checkbox" name="brand" value="Solarus")
+												span.checkbox--rounded-mask
+												span.name Solarus
+											span.count 15
+										// item end
+
+								// brands end
+
+								// power start
+								fieldset.power
+									h4.title.toggler Power
+									.power-block.toggle-item
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="4.4 kWp")
+												span.checkbox--primary-mask
+												span.name 4.4 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="4.8 kWp")
+												span.checkbox--primary-mask
+												span.name 4.8 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="5.0 kWp" checked)
+												span.checkbox--primary-mask
+												span.name 5.0 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="5.2 kWp")
+												span.checkbox--primary-mask
+												span.name 5.2 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="5.2 kWp")
+												span.checkbox--primary-mask
+												span.name 5.2 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="5.6 kWp" checked)
+												span.checkbox--primary-mask
+												span.name 5.6 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="5.8 kWp" checked)
+												span.checkbox--primary-mask
+												span.name 5.8 kWp
+										// item end
+
+										// item start
+										.power-item
+											label
+												input.checkbox.checkbox--primary(type="checkbox" name="power" value="6.0 kWp")
+												span.checkbox--primary-mask
+												span.name 6.0 kWp
+										// item end
+
+								// power end
+
+								// colors start
+								fieldset.colors
+									h4.title.toggler Colors
+									.colors-block.toggle-item
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#ED1A2D")
+												span.checkbox--color-mask(style="background-color: #ED1A2D;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#FFB00D")
+												span.checkbox--color-mask(style="background-color: #FFB00D;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#7830F4" checked)
+												span.checkbox--color-mask(style="background-color: #7830F4;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#FF933B")
+												span.checkbox--color-mask(style="background-color: #FF933B;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#22A86D")
+												span.checkbox--color-mask(style="background-color: #22A86D;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#262626" checked)
+												span.checkbox--color-mask(style="background-color: #262626;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#787878")
+												span.checkbox--color-mask(style="background-color: #787878;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#8CC34B")
+												span.checkbox--color-mask(style="background-color: #8CC34B;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#143BE7" checked)
+												span.checkbox--color-mask(style="background-color: #143BE7;")
+										// item end
+
+										// item start
+										.color-item
+											label
+												input.checkbox.checkbox--color(type="checkbox" name="color" value="#E6E6E6")
+												span.checkbox--color-mask(style="background-color: #E6E6E6;")
+										// item end
+
+								// colors end
+
+								.tags
+									h4.title.toggler Tags
+									.tags-block.toggle-item
+										span.tag Solar
+											span.close
+												+svg('close')
+										span.tag Windmill
+											span.close
+												+svg('close')
+										span.tag Power
+											span.close
+												+svg('close')
+										span.tag SWHS
+											span.close
+												+svg('close')
+										span.tag Conservation
+											span.close
+												+svg('close')
+
+								// button block start
+								fieldset.button-block
+									button.button.button--transparent(type="submit" data-hover="Apply Filters")
+										span Apply Filters
+								// button block end
+
+				.col-xl-9.col-lg-8
+					.row.d-lg-none
+						.col-12
+							.filter-trigger
+								+svg('controls')
+								span.title Filters
+
+					// tabs content start
+					.tabs-content
+
+						// tabs content item start
+						.tabs-content__item
+							.row.offset-margin
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-1.png" alt="product")
+										figcaption
+											span.description.price $ 1250.00
+											h4.title #[a(href="") DUOMAX twin-DEG5C.07(II)]
+											+with-line('Add to cart')
+									// item end
+
+							.row
+								.col-12
+									.pagination-holder
+										include ../_pagination/_pagination
+
+						// tabs content item end
+
+						// tabs content item start
+						.tabs-content__item
+							.row.offset-margin
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											span.product-item__badge.badge.badge--new New
+											img(src="img/product-1.png" alt="product")
+										figcaption
+											span.price $ 1250.00
+											h4.title #[a(href="shop-product.html") DUOMAX twin-DEG5C.07(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											span.product-item__badge.badge.badge--hot Hot
+											img(src="img/product-2.png" alt="product")
+										figcaption
+											span.price $ 900.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG5.07]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-9.png" alt="product")
+										figcaption
+											span.price $ 950.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG40.07]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-4.png" alt="product")
+										figcaption
+											span.price $ 1150.00
+											h4.title #[a(href="shop-product.html") DUOMAX M PLUS - DEG5(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											span.product-item__badge.badge.badge--sale Sale
+											img(src="img/product-6.png" alt="product")
+										figcaption
+											s $ 1200.00
+											span.price $ 850.00
+											h4.title #[a(href="shop-product.html") DUOMAX M PLUS-DEG5.07(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-7.png" alt="product")
+										figcaption
+											span.price $ 900.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG5.07]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-1.png" alt="product")
+										figcaption
+											span.price $ 1250.00
+											h4.title #[a(href="shop-product.html") DUOMAX twin-DEG5C.07(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-2.png" alt="product")
+										figcaption
+											span.price $ 900.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG5.07]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-9.png" alt="product")
+										figcaption
+											span.price $ 950.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG40.07]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											span.product-item__badge.badge.badge--discount - 10%
+											img(src="img/product-4.png" alt="product")
+										figcaption
+											span.price $ 1150.00
+											h4.title #[a(href="shop-product.html") DUOMAX M PLUS - DEG5(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-6.png" alt="product")
+										figcaption
+											span.price $ 850.00
+											h4.title #[a(href="shop-product.html") DUOMAX M PLUS-DEG5.07(II)]
+											+with-line('Add to cart')
+									// item end
+
+								.col-xl-4.col-lg-6.col-md-4.col-sm-6
+
+									// item start
+									figure.product-item.product-item--primary
+										a(href="shop-product.html").img-holder
+											img(src="img/product-7.png" alt="product")
+										figcaption
+											span.price $ 900.00
+											h4.title #[a(href="shop-product.html") DUOMAX-PEG5.07]
+											+with-line('Add to cart')
+									// item end
+
+							.row
+								.col-12
+									.pagination-holder
+										include ../_pagination/_pagination
+
+						// tabs content item end
+
+						// tabs content end
+
+				// catalog aside end
+
+// catalog end

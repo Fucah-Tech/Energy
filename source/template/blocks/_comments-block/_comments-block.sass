@@ -1,0 +1,127 @@
+/* comments block */
+
+.comments-block
+	.heading
+		background-color: $blue
+		padding: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 61px
+
+	+screen-is-768
+		.heading
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+
+	.heading .icon
+		color: #FFF
+		margin-right: 10px
+	.author
+		padding: 0
+	.author .name
+		color: #FFF
+	.comment-detail
+		display: flex
+		margin: 15px 0
+
+	+screen-is-768
+		.comment-detail
+			margin: 0
+
+	.comment-detail .count
+		color: #FFF
+		font-weight: 500
+	.likes-count
+		margin-right: 23px
+	.socials-primary a
+		color: #FFF
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		height: 36px
+		width: 36px
+		border: 2px solid #FFF
+		text-decoration: none
+		transition: all $transition
+	.socials-primary a:hover
+		color: $blue
+		background-color: #FFF
+	.comments-total
+		color: $blue
+		font-size: 18px
+		font-weight: 500
+		margin-bottom: 23px
+	.comments-total i
+		font-size: 11px
+		vertical-align: middle
+		margin-left: 5px
+	.comment-item
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+	.comment-item:not(:last-of-type)
+		margin-bottom: 30px
+
+	+screen-is-576
+		.comment-item:not(:last-of-type)
+			margin-bottom: 40px
+
+	+screen-is-768
+		.comment-item:not(:last-of-type)
+			margin-bottom: 55px
+
+	.comment-item.sub-comment
+		padding-left: 20px
+		margin-top: 30px
+
+	+screen-is-576
+		.comment-item.sub-comment
+			margin-top: 40px
+			padding-left: 70px
+
+	+screen-is-768
+		.comment-item.sub-comment
+			margin-top: 55px
+
+	.comment-item .img-holder
+		display: flex
+		height: 48px
+		width: 48px
+		border-radius: 50%
+		position: relative
+		overflow: hidden
+
+	.comment-heading
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.comment-heading .name,
+	.comment-heading .date
+		font-weight: 500
+	.comment-heading .date
+		color: $blue
+		margin-left: 10px
+	.comment-heading .icon
+		color: $blue
+		font-size: 18px
+		transition: color $transition
+		cursor: pointer
+		position: relative
+		top: -2px
+	.comment-heading .icon:hover
+		color: #333
+	.comment-item .text-holder
+		width: calc(100% - 58px)
+	.comment-item .text-holder p
+		margin-bottom: 0
+		line-height: 26px
+	.comment-item .comment-content
+		margin-top: 2px
+	.comment-rating .stars
+		pointer-events: none
+		margin-left: -11px
+	.comment-rating .stars .rating__label
+		font-size: 16px

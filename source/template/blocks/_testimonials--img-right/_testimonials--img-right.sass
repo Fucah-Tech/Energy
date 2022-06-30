@@ -1,0 +1,100 @@
+/* testimonials img right start */
+
+.testimonials.testimonials--img-right
+	.wrapper
+		position: relative
+		display: flex
+		justify-content: space-between
+	.subtitle
+		margin-bottom: 0
+
+	+screen-is-992
+		.wrapper
+			padding: 50px 0 0 0
+
+	.img-holder
+		display: none
+		position: absolute
+		right: 30px
+		top: 0px
+		z-index: 2
+		overflow: visible
+
+	+screen-is-992
+		.img-holder
+			display: block
+			height: 350px
+			width: 300px
+
+	+screen-is-1200
+		.img-holder
+			height: 414px
+			width: 370px
+
+	.img-bg
+		z-index: -1
+	.quote-icon
+		display: inline-flex
+		height: 80px
+		width: 80px
+		background-color: $blue
+		position: absolute
+		top: 20px
+		left: -21px
+	.quote-icon span
+		color: #FFF
+		font-size: 85px
+		line-height: 0px
+		position: absolute
+		top: 69px
+		left: 50%
+		transform: translateX(-50%)
+	.heading
+		text-align: left
+		max-width: 100%
+		margin: 0
+	.heading,
+	.content
+		width: 100%
+
+	+screen-is-992
+		.heading,
+		.content
+			width: calc(100% - 380px)
+
+	+screen-is-1200
+		.heading,
+		.content
+			width: calc(100% - 430px)
+
+	.text-block
+		width: 100%
+		background-color: #F3F4F5
+		padding: 50px 30px
+
+	+screen-is-992
+		.text-block
+			padding: 41px 0 73px 50px
+
+	.text-block p
+		color: #333
+		font-size: 18px
+		line-height: 30px
+
+	+screen-is-768
+		.text-block p
+			font-size: 20px
+			line-height: 30px
+
+	.testimonials-dots
+		display: flex
+		justify-content: flex-start
+		margin: 25px 0
+
+	+screen-is-768
+		justify-content: center
+		padding-bottom: 10px
+
+	+screen-is-768
+		.content
+			margin-top: 21px

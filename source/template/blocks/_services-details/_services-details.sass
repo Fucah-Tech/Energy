@@ -1,0 +1,100 @@
+/* services details */
+
+.services-details
+	position: relative
+
++screen-is-1200
+	.services-details::before
+		content: ""
+		width: 50%
+		height: 640px
+		background-color: #EFF2F5
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+
+.services-details
+	.details-tabs .tabs-header
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+
+	+screen-is-992
+		.details-tabs .tabs-header
+			font-size: 18px
+
+	.details-tabs .tabs-header span
+		display: block
+		position: relative
+		cursor: pointer
+		padding: 15px 15px 12px 15px
+		letter-spacing: -0.050em
+		background-color: #FFF
+		transition: all $transition
+
+	+screen-is-992
+		.details-tabs .tabs-header span
+			padding: 23px 30px 20px 30px
+
+	.details-tabs .tabs-header span::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 3px
+		background-color: transparent
+		transition: background-color $transition
+	.details-tabs .tabs-header span:hover::before
+		background-color: $blue
+	.details-tabs .tabs-header span.active
+		color: #FFF
+		background-color: $blue
+	.details-tabs .tabs-header span:not(:last-of-type)
+		border-bottom: 1px solid #F6F7F9
+	.pdf-holder
+		color: #FFF
+		background-color: $blue
+		text-align: center
+		margin-top: 30px
+		padding: 30px 20px 25px 20px
+		background-position: -100px top
+		background-repeat: no-repeat
+		margin-bottom: 30px
+
+	+screen-is-768
+		.pdf-holder
+			margin-bottom: 0
+
+	+screen-is-1200
+		.pdf-holder
+			padding: 40px 20px 35px 20px
+
+	.pdf-holder .title
+		letter-spacing: -0.050em
+		margin-bottom: 6px
+	.pdf-holder p
+		color: #FFF
+		opacity: 0.5
+	.pdf-holder .button
+		margin-top: 3px
+		border: 2px solid #FFF
+		transition: all $transition
+	.pdf-holder .button span
+		color: #FFF
+		background-color: $blue
+	.pdf-holder .button::before
+		background-color: #FFF
+		color: $blue
+	.img-holder
+		position: relative
+		margin-bottom: 57px
+	.img-holder img
+		width: 100%
+		height: auto
+	.tabs-content__item ul
+		margin: 30px 0
+
+	+screen-is-992
+		.tabs-content__item ul
+			margin: 40px 0

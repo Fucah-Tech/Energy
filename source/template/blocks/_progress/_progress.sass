@@ -1,0 +1,53 @@
+/* progress bars */
+
+.progress-simple
+	height: 40px
+	background: transparent
+	border: 2px solid $blue
+
+.progress-simple
+	.progress-bar
+		color: #333
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+
+.progress-simple:not(:last-of-type)
+	margin-bottom: 30px
+
+/* progress tooltip */
+
+.progress-tooltip
+	height: 40px
+
+.tooltip-bar:not(:last-of-type)
+	margin-bottom: 30px
+
+.tooltip
+	> .tooltip-inner
+		color: #FFF
+		font-size: 12px
+		font-weight: 700
+		background-color: #25272A
+		padding: 7px 10px
+	.arrow::before
+		border-top-color: #25272A
+
+.progress
+	border-radius: 0
+
+.progress
+	.popover
+		left: auto
+		right: 0
+		visibility: hidden
+
+.progress-bar
+	position: relative
+	transition: width $transition
+
+.bar-holder
+	.progress-title
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase

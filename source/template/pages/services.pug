@@ -1,0 +1,43 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'services'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/services.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/services.jpg' alt='img')
+
+	+promo-primary('Our Services')
+
+block main
+
+	include ../blocks/_services-inner/_services-inner
+
+	include ../blocks/_we-provide/_we-provide
+
+	include ../blocks/_testimonials--primary/_testimonials--primary
+
+	// brands start
+
+	section.section.brands.no-padding-top
+		.container
+			.row
+				.col-12
+					include ../blocks/_brands-slider/_brands-slider
+
+	// brands end
+
+block footer
+
+	include ../blocks/_footer/_footer

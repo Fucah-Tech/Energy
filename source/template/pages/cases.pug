@@ -1,0 +1,29 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'cases'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/cases.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/cases.jpg' alt='img')
+
+	+promo-primary('Project Cases')
+
+block main
+
+	include ../blocks/_project-cases/_project-cases
+
+	include ../blocks/_brands--with-heading/_brands--with-heading
+
+block footer
+
+	include ../blocks/_footer/_footer

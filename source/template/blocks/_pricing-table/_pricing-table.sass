@@ -1,0 +1,134 @@
+/* pricing table--primary */
+
+.pricing-table
+	.pricing-item
+		text-align: center
+		padding: 0px 15px
+		position: relative
+		overflow: hidden
+		transition: background-color $transition
+		width: 100%
+		max-width: 290px
+		margin: 0 auto
+		margin-bottom: 50px
+
+	+screen-is-576
+		.pricing-item
+			padding: 35px 15px 0 15px
+
+	+screen-is-992
+		.pricing-item
+			margin-left: -15px
+			margin-right: -15px
+
+	+screen-is-1200
+		.pricing-item
+			padding: 35px 30px
+
+	.pricing-item.active
+		background-color: #F6F8F9
+		padding-bottom: 35px
+		padding-top: 35px
+	.pricing-item.active .ribbon
+		opacity: 1
+		visibility: visible
+		z-index: 1
+	.pricing-item.active .button span
+		background-color: #F6F8F9
+	.pricing-item .ribbon
+		display: inline-block
+		height: 78px
+		width: 78px
+		background-color: $blue
+		transform: rotate(-45deg)
+		position: absolute
+		top: -39px
+		right: -39px
+		opacity: 0
+		visibility: hidden
+		z-index: -1
+	.pricing-item .ribbon .icon
+		font-size: 22px
+		position: absolute
+		bottom: 26px
+		left: 7px
+		transform: rotate(45deg)
+		fill: #FFF
+		padding: 3px
+	.pricing-item .img-holder .icon
+		font-size: 72px
+		fill: $blue
+	.pricing-item .title
+		text-align: center
+		letter-spacing: -0.050em
+		margin-top: 30px
+		margin-bottom: 10px
+	.pricing-item .price
+		color: $blue
+		font-size: 50px
+		line-height: 70px
+		font-weight: 700
+	.pricing-item .button-black
+		padding: 11px 30px
+		margin-top: 11px
+	.pricing-item .item-list
+		color: $grey
+		text-align: left
+		padding: 0
+		margin: 0
+		list-style: none
+		margin: 10px 0 16px 0
+		min-height: 160px
+		display: inline-flex
+		flex-direction: column
+	.pricing-item .item-list li
+		position: relative
+		padding-left: 15px
+		line-height: 24px
+
+	+screen-is-1200
+		.pricing-item .item-list li
+			padding-left: 25px
+
+	.pricing-item .item-list li:not(:last-of-type)
+		margin-bottom: 14px
+	.pricing-item .item-list li::before,
+	.pricing-item .item-list li::after
+		content: ""
+		display: inline-block
+		width: 2px
+		background-color: #45DBAB
+		position: absolute
+	.pricing-item .item-list li::before
+		height: 10px
+		transform: rotate(45deg)
+		left: 5px
+		top: 7px
+	.pricing-item .item-list li::after
+		height: 4px
+		transform: rotate(-45deg)
+		left: 0
+		top: 11px
+
+/* pricing table is--dark */
+
+.pricing-table.pricing-table.is--dark
+	background-color: #2C2F34
+
+.pricing-table.pricing-table.is--dark
+	.pricing-item.active
+		background-color: #35383D
+	.pricing-item .img-holder .icon
+		fill: #FFF
+	.pricing-item .title
+		color: #FFF
+	.pricing-item .button
+		border: 1px solid #FFF
+	.pricing-item .button span
+		color: #FFF
+		background-color: #2C2F34
+	.pricing-item .button::before
+		color: #2C2F34
+		background-color: #FFF
+	.pricing-item.active .button span
+		background-color: #35383D

@@ -1,0 +1,31 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'services-details'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/services-details.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/services-details.jpg' alt='img')
+
+	+promo-primary('Windmills')
+
+block main
+
+	include ../blocks/_services-details/_services-details
+
+	include ../blocks/_pricing--inner/_pricing--inner
+
+block footer
+
+	include ../blocks/_footer/_footer

@@ -1,0 +1,39 @@
+// header start
+
+header#header.header.header--style-1
+	.container-fluid
+		.row
+			.col-12.column
+
+				// logo block start
+				.logo-block
+					a.logo(href="index.html")
+						+svg('logo')
+						span R - energy
+				// logo block end
+
+				// menu block start
+				.menu-block
+					include ../_main-menu/_main-menu
+				// menu block end
+
+				// lang block start
+				.lang-block
+					ul.lang-select
+						li.lang-item.active #[span EN]
+							ul.sub-list
+								li.lang-item
+									a(href="#") French
+								li.lang-item
+									a(href="#") Spanish
+								li.lang-item
+									a(href="#") Deutsch
+								li.lang-item
+									a(href="#") Russian
+					+btn-transp('Get In Touch')
+
+					include ../_menu-trigger/_menu-trigger
+
+				// lang block end
+
+// header end

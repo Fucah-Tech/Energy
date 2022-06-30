@@ -1,0 +1,65 @@
+/* features */
+
+.features-item
+	position: relative
+
+.features-item:not(:last-of-type)
+	margin-bottom: 80px
+
++screen-is-992
+	.features-item:not(:last-of-type)
+		margin-bottom: 0px
+
+.features-item
+	.img-holder
+		position: relative
+		min-height: 350px
+
+	+screen-is-992
+		.img-holder
+			min-height: 480px
+
+	+screen-is-1200
+		.img-holder
+			min-height: 570px
+
+	.count
+		color: $blue
+		font-size: 11px
+		font-weight: 500
+	.title
+		letter-spacing: -0.050em
+		margin-bottom: 24px
+	.button
+		margin-top: 20px
+	.text-holder
+		position: relative
+		padding-top: 25px
+	.count-bg
+		position: absolute
+		color: #F7F7F7
+		font-weight: bold
+		z-index: -1
+		font-size: 80px
+		top: 0
+		left: 0
+
+	+screen-is-992
+		.count-bg
+			font-size: 100px
+			top: -15px
+			left: -15px
+
+	+screen-is-1200
+		.count-bg
+			font-size: 120px
+			top: -30px
+			left: -30px
+
+.features-item:nth-of-type(even)
+	flex-direction: column-reverse
+
++screen-is-992
+
+	.features-item:nth-of-type(even)
+		flex-direction: row

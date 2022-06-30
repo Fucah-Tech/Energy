@@ -1,0 +1,42 @@
+/* blog inner */
+
+.blog-inner
+	.button-holder
+		margin-top: 70px
+		text-align: center
+	.button span,
+	.button::before
+		padding: 11px 55px
+
+	/* masonry blog */
+
+.blog-masonry
+	.masonry-item
+		width: 100%
+
+	+screen-is-768
+		.masonry-item
+			width: 50%
+
+	+screen-is-1200
+		.masonry-item
+			width: 33.33333%
+
+.blog-inner-item
+	margin-bottom: 50px
+
+.blog-inner-item
+	.content-holder:first-child
+		padding-top: 56px
+	.content-holder:first-child .ribbon
+		top: 0
+		right: 0
+
+.blog-inner-item
+	.content-holder
+		margin: 0
+		max-width: 100%
+	.ribbon
+		right: 0
+	.img-holder
+		padding-top: percentage(255/349.55)

@@ -1,0 +1,44 @@
+// get in touch start
+
+section.section.get-in-touch
+	.container
+		.row
+			.col-12
+				.form-wrapper(style="background-image: url(img/world-map.png);")
+
+					// contact form start
+					form#get-in-touch.form.js-contact-form.contact--form.contacts-page-form(autocomplete="off")
+						.row
+							.col-12
+								.title-block
+									h3.title Get in #[span Touch]
+						.row
+							.col-md-6
+								label.input-label
+									input.form-field.input.input-name#input-name(type="text" name="name" required)
+									span Name
+							.col-md-6
+								label.input-label
+									input.form-field.input.input-text#input-text(type="text" name="subject" required)
+									span Subject
+							.col-md-6
+								label.input-label
+									input.form-field.input.input-tel#input-tel(type="tel" name="phone" required)
+									span Phone
+							.col-md-6
+								label.input-label
+									input.form-field.input.input-mail#input-mail(type="email" name="email" required)
+									span Email
+							.col-12
+								label.textarea-label
+									textarea.form-field.textarea#textarea(name="message")
+									span Comment
+						.row
+							.col-12
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Send")
+										span Send
+									.form__note
+					// contact form end
+
+// get in touch end

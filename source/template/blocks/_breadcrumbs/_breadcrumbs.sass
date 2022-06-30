@@ -1,0 +1,81 @@
+/* breadcrumbs common */
+
+.breadcrumb
+	padding: 0
+	margin: 0
+	background: none
+	font-size: 14px
+	display: inline-flex
+	flex-wrap: wrap
+	list-style: none
+
+.breadcrumb-item + .breadcrumb-item
+	padding-left: 0.5rem
+
+.breadcrumb-item + .breadcrumb-item::before
+	display: inline-block
+	padding-right: 0.5rem
+	color: #6c757d
+	content: "/"
+
+.breadcrumb
+	.breadcrumb-item a
+		color: #333
+		text-decoration: none
+		transition: color $transition
+	.breadcrumb-item a:hover
+		color: $blue
+	.breadcrumb-item.active
+		color: $blue
+
+/* breadcrumbs--with-line */
+
+.breadcrumb.breadcrumb--with-line
+	.breadcrumb-item + .breadcrumb-item::before
+		content: "—"
+
+/* breadcrumbs--with-dot */
+
+.breadcrumb.breadcrumb--with-dot
+	.breadcrumb-item + .breadcrumb-item::before
+		content: "·"
+
+/* breadcrumbs--with-icon */
+
+.breadcrumb.breadcrumb--with-icon
+	.breadcrumb-item .icon
+		font-size: 12px
+		margin-right: 8px
+
+/* breadcrumbs--with-number */
+
+.breadcrumb.breadcrumb--with-number
+	counter-reset: counter
+
+.breadcrumb.breadcrumb--with-number
+	.breadcrumb-item
+		counter-increment: counter
+	.breadcrumb-item a::before
+		content: "" counter(counter)
+		position: relative
+		top: -2px
+		display: inline-block
+		text-align: center
+		padding: 2px 3px 0 3px
+		font-size: 10px
+		line-height: 10px
+		height: 15px
+		width: 15px
+		margin-right: 8px
+		border: 1px solid #333
+		transition: border-color $transition
+	.breadcrumb-item:not(:last-of-type)::after
+		padding-left: 0.5em
+	.breadcrumb-item a:hover::before,
+	.breadcrumb-item.active a
+		color: $blue
+		border-color: $blue
+	.breadcrumb-item.active a::before
+		border-color: $blue
+	.breadcrumb-item:last-of-type
+		pointer-events: none

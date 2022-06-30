@@ -1,0 +1,133 @@
+/* pagination common */
+
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: 0
+
+.pagination
+	li
+		padding-left: 0
+	li:nth-of-type(5),
+	li:nth-of-type(6)
+		display: none
+
+	+screen-is-576
+
+		li:nth-of-type(5),
+		li:nth-of-type(6)
+			display: initial
+
+	li:before
+		display: none
+	li:not(:last-of-type)
+		margin-right: 8px
+	li a
+		display: inline-block
+		color: #333
+		text-decoration: none
+		font-weight: 500
+		min-width: 30px
+		text-align: center
+		transition: all $transition
+
+	+screen-is-576
+		li a
+			font-size: 16px
+
+	li.back a,
+	li.next a
+		text-transform: uppercase
+		font-weight: 700
+		padding: 0 10px
+		font-size: 14px
+
+	+screen-is-576
+		li.back a,
+		li.next a
+			font-size: 16px
+			font-weight: 500
+			text-transform: initial
+
+	+screen-is-768
+		li a
+			min-width: 40px
+			padding: 5px
+
+	+screen-is-992
+		li a
+			min-width: 50px
+			padding: 10px 5px
+
+	li a:hover
+		color: #FFF
+		background-color: $blue
+
+	+screen-is-768
+		li.back a,
+		li.next a
+			padding: 5px 25px
+
+		li.back
+			margin-right: 15px
+		li.next
+			margin-left: 7px
+
+	+screen-is-992
+		li.back a,
+		li.next a
+			padding: 10px 48px
+
+		li.back
+			margin-right: 28px
+		li.next
+			margin-left: 20px
+
+	li.current a
+		color: #FFF
+		background-color: $blue
+
+/* pagination--primary */
+
+.pagination.pagination--primary
+	li a
+		border: 2px solid #EFF2F5
+	li a:hover,
+	li.current a
+		border: 2px solid $blue
+
+/* pagination--filled */
+
+.pagination.pagination--filled
+	li a
+		background-color: #EFF2F5
+	li.current a
+		color: #FFF
+		background-color: $blue
+	li a:hover
+		color: #FFF
+		background-color: $blue
+
+/* pagination--rounded */
+
+.pagination.pagination--rounded
+	li a
+		padding: 0
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		height: 34px
+		width: 34px
+		border-radius: 50%
+		box-shadow: 0px 3px 15px 2px rgba(0,0,0, 0.05)
+
+	+screen-is-576
+		li a
+			height: 50px
+			width: 50px
+
+	+screen-is-768
+		li a
+			height: 50px
+			width: 50px

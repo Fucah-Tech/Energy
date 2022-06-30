@@ -1,0 +1,29 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	- var page = 'typography'
+
+	- var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/typography.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/typography.jpg' alt='img')
+
+	+promo-primary('Typography')
+
+block main
+
+	include ../blocks/_typography/_typography
+
+block footer
+
+	include ../blocks/_footer/_footer

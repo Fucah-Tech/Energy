@@ -1,0 +1,38 @@
+/* logos common */
+
+.logos
+	.logo-item
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 150px
+		overflow: hidden
+	.logo-item img
+		display: inline-block
+		max-width: 120px
+		height: auto
+
+/* logos--grayscaled start */
+
+.logos.logos--grayscaled
+	.logo-item.logo-item--grayscaled
+		filter: grayscale(1)
+		opacity: 0.5
+		transition: opacity $transition
+	.logo-item.logo-item--grayscaled:hover
+		opacity: 1
+
+/* logos--grayscaled end */
+
+/* logos slider */
+
+.logos-slider
+	.slider-item
+		display: flex!important
+		align-items: center
+		justify-content: center
+
+.logos-dots
+	display: flex
+	justify-content: center
+	margin-top: 20px

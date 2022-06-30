@@ -1,0 +1,36 @@
+// live comment start
+
+section.section.live-comment
+	.container
+		.row
+			.col-12
+				.heading.primary-heading
+					+primary-heading('Comment', 'Live', 'Comment')
+	.container
+		.row
+			.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1
+
+				// comment form start
+				form.form.contact--form.comment-form(action="javascript:void(0);")
+					.container
+						.row
+							.col-md-6
+								label.input-label(for="#input-name")
+									input.form-field.input.input-name#input-name(type="text" name="name" required)
+									span Name
+							.col-md-6
+								label.input-label(for="#input-mail")
+									input.form-field.input.input-mail#input-mail(type="email" name="email" required)
+									span Email
+							.col-12
+								label.textarea-label(for="#textarea")
+									textarea.form-field.textarea#textarea(name="comment")
+									span Comment
+						.row
+							.col-12
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Send")
+										span Send
+				// comment form end
+
+// live comment end

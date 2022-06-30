@@ -1,0 +1,36 @@
+/* banner */
+
+.banner
+	position: relative
+	min-height: 750px
+
++screen-is-576
+	.banner
+		min-height: auto
+
+.banner
+	.title
+		font-size: 30px
+		line-height: 30px
+		letter-spacing: -0.050em
+		margin-bottom: 24px
+
+	+screen-is-576
+		.title
+			font-size: 36px
+			line-height: 36px
+
+	+screen-is-992
+		.title
+			font-size: 50px
+			line-height: 50px
+
+	.button
+		margin-top: 20px
+	.button span
+		background: #E4EFF3
+	.button span,
+	.button::before
+		padding: 13px 40px
+	.img-bg
+		z-index: -1

@@ -1,0 +1,64 @@
+/* description item */
+
+.description-item
+	position: relative
+
+.description-item
+	.primary-heading
+		text-align: left
+		margin-bottom: 0px
+	.text
+		margin-top: 20px
+	.text:last-of-type
+		margin-bottom: 0
+	&__img img
+		width: 100%
+		height: auto
+
+.description-item:nth-of-type(odd)::after
+	content: ""
+	width: 80px
+	height: 100%
+	background-color: $blue
+	position: absolute
+	top: 0
+	right: 0
+	display: none
+
+.description-item:nth-of-type(odd)
+	.description-item__img
+		margin-bottom: 15px
+
++screen-is-768
+	.description-item:nth-of-type(odd)
+		.description-item__img
+			margin-bottom: 0px
+
++screen-is-1366
+	.description-item:nth-of-type(odd)::after
+		width: 80px
+		display: block
+
++screen-is-1600
+	.description-item:nth-of-type(odd)::after
+		width: 150px
+
+.description-item:not(:last-of-type)
+	margin-bottom: 50px
+
++screen-is-992
+	.description-item:not(:last-of-type)
+		margin-bottom: 90px
+
++screen-is-1200
+	.description-item:not(:last-of-type)
+		margin-bottom: 120px
+
+.description-item:nth-of-type(even)
+	.description-item__img
+		margin-bottom: 15px
+
++screen-is-768
+	.description-item:nth-of-type(even)
+		.description-item__img
+			margin-bottom: 0px

@@ -1,0 +1,38 @@
+/* product tabs */
+
+.product-tabs
+	.tabs-header__title
+		display: inline-block
+		color: #82868A
+		font-size: 13px
+		font-weight: 700
+		text-transform: uppercase
+		background-color: transparent
+		padding: 15px 25px
+		cursor: pointer
+		transition: all $transition
+	.tabs-header__title:hover
+		color: $blue
+	.tabs-header__title.active
+		color: #FFF
+		background-color: $blue
+	.tabs-content
+		margin-top: 0px
+
+	+screen-is-768
+
+		.tabs-content
+			margin-top: 30px
+
+	+screen-is-992
+
+		.tabs-content
+			margin-top: 50px
+
+	+screen-is-1200
+
+		.tabs-content
+			margin-top: 70px
+
+	.pagination
+		margin-top: 25px

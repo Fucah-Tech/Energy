@@ -1,0 +1,75 @@
+// footer-style-2 start
+
+footer.footer.footer--style-2
+	.footer-top
+		.container
+			.row
+				.col-xl-3.col-md-6
+
+					// logo start
+					.footer-logo
+						a.logo(href="index.html")
+							+svg('logo')
+							span R-energy
+					// logo end
+
+					include ../_socials-primary/_socials-primary
+
+				.col-xl-3.col-md-6
+
+					// footer contacts start
+					.footer-contacts
+						h4.title Subscribe
+						p.address Elliott Ave, Parkville VIC 3052, Melbourne Canada
+						p.phone-number Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
+						p.e-main Email: #[a(href="mailto:r_energy@mail.co") r_energy@mail.co]
+					// footer contacts end
+
+				.col-xl-3.col-md-6
+					h4.title Company and Links
+
+					// footer nav start
+					nav.footer-nav
+						ul.footer-menu
+							li(class=(type === "front" ? "active" : undefined))
+								a(href="#") Home
+							li(class=(type === "shop" ? "active" : undefined))
+								a(href="#") Shop
+							li(class=(page === "about" ? "active" : undefined))
+								a(href="#") About Us
+							li(class=(page === "blog" ? "active" : undefined))
+								a(href="#") Blog
+							li(class=(page === "services" ? "active" : undefined))
+								a(href="#") Services
+							li(class=(type === "elements" ? "active" : undefined))
+								a(href="#") Elements
+							li
+								a(href="#") Case studios
+							li(class=(page === "contacts" ? "active" : undefined))
+								a(href="#") Contacts
+					// footer nav end
+
+				.col-xl-3.col-md-6
+
+					// footer downloads start
+					.footer-downloads
+						h4.title Information for Download
+						p Direct link for downloading the file which you can use
+						+btn-filled('Download PDF')
+					// footer downloads end
+	.container                
+		.row
+			.col-12
+				.footer-lower
+					.row
+						.col-md-6
+							p.copyright © 2019 R-energy Template by Artureanec
+						.col-md-6
+
+							// privacy start
+							.privacy-block
+								a(href="#") Privacy Policy #[span.separator |] 
+								a(href="#") Term and Condision
+							// privacy end
+
+// footer-style-2 end

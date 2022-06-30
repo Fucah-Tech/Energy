@@ -1,0 +1,109 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'buttons'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Buttons')
+
+block main
+
+	section.elements.elements--buttons
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-12
+
+						// transparent button start
+						a.button.button--transparent.button--primary(href='#' data-hover="More about")
+							span More about
+						// transparent button end
+
+						// filled button start
+						a.button.button--filled.button--primary(href='#' data-hover="More about")
+							span More about
+						// filled button end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-12
+
+						// transparent button-rounded start
+						a.button.button--transparent.button--primary.button--rounded(href='#' data-hover="More about")
+							span More about
+						// transparent button-rounded end
+
+						// filled button-rounded start
+						a.button.button--filled.button--primary.button--rounded(href='#' data-hover="More about")
+							span More about
+						// filled button-rounded end
+
+		.element-holder.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			.container
+				.row
+					.col-12
+
+						// transparent buttonn-radius start
+						a.button.button--transparent.button--primary.button--radius(href='#' data-hover="More about")
+							span More about
+						// transparent buttonn-radius end
+
+						// filled buttonn-radius start
+						a.button.button--filled.button--primary.button--radius(href='#' data-hover="More about")
+							span More about
+						// filled buttonn-radius end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 4
+
+			.container
+				.row
+					.col-12
+
+						// transparent buttonn-dark start
+						a.button.button--primary.button--dark(href='#' data-hover="More about")
+							span More about
+						// transparent buttonn-dark end
+
+						// filled buttonn-gray start
+						a.button.button--primary.button--gray(href='#' data-hover="More about")
+							span More about
+						// filled buttonn-gray end
+
+block footer
+
+	include ../blocks/_footer/_footer

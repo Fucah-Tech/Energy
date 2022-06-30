@@ -1,0 +1,121 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'tabs'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Tabs')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-xl-8
+
+						#responsive-tabs.tabs.horizontal--tabs
+							ul.tabs-header
+								li
+									a(href="#horizontal-tab-1")
+										+svg('info')
+										span About
+								li
+									a(href="#horizontal-tab-2")
+										+svg('settings')
+										span Services
+								li
+									a(href="#horizontal-tab-3")
+										+svg('user-ic')
+										span Clients
+								li
+									a(href="#horizontal-tab-4")
+										+svg('puzzle')
+										span Skills
+							.tabs-content
+								#horizontal-tab-1.tab
+									h4.title About Us
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts.                           
+								#horizontal-tab-2.tab
+									h4.title Services
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts. 
+								#horizontal-tab-3.tab
+									h4.title Clients
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts. 
+								#horizontal-tab-4.tab
+									h4.title Skills
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts.
+
+		.element-holder.no-padding-top
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-xl-8
+
+						#responsive-tabs.tabs.vertical--tabs
+							ul.tabs-header
+								li
+									a(href="#vertical-tab-1")
+										+svg('info')
+										span About
+								li
+									a(href="#vertical-tab-2")
+										+svg('settings')
+										span Services
+								li
+									a(href="#vertical-tab-3")
+										+svg('user-ic')
+										span Clients
+								li
+									a(href="#vertical-tab-4")
+										+svg('puzzle')
+										span Skills
+							.tabs-content
+								#vertical-tab-1.tab
+									h4.title About Us
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts.                           
+								#vertical-tab-2.tab
+									h4.title Services
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts. 
+								#vertical-tab-3.tab
+									h4.title Clients
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts. 
+								#vertical-tab-4.tab
+									h4.title Skills
+									p Zoo Miami today occupies almost 750 acres and is home to more than 3,000 animals representing over 500 different species. Of this population, more than 40 species are classified as endangered. The zoo also houses more than 1,000 species of trees, palms and other plants, and over 100 special exhibits showcasing a broad number of species and scientific topics.
+									p We are accredited by the Association of Zoos and Aquariums (AZA) which means we have passed a rigorous application and inspection process and meet or exceed the AZA's standards for animal health and welfare, fundraising, zoo staffing, and involvement in global conservation efforts. 
+
+block footer
+
+	include ../blocks/_footer/_footer

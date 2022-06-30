@@ -1,0 +1,118 @@
+// mobile-menu start
+
+.mobile-nav
+	.nav-inner
+
+		.nav-item
+
+			// main menu start
+			nav.menu-holder
+				ul.mobile-menu
+					li.menu-item.menu-item--has-child(class=(type === "front" ? "active" : undefined))
+						a(href='javascript:void(0);') #[span Home]
+
+						// sub-menu start
+						ul.sub-menu
+							li(class=(page === "index" ? "active" : undefined))
+								a(href='index.html') Home page 1
+							li(class=(page === "index-2" ? "active" : undefined))
+								a(href='index-2.html') Home page 2
+							li(class=(page === "index-3" ? "active" : undefined))
+								a(href='index-3.html') Home page 3
+						// sub-menu end
+
+					li.menu-item.menu-item--has-child(class=(type === "inner" ? "active" : undefined))
+						a(href='javascript:void(0);') #[span Pages] 
+
+						// sub-menu start
+						ul.sub-menu
+							li(class=(page === "about" ? "active" : undefined))
+								a(href='about.html') About
+							li(class=(page === "blog-detail" ? "active" : undefined))
+								a(href='blog-detail.html') Blog Detail
+							li(class=(page === "services" ? "active" : undefined))
+								a(href='services.html') Services
+							li(class=(page === "services-details" ? "active" : undefined))
+								a(href='services-details.html') Services Details
+							li(class=(page === "gallery" ? "active" : undefined))
+								a(href='gallery.html') Gallery
+							li(class=(page === "products" ? "active" : undefined))
+								a(href='products.html') Products
+							li(class=(page === "product-details" ? "active" : undefined))
+								a(href='product-details.html') Product Details
+							li(class=(page === "cases-details" ? "active" : undefined))
+								a(href='cases-details.html') Project Details
+							li(class=(page === "typography" ? "active" : undefined))
+								a(href='typography.html') Typography
+							li(class=(page === "faq" ? "active" : undefined))
+								a(href='faq.html') FAQ
+							li(class=(page === "404" ? "active" : undefined))
+								a(href='404.html') 404 Page
+						// sub-menu end
+
+					li.menu-item(class=(page === "cases" ? "active" : undefined))
+						a(href='cases.html') #[span Projects]
+					li.menu-item(class=(page === "blog" ? "active" : undefined))
+						a(href='blog.html') #[span Blog]
+					li.menu-item.menu-item--has-child(class=(type === "shop" ? "active" : undefined))
+						a(href='javascript:void(0);') #[span Shop]
+
+						// sub-menu start
+						ul.sub-menu
+							li(class=(page === "catalog-page" ? "active" : undefined))
+								a(href='catalog-page.html') Catalog page
+							li(class=(page === "shop-product" ? "active" : undefined))
+								a(href='shop-product.html') Shop Product
+							li(class=(page === "shopping-cart" ? "active" : undefined))
+								a(href='shopping-cart.html') Cart
+							li(class=(page === "shopping-checkout" ? "active" : undefined))
+								a(href='shopping-checkout.html') Checkout
+						// sub-menu end
+
+					li.menu-item(class=(page === "contacts" ? "active" : undefined))
+						a(href='contacts.html') #[span Contacts]
+					li.menu-item.menu-item--has-child(class=(type === "elements" ? "active" : undefined))
+						a(href='javascript:void(0);') #[span Elements]
+
+						// sub-menu start
+						ul.sub-menu
+							li(class=(page === "pricing-tables" ? "active" : undefined))
+								a(href='pricing-tables.html') Pricing Tables
+							li(class=(page === "testimonials" ? "active" : undefined))
+								a(href='testimonials.html') Testimonials
+							li(class=(page === "icon-list" ? "active" : undefined))
+								a(href='icon-list.html') Icon List
+							li(class=(page === "accordions" ? "active" : undefined))
+								a(href='accordions.html') Accordions
+							li(class=(page === "team" ? "active" : undefined))
+								a(href='team.html') Team
+							li(class=(page === "logos" ? "active" : undefined))
+								a(href='logos.html') Logos
+							li(class=(page === "tabs" ? "active" : undefined))
+								a(href='tabs.html') Tabs
+							li(class=(page === "buttons" ? "active" : undefined))
+								a(href='buttons.html') Buttons
+							li(class=(page === "alerts" ? "active" : undefined))
+								a(href='alerts.html') Alerts
+							li(class=(page === "breadcrumbs" ? "active" : undefined))
+								a(href='breadcrumbs.html') Bread Crumbs
+							li(class=(page === "charts" ? "active" : undefined))
+								a(href='charts.html') Charts
+							li(class=(page === "counters" ? "active" : undefined))
+								a(href='counters.html') Counters
+							li(class=(page === "pagination" ? "active" : undefined))
+								a(href='pagination.html') Pagination
+							li(class=(page === "progress" ? "active" : undefined))
+								a(href='progress-bars.html') Progress Bars
+						// sub-menu end
+						// main menu end
+
+						.button-holder
+							+btn-filled('Get In Touch')
+
+						.menu-contacts
+							p.address Elliott Ave, Parkville VIC 3052, Melbourne
+							p.phone-number Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
+							p.e-main Email: #[a(href="mailto:r_energy@mail.co") r_energy@mail.co]
+
+// mobile-menu end

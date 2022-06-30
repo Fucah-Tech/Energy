@@ -1,0 +1,82 @@
+/* contacts banner */
+
+.contacts-banner
+	position: relative
+	width: 100%
+	padding: 70px 0
+	font-size: 18px
+	line-height: 36px
+	background: #FAFAFA
+	z-index: 2
+
++screen-is-992
+	.contacts-banner
+		background: #FFF
+		padding: 42px 30px 50px 30px
+		max-width: 500px
+		margin-left: 100px
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+
++screen-is-1200
+	.contacts-banner
+		padding: 60px 65px 58px 65px
+		max-width: 550px
+
+.contacts-banner
+	p
+		color: #333
+		line-height: 36px
+		margin: 0
+	.title
+		color: $blue
+		line-height: 50px
+		letter-spacing: -0.050em
+		margin-bottom: 0
+	.title span
+		color: #333
+	.title-block
+		margin-bottom: 30px
+
+	.inner-block
+		letter-spacing: -0.050em
+		font-weight: 500
+	.button-holder
+		transform: translateZ(0)
+		margin-top: 40px
+		text-align: left
+
+	.button span,
+	.button::before
+		padding: 7px 60px
+
+	+screen-is-768
+		.button span,
+		.button::before
+			padding: 7px 125px
+			
+	.address,
+	.phones-block
+		margin-bottom: 10px
+	.phones-block a
+		color: #333
+		text-decoration: none
+		transition: color $transition
+	.phones-block a:hover
+		color: $blue
+	.mail-block a
+		display: inline-block
+		color: $blue
+		position: relative
+		text-decoration: none
+	.mail-block a::after
+		content: ""
+		display: block
+		width: 100%
+		height: 1px
+		background-color: #A2BEFB
+		position: absolute
+		bottom: 7px
+		left: 0
+		transition: background-color $transition
+	.mail-block a:hover::after
+		background-color: transparent

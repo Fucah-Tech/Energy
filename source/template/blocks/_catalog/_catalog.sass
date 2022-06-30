@@ -1,0 +1,286 @@
+/* catalog */
+
+.catalog
+	.pagination-holder
+		display: flex
+		justify-content: center
+		width: 100%
+		margin-top: 70px
+
+	/* catalog aside */
+
+.catalog-aside
+	letter-spacing: -0.050em
+
+.catalog-aside
+	&__inner
+		padding: 0 20px
+		border-bottom: 1px solid #f0f3f6
+	.title
+		position: relative
+		cursor: pointer
+		margin: 0
+		padding: 15px 0
+		z-index: 2
+	.title::before,
+	.title::after
+		content: ""
+		display: block
+		width: 6px
+		height: 2px
+		background-color: $blue
+		position: absolute
+		top: 26px
+		pointer-events: none
+		transition: all $transition
+	.title::before
+		right: 3px
+		transform: rotate(45deg)
+	.title::after
+		right: 0px
+		transform: rotate(-45deg)
+	.title.active::after
+		transform: rotate(45deg)
+	.title.active::before
+		transform: rotate(-45deg)
+
+.catalog
+	.aside-holder
+		position: fixed
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		max-width: 270px
+		padding-top: 50px
+		z-index: 4
+		overflow-y: scroll
+		background-color: #FFF
+		transform: translateX(-100%)
+		transition: transform $transition
+	.aside-holder.is-active
+		transform: translateX(0)
+
+	+screen-is-992
+		.aside-holder
+			position: static
+			z-index: 1
+			height: auto
+			overflow-y: auto
+			transform: translateX(0)
+			max-width: 100%
+			padding: 0
+
+	.filter-trigger
+		cursor: pointer
+		user-select: none
+		display: inline-flex
+		align-items: baseline
+		margin-bottom: 30px
+	.filter-trigger .title
+		font-size: 18px
+		font-weight: 500
+		margin-left: 10px
+		transition: color $transition
+	.filter-trigger .icon
+		transition: color $transition
+	.filter-trigger:hover .title,
+	.filter-trigger:hover .icon
+		color: $blue
+	.close-aside
+		cursor: pointer
+		position: absolute
+		top: 20px
+		right: 15px
+
+.form--primary
+	label
+		margin-bottom: 0
+		display: inline-flex
+		align-items: center
+	fieldset.price,
+	fieldset.brands,
+	fieldset.power,
+	fieldset.colors
+		padding: 0 20px
+		border-bottom: 1px solid #F0F3F6
+	.tags
+		padding: 0 20px
+	.tags-block
+		margin-top: 9px
+	fieldset.button-block
+		padding: 30px 20px
+	.price-block
+		margin-top: 8px
+		padding-bottom: 30px
+	.irs
+		margin-top: -29px
+	.irs-max,
+	.irs-min,
+	.irs-single
+		display: none
+	.irs--round .irs-handle
+		border: 3px solid #FFF
+		background-color: $blue
+		height: 14px
+		width: 14px
+		top: 30px
+		cursor: pointer
+	.irs--round .irs-bar
+		height: 5px
+		background-color: $blue
+	.irs--round .irs-line
+		height: 5px
+		background-color: #F0F2F5
+	.irs-from,
+	.irs-to
+		display: none
+	.values-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 30px
+	.values-block input
+		outline: none
+		height: 40px
+		width: 90px
+		border: 1px solid #D0D1D2
+		border-radius: 50px
+		font-size: 14px
+		line-height: 40px
+		text-align: center
+		position: relative
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+	.values-block .separator
+		height: 1px
+		width: 30px
+		background-color: #D0D1D2
+	.brands-block
+		margin-top: 3px
+		padding-bottom: 18px
+	.power-block
+		margin-top: 5px
+		padding-bottom: 8px
+	.power-block label,
+	.brands-block label,
+	.colors-block label
+		cursor: pointer
+	.colors-block
+		padding-bottom: 10px
+	.brand-item
+		display: flex
+		justify-content: space-between
+		position: relative
+	.brand-item:not(:last-of-type)
+		margin-bottom: 18px
+	.brand-item label
+		max-width: calc(100% - 40px)
+	.checkbox--rounded-mask
+		height: 14px
+		width: 14px
+		background-color: #EFF2F5
+		border-radius: 50%
+		margin-right: 9px
+	.checkbox--rounded
+		position: absolute
+		z-index: -1
+		visibility: hidden
+	.checkbox--rounded:checked + .checkbox--rounded-mask
+		background-color: $blue
+	.power-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.power-item
+		position: relative
+		width: 40%
+	.power-item
+		margin-bottom: 14px
+	.checkbox--primary
+		position: absolute
+		z-index: -1
+		visibility: hidden
+	.checkbox--primary-mask
+		height: 14px
+		width: 14px
+		background-color: #EFF2F5
+		margin-right: 10px
+	.checkbox--primary:checked + .checkbox--primary-mask
+		background-color: $blue
+		background-image: url('../img/svg/check.svg')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: 9px 9px
+	.colors-block
+		display: flex
+		flex-wrap: wrap
+		margin: 9px -9px 0 -9px
+	.color-item
+		position: relative
+		margin: 0 9px 13px 9px
+	.checkbox--color
+		position: absolute
+		z-index: -1
+		visibility: hidden
+	.checkbox--color-mask
+		height: 30px
+		width: 30px
+		border-radius: 50%
+	.checkbox--color:checked + .checkbox--color-mask
+		background-image: url('../img/svg/check.svg')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: 9px 9px
+	button
+		padding: 0
+	.button
+		background: none
+		width: 100%
+	.button span,
+	.button::before
+		padding: 10px 40px
+	.button span
+		background-color: #FFF
+
+	/* catalog tabs */
+
+.catalog-tabs
+	.tabs-header
+		margin-bottom: 5px
+	.tabs-header__title
+		display: flex
+		justify-content: space-between
+		position: relative
+		cursor: pointer
+		padding: 15px 20px 12px 0px
+		letter-spacing: -0.050em
+		background-color: #FFF
+		transition: all $transition
+	.tabs-header__title.active
+		color: #FFF
+		background-color: $blue
+		padding-left: 20px
+	.tabs-header__title .item
+		width: calc(100% - 40px)
+	.tabs-header__title .count
+		opacity: 0.7
+
+.filter-backdrop
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(33, 35, 38, 0.5)
+	opacity: 0
+	z-index: -1
+
+.filter-backdrop.is-active
+	opacity: 1
+	z-index: 3
+
++screen-is-992
+	.filter-backdrop
+		display: none

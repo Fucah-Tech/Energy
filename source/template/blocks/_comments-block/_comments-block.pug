@@ -1,0 +1,70 @@
+// comments block start
+
+.comments-block
+
+	// heading start
+	.heading
+		.author
+			.author-block
+				.img-holder
+					img.img-bg(src="img/author-img.jpg" alt="img")
+				span.name Katty Greybrown
+		.comment-detail
+			.likes-count
+				+svg('heart')
+				span.count 2546
+			.comments-count
+				+svg('comment')
+				span.count 593
+		include ../_socials-primary/_socials-primary
+	// heading end
+
+	// content start
+	.content
+		p.comments-total 32 comments #[i.fa.fa-chevron-down(aria-hidden="true")]
+
+		// item start
+		.comment-item
+			.img-holder
+				img.img-bg(src="img/author-2.jpg" alt="author")
+			.text-holder
+				.comment-heading
+					.wrapper
+						span.name Kristina Landie
+						span.date 12.04.2018
+					span.action
+						+svg('previous')
+				.comment-content
+					p A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine.
+		// item end
+
+		// item start
+		.comment-item
+			.img-holder
+				img.img-bg(src="img/author-3.jpg" alt="author")
+			.text-holder
+				.comment-heading
+					.wrapper
+						span.name Mike Lambert
+						span.date 12.04.2018
+					span.action
+						+svg('previous')
+				.comment-content
+					p A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine.
+			.comment-item.sub-comment
+				.img-holder
+					img.img-bg(src="img/author-4.jpg" alt="author")
+				.text-holder
+					.comment-heading
+						.wrapper
+							span.name Taylor Vien
+							span.date 12.04.2018
+						span.action
+							+svg('previous')
+					.comment-content
+						p His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.
+		// item end
+
+	// content end
+
+// comments block end

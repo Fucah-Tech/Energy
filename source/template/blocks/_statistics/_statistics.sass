@@ -1,0 +1,76 @@
+/* statistics */
+
+.statistics
+	background-color: #FAFAFA
+
+.statistics-item
+	text-align: center
+	position: relative
+	margin-bottom: 50px
+
+.statistics-item
+	.counter
+		font-size: 70px
+		line-height: 70px
+		font-weight: 700
+
+	+screen-is-768
+		.counter
+			font-size: 90px
+			line-height: 70px
+
+	+screen-is-992
+		.counter
+			font-size: 120px
+			line-height: 70px
+
+	.description
+		display: block
+		text-align: center
+		color: $blue
+		font-size: 16px
+		font-weight: 700px
+		text-transform: uppercase
+		letter-spacing: 0.30em
+		padding-left: 16px
+
+	+screen-is-768
+		.description
+			margin-top: 10px
+
+	+screen-is-992
+		.description
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 18px
+			letter-spacing: 0.80em
+
+/* counter--is-blue */
+
+.counter--is-blue
+	.counter
+		color: $blue
+	.description
+		font-weight: 700
+		color: #333333
+
+/* counter--text-lower */
+
+.counter--text-lower
+	.statistics-item
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+	.description
+		font-weight: 700
+		padding-left: 0
+		letter-spacing: 0
+		position: static
+		transform: translate(0, 0)
+
+	+screen-is-992
+		.description
+			margin-top: 25px

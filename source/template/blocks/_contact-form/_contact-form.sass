@@ -1,0 +1,248 @@
+/* contact form */
+
+.form.contact--form
+	position: relative
+	width: 100%
+	max-width: 100%
+	background: #FAFAFA
+	padding: 60px 0 70px 0
+	z-index: 2
+
++screen-is-992
+	.form.contact--form
+		margin-left: 80px
+		width: 100%
+		background: #FFF
+		max-width: 660px
+		padding: 42px 30px 50px 30px
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+
++screen-is-1200
+	.form.contact--form
+		max-width: 800px
+		padding: 72px 80px 80px 80px
+
++screen-is-1366
+	.form.contact--form
+		max-width: 850px
+
+.form.contact--form
+	.title-block
+		display: flex
+		align-items: baseline
+		justify-content: space-between
+		margin-bottom: 30px
+
+	+screen-is-576
+		.title-block
+			margin-bottom: 40px
+
+	+screen-is-992
+		.title-block
+			margin-bottom: 50px
+
+	.title
+		font-size: 30px
+		line-height: 40px
+		letter-spacing: -0.050em
+
+	+screen-is-576
+		.title
+			font-size: 40px
+			line-height: 50px
+
+	.trigger
+		display: none
+		color: $blue
+		font-size: 16px
+		font-weight: 700
+		cursor: pointer
+		transition: color $transition
+	.trigger.mobile-trigger
+		display: inline-block
+
+	+screen-is-576
+		.trigger
+			display: inline-block
+
+	.trigger:hover
+		color: #333333
+	.form-field
+		appearance: none
+		border: none
+		background: none
+		outline: none
+		position: relative
+	.input:valid
+		border-bottom: 1px solid #3C8EFD
+	.textarea
+		resize: none
+		border: none
+		outline: none
+		background: none
+		height: 102px
+	.form-field
+		font-size: 14px
+		border-bottom: 1px solid #E0E1E2
+		padding-bottom: 12px
+		transition: all $transition
+	.form-field::placeholder,
+	.form-field::placeholder
+		color: #A9ACAF
+	.button
+		margin-top: 18px
+		background: none
+		padding: 0
+	.button span
+		background-color: #FFF
+	.button::before,
+	.button span
+		padding: 11px 70px
+	.input-label,
+	.textarea-label
+		width: 100%
+		z-index: 2
+	.input-name
+		margin-bottom: 32px
+	.input:focus,
+	.textarea:focus
+		border-bottom: 1px solid $blue
+	.input-label,
+	.textarea-label
+		position: relative
+		padding-bottom: 12px
+		margin-bottom: 31px
+	.input-label span,
+	.textarea-label span
+		display: inline-block
+		color: #A9ACAF
+		font-size: 14px
+		transition: all $transition
+	.input-label .input,
+	.textarea-label .textarea
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	.input-label .input:focus + span,
+	.input-label .field--filled + span,
+	.textarea-label .textarea:focus + span,
+	.textarea-label .field--filled + span
+		transform: translateY(-25px)
+		font-size: 11px
+	.button-holder
+		text-align: center
+		margin-top: 67px
+	.trigger-holder
+		margin-top: 30px
+
+	+screen-is-768
+		.button-holder
+			text-align: left
+			margin-top: 0
+
+	/* contacts-page form */
+
+.form.contacts-page-form
+	.button-holder
+		margin-top: 0
+	.button span
+		background-color: #FFF
+
+	/* account form */
+
+.account--form
+	font-size: 14px
+	padding: 36px 15px 36px 15px
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+
++screen-is-576
+	.account--form
+		padding: 46px 45px 46px 45px
+
+.account--form
+	.form-title
+		letter-spacing: -0.050em
+		margin-bottom: 30px
+	.form-field
+		appearance: none
+		border: none
+		background: none
+		outline: none
+		position: relative
+	.input:valid
+		border-bottom: 1px solid #3C8EFD
+	.textarea
+		resize: none
+		border: none
+		outline: none
+		background: none
+		height: 102px
+	.form-field
+		font-size: 14px
+		border-bottom: 1px solid #E0E1E2
+		padding-bottom: 12px
+		transition: all $transition
+	.form-field::placeholder,
+	.form-field::placeholder
+		color: #A9ACAF
+	.button
+		margin-top: 18px
+		background: none
+		padding: 0
+		width: 100%
+	.button span
+		background-color: #FFF
+	.button::before,
+	.button span
+		font-size: 16px
+		padding: 11px 70px
+	.input-label,
+	.textarea-label
+		width: 100%
+		z-index: 2
+	.input-name
+		margin-bottom: 32px
+	.input:focus,
+	.textarea:focus
+		border-bottom: 1px solid $blue
+	.input-label,
+	.textarea-label
+		position: relative
+		padding-bottom: 12px
+		margin-bottom: 45px
+	.input-label span,
+	.textarea-label span
+		position: absolute
+		top: 0
+		left: 0
+		display: inline-block
+		color: #A9ACAF
+		font-size: 14px
+		transition: all $transition
+	.input-label .input,
+	.textarea-label .textarea
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	.input-label .input:focus + span,
+	.input-label .field--filled + span,
+	.textarea-label .textarea:focus + span,
+	.textarea-label .field--filled + span
+		transform: translateY(-20px)
+		font-size: 11px
+	.button-holder
+		margin: 27px 0 20px 0
+	.password-trigger
+		display: inline-flex
+		cursor: pointer
+		position: absolute
+		right: 0
+		top: 3px
+		color: #8F8A86
+		font-size: 16px
+	.password-trigger.active
+		color: $blue
+	.input-password
+		padding-right: 30px

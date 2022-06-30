@@ -1,0 +1,62 @@
+// news-style-2 start
+
+section.section.news--style-2
+	.container
+		.row.align-items-end.margin-bottom
+			.col-lg-9.col-md-8
+				.heading.primary-heading
+					+primary-heading('Blog', 'News &', 'Insights')
+			.col-lg-3.col-md-4.d-none.d-lg-block
+				.button-holder
+					+btn-transp('All Articles')
+
+	.container
+		.row.flex-column-reverse.flex-lg-row
+			.col-lg-6
+
+				// item start
+				.news-item--aside
+					.img-holder
+						img.img-bg(src="img/news-thumb-1.jpg" alt="img")
+					.description
+						span.date October 12, 2019
+						a(href="#") Germany Sees Solar Installations Spike to Nearly 3GW in 2018
+				// item end
+
+				// item start
+				.news-item--aside
+					.img-holder
+						img.img-bg(src="img/news-thumb-2.jpg" alt="img")
+					.description
+						span.date October 17, 2019
+						a(href="#") RGS Energy Revives Dow’s Solar Roof, Claiming Better Efficiency 
+				// item end
+
+				// item start
+				.news-item--aside
+					.img-holder
+						img.img-bg(src="img/news-thumb-3.jpg" alt="img")
+					.description
+						span.date October 25, 2019
+						a(href="#") Texas Grid Operator Reports Fuel Mix Is Now 30% Carbon-Free
+				// item end
+
+			.col-lg-6
+
+				// item start
+
+				.news-item--style-2
+					a(href="#").img-holder
+						.overlay
+						img.img-bg(src="img/news--style-2-bg.jpg" alt="img")
+					.description
+						span.date October 12, 2019
+						a(href="#") Trends Shaping the Global Solar Market in 2019
+
+	.container
+		.row
+			.col-12.d-block.d-lg-none
+				.button-holder.text-center.margin-top
+					+btn-transp('All Articles')
+
+// news-style-2 end

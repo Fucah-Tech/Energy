@@ -1,0 +1,53 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'testimonials'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Testimonials')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			include ../blocks/_testimonials--img-left/_testimonials--img-left
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			include ../blocks/_testimonials--primary/_testimonials--primary
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			include ../blocks/_testimonials--img-right/_testimonials--img-right
+
+block footer
+
+	include ../blocks/_footer/_footer

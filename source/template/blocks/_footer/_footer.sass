@@ -1,0 +1,159 @@
+/* footer */
+
+footer.footer
+	background-color: #25272A
+	padding: 70px 0 0 0
+
+footer.footer
+	p:last-of-type
+		margin-bottom: 0
+	.footer-logo
+		display: inline-flex
+	.logo
+		display: inline-flex
+		align-items: center
+	.logo .icon
+		margin-right: 20px
+		font-size: 43px
+		fill: $blue
+	.footer-top
+		padding-bottom: 50px
+
+	+screen-is-992
+		.footer-top
+			padding-bottom: 62px
+
+	a
+		color: $grey
+		transition: color $transition
+		text-decoration: none
+	a:hover
+		color: $blue
+	.footer-logo a span
+		color: #FFF
+		font-size: 30px
+		line-height: 25px
+		letter-spacing: -0.05em
+		text-decoration: none
+	.title
+		color: #FFF
+		margin-bottom: 20px
+		letter-spacing: -0.05em
+		margin-top: 30px
+
+	+screen-is-768
+		.title
+			padding-top: 10px
+			margin-top: 0px
+
+	.footer-contacts
+		margin-top: 4px
+		margin-bottom: 0
+
+	+screen-is-768
+		.footer-contacts
+			margin-bottom: 20px
+
+	+screen-is-992
+		.footer-contacts
+			margin-bottom: 0
+
+	.footer-contacts p:not(:last-of-type)
+		margin-bottom: 0px
+	.footer-menu
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		list-style: none
+		padding: 0
+		margin: 0
+	.footer-menu .active a
+		color: $blue
+	.footer-menu li
+		width: 50%
+		padding-left: 0
+	.footer-menu li::before
+		display: none
+	.footer-lower,
+	.footer-lower p
+		font-size: 14px
+	.footer-lower
+		border-top: 1px solid #2C2F32
+		padding: 31px 0 24px 0
+	.copyright
+		text-align: center
+
+	+screen-is-768
+		.copyright
+			text-align: left
+
+	.privacy-block
+		display: flex
+		justify-content: center
+
+	+screen-is-768
+		.privacy-block
+			justify-content: flex-end
+
+	+screen-is-992
+		.privacy-block
+			justify-content: center
+			text-align: center
+
+	.privacy-block .separator
+		margin: 0 8px
+	.privacy-block a
+		text-decoration: underline
+	.privacy-block a:hover
+		color: $grey
+		text-decoration: none
+	.socials-holder.socials-desktop
+		display: none
+	.socials-primary
+		font-size: 16px
+	.socials-holder.socials-tablet
+		display: none
+		margin-top: 10px
+
+	+screen-is-768
+		.socials-holder.socials-tablet
+			display: flex
+
+	.socials-holder.socials-mobile
+		display: flex
+		justify-content: center
+		margin: 43px 0 0px 0
+
+	+screen-is-992
+		.socials-holder.socials-desktop
+			display: flex
+			justify-content: flex-end
+
+.subscribe-form
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+
+.subscribe-form
+	.input-mail
+		width: 100%
+		background: none
+		border: none
+		border-bottom: 1px solid #3C3D40
+		margin-bottom: 18px
+		padding: 3px 45px 14px 0
+		outline: none
+		color: #FFF
+		background: url(../img/svg/envelope.svg) right 0px no-repeat
+		background-size: 24px 30px
+	.button
+		appearance: none
+		background: none
+		padding: 0
+		width: 100%
+		border: 2px solid $blue
+	.button::before,
+	.button span
+		padding-top: 11px
+		padding-bottom: 11px

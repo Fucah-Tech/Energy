@@ -1,0 +1,302 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'logos'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Logos')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			// logos-primary start
+			.logos.logos--primary
+				.container
+					.row.no-gutters
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-1.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-2.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-3.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-4.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-5.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-6.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-7.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-8.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-9.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-10.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-11.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--primary
+								img(src="img/logo-12.png" alt="logo")
+							// item end
+
+			// logos-primary end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-12
+
+						// logos slider start
+						.logos.logos-slider
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-1.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-2.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-3.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-4.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-5.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-6.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-7.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-8.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-9.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-10.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-11.png" alt="logo")
+							// item end
+
+							// item start
+							.logo-item.slider-item
+								img(src="img/logo-12.png" alt="logo")
+							// item end
+
+						// logos slider end
+
+						// slider nav start
+						.logos-dots
+						// slider nav end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			// logos-grayscaled start
+			.logos.logos--grayscaled
+				.container
+					.row.no-gutters
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-1.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-2.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-3.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-4.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-5.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-6.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-7.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-8.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-9.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-10.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-11.png" alt="logo")
+							// item end
+
+						.col-lg-3.col-sm-4.col-6
+
+							// item start
+							.logo-item.logo-item--grayscaled
+								img(src="img/logo-12.png" alt="logo")
+							// item end
+
+			// logos-grayscaled end
+
+block footer
+
+	include ../blocks/_footer/_footer

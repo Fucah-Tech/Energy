@@ -1,0 +1,70 @@
+	/* testimonials img left */
+
+.testimonials.testimonials--img-left
+	.wrapper
+		display: flex
+		justify-content: space-between
+	.subtitle
+		margin-bottom: 0
+	.img-holder
+		display: none
+		height: 386px
+		width: 198px
+		position: relative
+		overflow: visible
+
+	+screen-is-992
+		.img-holder
+			display: block
+
+	.img-bg
+		z-index: -1
+	.quote-icon
+		display: inline-flex
+		height: 107px
+		width: 62px
+		background-color: $blue
+		position: absolute
+		top: 51px
+		right: -31px
+		z-index: 2
+	.quote-icon span
+		color: #FFF
+		font-size: 92px
+		line-height: 0px
+		position: absolute
+		top: 84px
+		left: 50%
+		transform: translateX(-50%)
+	.heading
+		text-align: left
+		max-width: 100%
+		margin: 0
+	.text-block
+		width: 100%
+
+	+screen-is-992
+		.text-block
+			width: calc(100% - 260px)
+
+	+screen-is-1200
+		.text-block
+			width: calc(100% - 295px)
+
+	.text-block p
+		color: #82868A
+		font-size: 20px
+		line-height: 30px
+	.testimonials-dots
+		display: flex
+		justify-content: flex-start
+		margin: 25px 0
+
+	+screen-is-768
+		.testimonials-dots
+			justify-content: center
+			padding-bottom: 10px
+
+	+screen-is-768
+		.content
+			margin-top: 21px

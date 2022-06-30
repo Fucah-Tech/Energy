@@ -1,0 +1,126 @@
+/* about welcome */
+
+.about-welcome
+	position: relative
+
++screen-is-1200
+	.about-welcome::before
+		content: ""
+		display: block
+		position: absolute
+		width: 41%
+		height: 65%
+		top: 0
+		left: 0
+		background-color: #FAFAFA
+
++screen-is-1600
+	.about-welcome::before
+		width: 43%
+
+.about-welcome
+	.title-block
+		background-color: $blue
+		position: relative
+		padding: 30px 75px 30px 15px
+		margin-bottom: 40px
+
+	+screen-is-576
+		.title-block
+			padding: 40px 70px 40px 30px
+
+	+screen-is-768
+		.title-block
+			padding: 80px 30px 80px 65px
+
+	+screen-is-992
+		.title-block
+			padding: 99px 30px 119px 65px
+			margin-bottom: 30px
+
+	.title-block span
+		display: inline-block
+		color: #6CA8F8
+		font-size: 13px
+		font-weight: 500
+		line-height: 27px
+		text-transform: uppercase
+		margin-bottom: 13px
+	.title-block .title
+		color: #FFF
+		font-size: 30px
+		line-height: 40px
+
+	+screen-is-576
+		.title-block .title
+			font-size: 36px
+			line-height: 46px
+
+	+screen-is-768
+		.title-block .title
+			font-size: 40px
+			line-height: 50px
+
+	.title-block .icon-holder
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #424242
+		height: 90px
+		width: 85px
+		right: -15px
+		bottom: -15px
+
+	+screen-is-768
+		.title-block .icon-holder
+			height: 147px
+			width: 131px
+			bottom: -32px
+			right: -31px
+
+	.title-block .icon-holder .icon
+		font-size: 45px
+		fill: #FFF
+	.description .title
+		letter-spacing: -0.050em
+		margin-bottom: 23px
+	.brands-slider
+		margin-top: 70px
+
+/* about-welcome--style-2 */
+
+.about-welcome--style-2::before
+	display: none
+
+.about-welcome--style-2
+	.button
+		margin-top: 25px
+	.button::before,
+	.button span,
+		padding: 13px 40px
+
+/* about-welcome--style-3 */
+
+.about-welcome--style-3::before
+	display: none
+
+.about-welcome--style-3
+	.heading
+		text-align: left
+		max-width: 100%
+		margin-bottom: 20px
+	.counter-block
+		margin-bottom: 50px
+	.counter-holder
+		margin-top: 50px
+		padding: 60px 0 0 0
+		border: 5px solid #EFF2F5
+
+	+screen-is-768
+		.counter-holder
+			margin-top: 63px
+			padding: 84px 0 13px 0
+
+	.description .button
+		margin-top: 20px

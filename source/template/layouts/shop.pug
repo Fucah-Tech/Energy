@@ -1,0 +1,29 @@
+include ../mixins/_mixins
+
+<!DOCTYPE html>
+html(lang="en")
+
+	block vars
+
+	head
+
+		include ../blocks/_head/_head
+
+	body
+
+		.page-wrapper
+
+			block header
+
+			main.main
+
+				section.promo-primary.promo-primary--shop
+					.overlay
+
+					block promo
+
+				block main
+
+			block footer
+
+		include ../blocks/_scripts/_scripts

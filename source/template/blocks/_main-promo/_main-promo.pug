@@ -1,0 +1,33 @@
+// main promo start
+
+section.main-promo
+
+	include ../_promo-slider/_promo-slider
+
+	// slider nav start
+	.slider-nav
+		.container
+			.row
+				.col-xl-5
+					.inner-block
+						.promo-dots
+						span.paging-info
+	// slider nav end
+
+	// promo-lower start
+	.promo-lower
+		.promo-contacts
+			p.address Elliott Ave, Parkville VIC 3052, Melbourne
+			p.phone-number Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
+			p.e-main Email: #[a(href="mailto:r_energy@mail.co") r_energy@mail.co]
+		.promo-socials
+			include ../_socials-primary/_socials-primary
+		.video-block
+			.img-holder
+				img.img-bg(src="img/video-bg.jpg" alt="img")
+				.overlay
+				a.fancy-video(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+					i.fa.fa-play(aria-hidden=true)
+	// promo-lower end
+
+// main promo end

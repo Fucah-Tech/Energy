@@ -1,0 +1,398 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'team'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Team')
+
+block main
+
+	section.elements
+
+		.element-holder.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row.offset-margin
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--grayscaled start
+						.team-item.team-item--grayscaled
+							.img-holder
+								img.img-bg(src="img/dark-team-1.jpg" alt="img")
+							.description
+								span.name Chris Patt
+								span.position Director of Animal Health
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--grayscaled end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--grayscaled start
+						.team-item.team-item--grayscaled
+							.img-holder
+								img.img-bg(src="img/dark-team-4.jpg" alt="img")
+							.description
+								span.name Anastasia Lee
+								span.position Presedent & CEO
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--grayscaled end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--grayscaled start
+						.team-item.team-item--grayscaled
+							.img-holder
+								img.img-bg(src="img/dark-team-3.jpg" alt="img")
+							.description
+								span.name Martin Garix
+								span.position Director of Wildlife Care
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--grayscaled end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--grayscaled start
+						.team-item.team-item--grayscaled
+							.img-holder
+								img.img-bg(src="img/dark-team-2.jpg" alt="img")
+							.description
+								span.name John Federico
+								span.position Director of Wildlife Care
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--grayscaled end
+
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row.offset-margin
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--dark start
+						.team-item.team-item--dark
+							.img-holder
+								img.img-bg(src="img/dark-team-1.jpg" alt="img")
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end                      
+								.description
+									span.name Chris Patt
+									span.position Director of Animal Health
+						// team-item--dark end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--dark start
+						.team-item.team-item--dark
+							.img-holder
+								img.img-bg(src="img/dark-team-2.jpg" alt="img")
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end                      
+								.description
+									span.name Marilyn Netter
+									span.position Director of Animal Health
+						// team-item--dark end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--dark start
+						.team-item.team-item--dark
+							.img-holder
+								img.img-bg(src="img/dark-team-3.jpg" alt="img")
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end                      
+								.description
+									span.name Martin Garix
+									span.position Director of Animal Health
+						// team-item--dark end
+
+					.col-lg-3.col-md-4.col-sm-6
+
+						// team-item--dark start
+						.team-item.team-item--dark
+							.img-holder
+								img.img-bg(src="img/dark-team-4.jpg" alt="img")
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end                      
+								.description
+									span.name Anastasia Lee
+									span.position Director of Animal Health
+						// team-item--dark end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			.container
+				.row.offset-margin
+					.col-xl-4.col-md-6
+
+						// team-item--rounded-img start
+						.team-item.team-item--rounded-img
+							.img-holder
+								img.img-bg(src="img/dark-team-1.jpg" alt="img")
+							.description
+								span.name Chris Patt
+								span.position Director of Animal Health
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--rounded-img end
+
+					.col-xl-4.col-md-6
+
+						// team-item--rounded-img start
+						.team-item.team-item--rounded-img
+							.img-holder
+								img.img-bg(src="img/dark-team-4.jpg" alt="img")
+							.description
+								span.name Anastasia Lee
+								span.position Presedent & CEO
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--rounded-img end
+
+					.col-xl-4.col-md-6
+
+						// team-item--rounded-img start
+						.team-item.team-item--rounded-img
+							.img-holder
+								img.img-bg(src="img/dark-team-3.jpg" alt="img")
+							.description
+								span.name John Federico
+								span.position Director of Wildlife Care
+								// socials start
+								nav.socials-holder
+									ul.socials-primary
+										li
+											a(href="#")
+												i.fa.fa-facebook(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-twitter(aria-hidden='true')
+										li
+											a(href="#")
+												i.fa.fa-youtube-play(aria-hidden='true')
+								// socials end
+								// team-item--rounded-img end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 4
+
+			.container
+				.row.offset-margin
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-1.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Florian Bottmann
+									span.position Partner & CEO
+						// item end
+
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-2.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Fynn Kliemann
+									span.position Chief Technology Officer
+						// item end
+
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-3.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Matt Harpin
+									span.position Chief Financial Officer
+						// item end
+
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-4.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Carla Santos
+									span.position Chief People Officer
+						// item end
+
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-5.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Gary Hides
+									span.position Learning & Career Manager
+						// item end
+
+					.col-lg-4.col-sm-6
+
+						// item start
+						.team-item.team-item--primary
+							.img-holder
+								img.img-bg(src="img/team-bg-6.jpg" alt="img")
+								include ../blocks/_socials-primary/_socials-primary
+								.description
+									span.name Georgina Wilson
+									span.position Office Manager
+						// item end
+
+block footer
+
+	include ../blocks/_footer/_footer

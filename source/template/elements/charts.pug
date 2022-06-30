@@ -1,0 +1,84 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'charts'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Charts')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-xl-8
+
+						// bart chart start
+						canvas#bar-chart
+						// bart chart end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+			.container
+				.row
+					.col-xl-8
+
+						// line chart start
+						canvas#line-chart
+						// line chart end
+
+		.element-holder.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			.container
+				.row
+					.col-xl-8
+
+						// radar chart start
+						canvas#radar-chart
+						// radar chart end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 4
+
+			.container
+				.row
+					.col-xl-8
+
+						// doughnut chart start
+						canvas#doughnut-chart
+						// doughnut chart end
+
+block footer
+
+	include ../blocks/_footer/_footer

@@ -1,0 +1,145 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'pagination'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Pagination')
+
+block main
+
+	section.elements.elements--pagination
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-12
+
+						// pagination-primary start
+						ul.pagination.pagination--primary
+							li.back
+								a(href="#") Back
+							li.number.current
+								a(href="#") 1
+							li.number
+								a(href="#") 2
+							li.number
+								a(href="#") 3
+							li.number
+								a(href="#") 4
+							li.number
+								a(href="#") 5
+							li.next
+								a(href="#") Next
+						// pagination-primary start
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-12
+
+						// pagination-filled start
+						ul.pagination.pagination--filled
+							li.back
+								a(href="#") Back
+							li.number.current
+								a(href="#") 1
+							li.number
+								a(href="#") 2
+							li.number
+								a(href="#") 3
+							li.number
+								a(href="#") 4
+							li.number
+								a(href="#") 5
+							li.next
+								a(href="#") Next
+						// pagination-filled start
+
+		.element-holder.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			.container
+				.row
+					.col-12
+
+						// pagination-rounded start
+						ul.pagination.pagination--rounded
+							li.back
+								a(href="#") 
+									i.fa.fa-chevron-left(aria-hidden="true")
+							li.number.current
+								a(href="#") 1
+							li.number
+								a(href="#") 2
+							li.number
+								a(href="#") 3
+							li.number
+								a(href="#") 4
+							li.number
+								a(href="#") 5
+							li.next
+								a(href="#")
+									i.fa.fa-chevron-right(aria-hidden="true")
+						// pagination-rounded start
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 4
+
+			.container
+				.row
+					.col-12
+
+						// pagination-rounded start
+						ul.pagination.pagination--rounded.pagination--filled
+							li.back
+								a(href="#") 
+									i.fa.fa-chevron-left(aria-hidden="true")
+							li.number.current
+								a(href="#") 1
+							li.number
+								a(href="#") 2
+							li.number
+								a(href="#") 3
+							li.number
+								a(href="#") 4
+							li.number
+								a(href="#") 5
+							li.next
+								a(href="#")
+									i.fa.fa-chevron-right(aria-hidden="true")
+						// pagination-rounded start
+
+block footer
+
+	include ../blocks/_footer/_footer

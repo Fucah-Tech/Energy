@@ -1,0 +1,36 @@
+/* gallery inner */
+
+.gallery-filter
+	.header-holder
+		display: flex
+		align-items: center
+		justify-content: space-between
+	.tilemode
+		display: none
+		pointer-events: none
+
+	+screen-is-992
+		.tilemode
+			display: block
+
+	.header__title
+		display: inline-block
+		color: #82868A
+		font-size: 13px
+		font-weight: 700
+		text-transform: uppercase
+		background-color: transparent
+		padding: 15px 25px
+		cursor: pointer
+		transition: all $transition
+	.header__title:hover
+		color: $blue
+	.header__title.active
+		color: #FFF
+		background-color: $blue
+	.gallery
+		margin-top: 50px
+
+	+screen-is-768
+		.gallery
+			margin-top: 70px

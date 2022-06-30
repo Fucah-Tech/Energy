@@ -1,0 +1,178 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'breadcrumbs'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Bread Crumbs')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-12
+
+						// breadcrumbs-with-line start
+						nav(aria-label='breadcrumb')
+							ol.breadcrumb.breadcrumb--with-line
+								li.breadcrumb-item
+									a(href='#') Home
+								li.breadcrumb-item
+									a(href='#') About
+								li.breadcrumb-item
+									a(href='#') Services
+								li.breadcrumb-item
+									a(href='#') Portfolio
+								li.breadcrumb-item
+									a(href='#') Blog
+								li.breadcrumb-item.active(aria-current='page') Contact
+						// breadcrumbs-with-line end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-12
+
+						// breadcrumbs-primary start
+						nav(aria-label='breadcrumb')
+							ol.breadcrumb.breadcrumb--primary
+								li.breadcrumb-item
+									a(href='#') Home
+								li.breadcrumb-item
+									a(href='#') About
+								li.breadcrumb-item
+									a(href='#') Services
+								li.breadcrumb-item
+									a(href='#') Portfolio
+								li.breadcrumb-item
+									a(href='#') Blog
+								li.breadcrumb-item.active(aria-current='page') Contact
+						// breadcrumbs-primary end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 3
+
+			.container
+				.row
+					.col-12
+
+						// breadcrumbs-with-dot start
+						nav(aria-label='breadcrumb')
+							ol.breadcrumb.breadcrumb--with-dot
+								li.breadcrumb-item
+									a(href='#') Home
+								li.breadcrumb-item
+									a(href='#') About
+								li.breadcrumb-item
+									a(href='#') Services
+								li.breadcrumb-item
+									a(href='#') Portfolio
+								li.breadcrumb-item
+									a(href='#') Blog
+								li.breadcrumb-item.active(aria-current='page') Contact
+						// breadcrumbs-with-dot end
+
+		.element-holder.no-padding-top.no-padding-bottom
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 4
+
+			.container
+				.row
+					.col-12
+
+						// breadcrumbs-with-icon start
+						nav(aria-label='breadcrumb')
+							ol.breadcrumb.breadcrumb--with-icon
+								li.breadcrumb-item
+									a(href='#') 
+										+svg('home')
+										span Home
+								li.breadcrumb-item
+									a(href='#')
+										+svg('info')
+										span About
+								li.breadcrumb-item
+									a(href='#')
+										+svg('settings')
+										span Services
+								li.breadcrumb-item
+									a(href='#')
+										+svg('portfolio')
+										span Portfolio
+								li.breadcrumb-item
+									a(href='#')
+										+svg('comment') 
+										span Blog
+								li.breadcrumb-item.active(aria-current='page')
+									+svg('navigation')
+									span Contact
+						// breadcrumbs-with-icon end
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 5
+
+			.container
+				.row
+					.col-12
+
+						// breadcrumbs-with-number start
+						nav(aria-label='breadcrumb')
+							ol.breadcrumb.breadcrumb--with-number
+								li.breadcrumb-item
+									a(href='#')
+										span Home
+								li.breadcrumb-item
+									a(href='#') 
+										span About
+								li.breadcrumb-item
+									a(href='#') 
+										span Services
+								li.breadcrumb-item
+									a(href='#')
+										span Portfolio
+								li.breadcrumb-item
+									a(href='#')
+										span Blog
+								li.breadcrumb-item.active(aria-current='page')
+									a(href="#")
+										span Contact
+						// breadcrumbs-with-number end
+
+block footer
+
+	include ../blocks/_footer/_footer

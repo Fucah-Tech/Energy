@@ -1,0 +1,29 @@
+extends ../layouts/shop.pug
+
+block vars
+
+	-var page = 'shopping-checkout'
+
+	-var type = 'shop'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_shop-header/_shop-header
+
+block promo
+
+	picture
+		source(srcset='img/catalog-bg.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/catalog-bg.jpg' alt='img')
+
+	+shop-promo('Checkout')
+
+block main
+
+	include ../blocks/_checkout/_checkout
+
+block footer
+
+	include ../blocks/_footer/_footer

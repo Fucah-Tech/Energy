@@ -1,0 +1,119 @@
+extends ../layouts/shop.pug
+
+block vars
+
+	-var page = 'account'
+
+	-var type = 'shop'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_shop-header/_shop-header
+
+block promo
+
+	picture
+		source(srcset='img/catalog-bg.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/catalog-bg.jpg' alt='img')
+
+	+shop-promo('Account')
+
+block main
+
+	section.section.account-elements
+		.container
+			.row.offset-margin
+				.col-xl-4.col-lg-6.col-md-8.offset-md-2.offset-lg-0
+
+					// sign-in start
+					form.form--primary.account--form(action="javascript:void(0);")
+						.row
+							.col-12
+								h4.form-title Sign In
+							.col-12
+								label.input-label
+									input.form-field.input.input-name(type="text" name="name" required)
+									span Name
+							.col-12
+								label.input-label
+									input#password-field_1.form-field.input.input-password(type="password" name="password" required)
+									span Password
+									.password-trigger(toggle="#password-field_1")
+										+svg('eye')
+							.col-12.d-flex.justify-content-between
+								label
+									input.checkbox.checkbox--primary(type="checkbox" name="Remember" required checked)
+									span.checkbox--primary-mask
+									span.name Remember me
+								a(href="#") I forgot my password
+							.col-12
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Sign in")
+										span Sign in
+							.col-12.text-center
+								span #[a(href="#") Sign up] if you don’t have an account
+					// sign-in end
+
+				.col-xl-4.col-lg-6.col-md-8.offset-md-2.offset-lg-0
+
+					// sign-in start
+					form.form--primary.account--form(action="javascript:void(0);")
+						.row
+							.col-12
+								h4.form-title Sign Up
+							.col-12
+								label.input-label
+									input.form-field.input.input-name(type="text" name="name" required)
+									span Username
+							.col-12
+								label.input-label
+									input.form-field.input.input-email(type="email" name="email" required)
+									span Email
+							.col-12
+								label.input-label
+									input#password-field_2.form-field.input.input-password(type="password" name="password" required)
+									span Password
+									.password-trigger(toggle="#password-field_2")
+										+svg('eye')
+							.col-12
+								label.input-label
+									input#password-field_3.form-field.input.input-password(type="password" name="password" required)
+									span Confirm Password
+									.password-trigger(toggle="#password-field_3")
+										+svg('eye')
+							.col-12
+								span I agree with #[a(href="#") Term of Services]
+							.col-12
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Sign up")
+										span Sign up
+							.col-12.text-center
+								span #[a(href="#") Sign in] if you an account
+					// sign-in end
+
+				.col-xl-4.col-lg-6.col-md-8.offset-md-2.offset-lg-0
+
+					// sign-in start
+					form.form--primary.account--form(action="javascript:void(0);")
+						.row
+							.col-12
+								h4.form-title Password Recovery
+							.col-12
+								label.input-label
+									input.form-field.input.input-email(type="email" name="email" required)
+									span Email
+							.col-12
+								a(href="#") Didn’t get email?
+							.col-12
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Submit")
+										span Submit
+							.col-12.text-center
+								span #[a(href="#") Back] to Sign in
+					// sign-in end
+
+block footer
+
+	include ../blocks/_footer/_footer

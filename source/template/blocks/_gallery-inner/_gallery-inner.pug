@@ -1,0 +1,101 @@
+// gallery inner start
+
+section.section.gallery-inner.no-padding-bottom
+	.gallery-filter
+		.container
+			.row
+				.col-12
+					.header-holder
+
+						// filter header start
+						.filter-header
+							span.header__title.active(data-filter="*") All Projects
+							span.header__title(data-filter=".category_1") Sun Energy
+							span.header__title(data-filter=".category_2") Water Energy
+							span.header__title(data-filter=".category_3") Wind Energy
+							span.header__title(data-filter=".category_4") Bio Energy
+						// tabs header end
+
+						span.tilemode
+							+svg('tilemode')
+
+		.gallery.row.no-gutters
+
+			// gallery item start
+			.col-xl-3.gallery-item.col-sm-6.gallery-item.category_1
+				a.gallery-link(href="img/gallery-1.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-1.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-1.jpg' alt='img')
+				.description
+					span Solar Factory in NY
+			// gallery item end
+
+			// gallery item start
+			.col-xl-6.gallery-item.large.col-sm-6.category_1
+				a.gallery-link(href="img/gallery-2.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-2.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-2.jpg' alt='img')
+				.description
+					span Solar Field in Los Angeles
+			// gallery item end
+
+			// gallery item start
+			.col-xl-3.gallery-item.large.col-sm-6.category_4
+				a.gallery-link(href="img/gallery-3.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-3.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-3.jpg' alt='img')
+				.description
+					span Energy Station
+			// gallery item end
+
+			// gallery item start
+			.col-xl-3.gallery-item.col-sm-6.category_3
+				a.gallery-link(href="img/gallery-4.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-4.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-4.jpg' alt='img')
+				.description
+					span Windmill Station
+			// gallery item end
+
+			// gallery item start
+			.col-xl-3.gallery-item.col-sm-6.category_2
+				a.gallery-link(href="img/gallery-5.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-5.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-5.jpg' alt='img')
+				.description
+					span Electricity Station
+			// gallery item end
+
+			// gallery item start
+			.col-xl-3.gallery-item.col-sm-6.category_4
+				a.gallery-link(href="img/gallery-6.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-6.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-6.jpg' alt='img')
+				.description
+					span Renewable Energy Station
+			// gallery item end
+
+			// gallery item start
+			.col-xl-6.gallery-item.col-12.category_4
+				a.gallery-link(href="img/gallery-7.jpg" data-fancybox="main-gallery")
+					.overlay
+					picture
+						source(srcset='img/gallery-7.jpg' media='(min-width: 992px)')
+						img.img-bg(src='img/gallery-7.jpg' alt='img')
+				.description
+					span Renewable Energy Station
+			// gallery item end
+
+// gallery inner end

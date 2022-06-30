@@ -1,0 +1,127 @@
+// footer start
+
+footer.footer
+	.footer-top
+		.container
+			.row
+				.col-md-4
+
+					// logo start
+					.footer-logo
+						a.logo(href="index.html")
+							+svg('logo')
+							span R-energy
+					// logo end
+
+					// footer contacts start
+					.footer-contacts
+						p.address Elliott Ave, Parkville VIC 3052, #[br] Melbourne Canada
+						p.phone-number Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
+						p.e-main Email: #[a(href="mailto:r_energy@mail.co") r_energy@mail.co]
+					// footer contacts end
+
+				.col-lg-4.offset-lg-0.col-md-7.offset-md-1
+					h4.title Company and Links
+
+					// footer nav start
+					nav.footer-nav
+						ul.footer-menu
+							li(class=(type === "front" ? "active" : undefined))
+								a(href="#") Home
+							li(class=(type === "shop" ? "active" : undefined))
+								a(href="#") Shop
+							li(class=(page === "about" ? "active" : undefined))
+								a(href="#") About Us
+							li(class=(page === "blog" ? "active" : undefined))
+								a(href="#") Blog
+							li(class=(page === "services" ? "active" : undefined))
+								a(href="#") Services
+							li(class=(type === "elements" ? "active" : undefined))
+								a(href="#") Elements
+							li
+								a(href="#") Case studios
+							li(class=(page === "contacts" ? "active" : undefined))
+								a(href="#") Contacts
+					// footer nav end
+
+				.col-md-4.d-lg-none
+					// socials start
+					nav.socials-holder.socials-tablet
+						ul.socials-primary
+							li
+								a(href="#")
+									i.fa.fa-facebook(aria-hidden='true')
+							li
+								a(href="#")
+									i.fa.fa-twitter(aria-hidden='true')
+							li
+								a(href="#")
+									i.fa.fa-youtube-play(aria-hidden='true')
+							li
+								a(href="#")
+									i.fa.fa-instagram(aria-hidden='true')
+					// socials end 
+
+				.col-lg-4.offset-lg-0.col-md-7.offset-md-1
+
+					// footer subscribe start
+					.footer-subscribe
+						h4.title Subscribe
+						form.subscribe-form(action="javascript:void(0);")
+							input.input-mail(type="email" placeholder="Email")
+							button.button.button--filled(type="submit" data-hover="Subscribe")
+								span Subscribe
+
+						// socials start
+						nav.socials-holder.socials-mobile.d-md-none
+							ul.socials-primary
+								li
+									a(href="#")
+										i.fa.fa-facebook(aria-hidden='true')
+								li
+									a(href="#")
+										i.fa.fa-twitter(aria-hidden='true')
+								li
+									a(href="#")
+										i.fa.fa-youtube-play(aria-hidden='true')
+								li
+									a(href="#")
+										i.fa.fa-instagram(aria-hidden='true')
+						// socials end 
+
+					// footer subscribe end
+	.container                
+		.row
+			.col-12
+				.footer-lower
+					.row.align-items-baseline
+						.col-lg-4.col-md-6
+							p.copyright © 2019 R-energy Template by Artureanec
+						.col-lg-4.col-md-6
+
+							// privacy start
+							.privacy-block
+								a(href="#") Privacy Policy #[span.separator |] 
+								a(href="#") Term and Condision
+							// privacy end
+
+						.col-lg-4.col-md-6 
+
+							// socials start
+							nav.socials-holder.socials-desktop
+								ul.socials-primary
+									li
+										a(href="#")
+											i.fa.fa-facebook(aria-hidden='true')
+									li
+										a(href="#")
+											i.fa.fa-twitter(aria-hidden='true')
+									li
+										a(href="#")
+											i.fa.fa-youtube-play(aria-hidden='true')
+									li
+										a(href="#")
+											i.fa.fa-instagram(aria-hidden='true')
+							// socials end 
+
+// footer end

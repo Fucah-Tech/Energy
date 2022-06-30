@@ -1,0 +1,74 @@
+/* blog detail */
+
+.blog-detail
+	position: relative
+
+.blog-detail
+	.iframe-holder
+		margin: 30px 0
+	.promo-holder img
+		display: inline-block
+		width: 100%
+		height: auto
+	.author
+		display: flex
+		justify-content: space-between
+		padding: 35px 0
+
+	+screen-is-768
+		.author
+			padding: 70px 0 35px 0
+
+	.author-block,
+	.date-block
+		display: flex
+		align-items: center
+	.author-block .img-holder
+		height: 48px
+		width: 48px
+		border-radius: 50%
+		position: relative
+		overflow: hidden
+		margin-right: 15px
+	.author-block .name
+		width: calc(100% - 63px)
+	.author-block .img-holder .img-bg
+		z-index: 1
+	.author-block .name
+		font-weight: 500
+	.date-block .icon
+		color: $blue
+		margin-right: 7px
+		position: relative
+		top: -1px
+	.date-block .date
+		font-weight: 500
+	.content-block .title
+		color: $blue
+		margin: 46px 0 13px 0
+	.content-block .title::before
+		content: "."
+		display: inline-block
+		margin-right: 8px
+	.content-block .title span
+		color: #333
+	.content-block blockquote
+		margin: 35px 0
+
+	+screen-is-768
+		.content-block blockquote
+			margin: 53px 0 56px 0
+
+	.tags-block
+		margin: 40px 0
+		padding-bottom: 0
+	.tags-block .name
+		width: 100%
+
+	+screen-is-576
+
+		.tags-block
+			margin: 61px 0 60px
+
+		.tags-block .name
+			width: auto

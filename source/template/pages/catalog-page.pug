@@ -1,0 +1,33 @@
+extends ../layouts/shop.pug
+
+block vars
+
+	-var page = 'catalog-page'
+
+	-var type = 'shop'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_shop-header/_shop-header
+
+block promo
+
+	picture
+		source(srcset='img/catalog-bg.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/catalog-bg.jpg' alt='img')
+
+	+shop-promo('Catalog Page')
+
+block main
+
+	include ../blocks/_catalog/_catalog
+
+	include ../blocks/_relevant/_relevant
+
+	.filter-backdrop
+
+block footer
+
+	include ../blocks/_footer/_footer

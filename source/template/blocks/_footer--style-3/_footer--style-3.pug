@@ -1,0 +1,50 @@
+// footer-style-3 start
+
+footer.footer--style-3
+	.container
+		.row
+			.col-xl-4.offset-xl-4.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1
+				.heading.primary-heading
+					h5.subtitle #[span Sign up] #[span to R-energy]
+
+				// footer subscribe start
+				form.subscribe-form(action="javascript:void(0);")
+					input.input-mail(type="email" placeholder="Email")
+					button.button.button--filled(type="submit" data-hover="Subscribe")
+						span Subscribe
+				// footer subscribe end
+
+				// footer socials start
+				include ../_socials-primary/_socials-primary
+				// footer socials end
+
+	.container
+		.row
+			.col-12
+
+				// lower block start
+				.lower-block
+					.row.align-items-center
+						.col-lg-4
+
+							// logo start
+							.footer-logo
+								a.logo(href="index.html")
+									+svg('logo')
+									span R-energy
+							// logo end
+
+						.col-lg-4
+
+							// privacy start
+							.privacy-block
+								a(href="#") Privacy Policy #[span.separator |] 
+								a(href="#") Term and Condision
+							// privacy end
+
+						.col-lg-4
+							p.copyright © 2019 R-energy Template by Artureanec
+
+				// lower block end
+
+// footer-style-3 end

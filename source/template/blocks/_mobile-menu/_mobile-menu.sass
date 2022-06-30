@@ -1,0 +1,131 @@
+/* mobile menu */
+
+.mobile-nav
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	opacity: 0
+	overflow-y: auto
+	background-color: rgba(33, 35, 38, 0.5)
+
++screen-is-992
+	.mobile-nav
+		display: none
+
+.mobile-nav.is-active
+	visibility: visible
+	opacity: 1
+	z-index: 1071
+
+.nav-inner
+	width: 100%
+	min-height: 100%
+	background-color: #212326
+	padding: 80px 15px 60px 15px
+	box-shadow: 0px 1px 10px rgba(0,0,0, 0.3)
+	text-align: center
+
+.nav-inner
+	.nav-item
+		display: inline-block
+		text-align: left
+	.button-holder
+		margin-top: 41px
+	.button-holder .button span,
+	.button-holder .button::before
+		padding: 13px 30px
+	.button-holder .button::before
+		background-color: #FFF
+		color: $blue
+	.menu-contacts
+		margin-top: 38px
+		width: 100%
+		max-width: 200px
+	.menu-contacts p
+		color: #E2E2E2
+		font-size: 14px
+		line-height: 27px
+		font-weight: 500
+		margin-bottom: 0
+	.menu-contacts p a
+		color: inherit
+		text-decoration: none
+		transition: color $transition
+	.menu-contacts p a:hover
+		color: $blue	
+
+.mobile-menu
+	display: inline-flex
+	flex-direction: column
+	margin: 0
+	list-style-type: none
+
+.mobile-menu
+	li
+		padding: 0
+	li::before
+		display: none
+	> li:not(:last-of-type)
+		margin-bottom: 5px
+	> li > a
+		position: relative
+		color: #FFF
+		font-size: 13px
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		padding: 5px 0
+	> li > a::after
+		content: ""
+		display: block
+		height: 2px
+		width: 0%
+		position: absolute
+		bottom: 0px
+		left: 0
+		background-color: $blue
+		transition: width $transition
+	> li.active a::after
+		width: 100%
+	> li:hover > a::after,
+	> li.sub-menu-opened > a::after
+		width: 100%
+	> li.menu-item--has-child > a > span::before,
+	> li.menu-item--has-child > a > span::after
+		content: ""
+		display: block
+		width: 6px
+		height: 2px
+		background-color: $blue
+		position: absolute
+		top: 13px
+		pointer-events: none
+		transition: all $transition
+	> li.menu-item--has-child > a > span::before
+		right: -15px		
+		transform: rotate(45deg)		
+	> li.menu-item--has-child > a > span::after
+		right: -18px
+		transform: rotate(-45deg)
+	> li.menu-item--has-child.sub-menu-opened > a > span::after
+		transform: rotate(45deg)
+	> li.menu-item--has-child.sub-menu-opened > a > span::before
+		transform: rotate(-45deg)
+	.sub-menu
+		display: none
+		padding-left: 25px
+		margin: 7px 0
+	.sub-menu li:not(:last-of-type)
+		margin-bottom: 5px
+	.sub-menu li a
+		color: #8D9296
+		font-size: 13px
+		text-decoration: none
+		transition: color $transition
+	.sub-menu li a:hover
+		color: #FFF
+	.sub-menu li.active a
+		color: #FFF

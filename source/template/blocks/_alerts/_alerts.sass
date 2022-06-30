@@ -1,0 +1,113 @@
+/* alert common */
+
+.alert
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+
+.alert
+	.title
+		font-weight: 700
+		margin-right: 8px
+	.alert-icon
+		font-size: 18px
+		line-height: 18px
+		margin-right: 20px
+		font-weight: 700
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 15px
+		width: 30px
+		text-align: center
+
+	+screen-is-576
+		.alert-icon
+			left: 25px
+
+	.close
+		color: #FFF
+		font-size: 14px
+		line-height: 14px
+		cursor: pointer
+		margin-left: auto
+		opacity: 0.7
+		transition: opacity $transition
+		text-align: right
+		margin-left: 30px
+	.close:hover
+		opacity: 1
+
+/* alert--filled */
+
+.alert.alert--filled
+	color: #FFF
+	font-size: 16px
+	padding: 18px 15px 16px 55px
+
++screen-is-576
+	.alert.alert--filled
+		font-size: 18px
+		padding: 28px 30px 26px 70px
+
+.alert.alert--filled.alert--success
+	background-color: #ADD87C
+
+.alert.alert--filled.alert--attention
+	background-color: #6FB7D5
+
+.alert.alert--filled.alert--warning
+	background-color: #E1B577
+
+.alert.alert--filled.alert--error
+	background-color: #EA6F6F
+
+.alert.alert--filled.alert--error
+	.alert-icon
+		font-size: 15px
+		line-height: 15px
+
+/* alert--linear */
+
+.alert.alert--linear
+	padding: 16px 15px 14px 55px
+
++screen-is-576
+	.alert.alert--linear
+		padding: 26px 28px 24px 68px
+
+.alert.alert--linear.alert--success
+	color: #ADD87C
+	border: 2px solid #ADD87C
+
+.alert.alert--linear.alert--success
+	.close
+		color: #ADD87C
+
+.alert.alert--linear.alert--attention
+	color: #6FB7D5
+	border: 2px solid #6FB7D5
+
+.alert.alert--linear.alert--attention
+	.close
+		color: #6FB7D5
+
+.alert.alert--linear.alert--warning
+	color: #E1B577
+	border: 2px solid #E1B577
+
+.alert.alert--linear.alert--warning
+	.close
+		color: #E1B577
+
+.alert.alert--linear.alert--error
+	color: #EA6F6F
+	border: 2px solid #EA6F6F
+
+.alert.alert--linear.alert--error
+	.close
+		color: #EA6F6F
+	.alert-icon
+		font-size: 15px
+		line-height: 15px

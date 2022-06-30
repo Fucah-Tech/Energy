@@ -1,0 +1,344 @@
+/* shop product */
+
+.shop-product
+	.sliders-holder
+		width: 100%
+		max-width: 600px
+	.downloads-block
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-top: 40px
+
+	+screen-is-992
+		.downloads-block
+			margin-top: 153px
+
+	+screen-is-1200
+		.downloads-block
+			margin-top: 173px
+
+	.downloads-block a
+		display: inline-flex
+		align-items: center
+		color: #333
+		font-weight: 500
+		text-decoration: none
+		transition: color $transition
+	.downloads-block a:hover
+		color: $blue
+	.downloads-block a:hover .icon-holder
+		background-color: $blue
+		color: #FFF
+	.downloads-block a:not(:last-of-type)
+		margin-bottom: 30px
+
+	+screen-is-768
+		.downloads-block a:not(:last-of-type)
+			margin-bottom: 40px
+
+	.downloads-block .icon-holder
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		background-color: #EFF2F5
+		height: 30px
+		width: 30px
+		color: $blue
+		margin-right: 10px
+		transition: all $transition
+
+/* product sliders */
+
+.product-slider
+	&__badge
+		top: 3px
+		left: 3px
+	.icon
+		position: absolute
+		bottom: 15px
+		right: 15px
+	.slider-item
+		position: relative
+		padding-top: percentage(607/600)
+		background-position: bottom right
+		background-repeat: no-repeat
+		background-size: cover
+		border: 5px solid #EFF2F5
+	img
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		max-height: 70%
+		max-width: 80%
+
+.nav-slider
+	.slider-item
+		cursor: pointer
+		position: relative
+		padding-top: percentage(150/150)
+		vertical-align: top
+	img
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		max-width: 70%
+		max-height: 70%
+	.slick-slide
+		border-bottom: 4px solid transparent
+		transition: border-color $transition
+	.slick-slide:hover,
+	.slick-current
+		border-color: $blue
+
+	/* product about */
+
+.product-about
+	margin-top: 20px
+
++screen-is-992
+	.product-about
+		margin-top: 0
+
+.product-about
+	.status-block
+		border-bottom: 1px solid #EFF2F5
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 14px 0 30px 0
+	.status-block p
+		color: #333
+		font-weight: 500
+		margin-bottom: 0
+	.status-block .current-status
+		color: $blue
+	.status-block .buttons span
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		height: 30px
+		width: 30px
+		background-color: #EFF2F5
+		cursor: pointer
+		transition: background-color $transition
+	.status-block .buttons span.active
+		background-color: $blue
+	.status-block .buttons span.active .icon
+		color: #FFF
+	.status-block .buttons span:hover
+		background-color: $blue
+	.status-block .buttons span:hover .icon
+		color: #FFF
+	.status-block .buttons span:not(:last-of-type)
+		margin-right: 10px
+	.status-block .buttons .icon
+		color: $blue
+		transition: all $transition
+	.details
+		padding: 24px 0 20px 0
+		letter-spacing: -0.050em
+		border-bottom: 1px solid #EFF2F5
+	.details .name
+		margin-bottom: 0
+	.details .price,
+	.details s
+		display: inline-block
+		color: $blue
+		font-size: 30px
+		font-weight: 700
+		margin: 23px 0 21px 0
+	.details s
+		display: inline-block
+		color: #B3BDC7
+		margin-right: 20px
+	.details .details-inner p
+		color: #C7CCD4
+		font-size: 18px
+		margin-bottom: 0
+	.details .details-inner p .value
+		color: #333
+	.tags-block
+		padding-top: 24px
+	.tags-block .name,
+	.rating-block .name
+		width: 100%
+		font-size: 18px
+		font-weight: 500
+		margin-bottom: 15px
+	.rating-block
+		margin-top: 24px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		border-bottom: 1px solid #EFF2F5
+		padding-bottom: 30px
+	.rating-block .stars
+		pointer-events: none
+		margin-left: -12px
+	.rating-block .reviews-count
+		color: $blue
+		font-size: 18px
+		font-weight: 500
+	.add-block
+		padding: 30px 0
+		display: flex
+		align-items: flex-start
+
+	+screen-is-992
+		.add-block
+			justify-content: space-between
+
+	.add-block .count-block
+		display: flex
+		justify-content: space-between
+		border: 1px solid #D0D1D2
+		width: 169px
+		height: 50px
+		margin-right: 15px
+		margin-bottom: 15px
+	.add-block .count-block span
+		display: inline-flex
+		height: 48px
+		width: 48px
+		align-items: center
+		justify-content: center
+		color: #D0D1D2
+		font-size: 18px
+		font-weight: 500
+		cursor: pointer
+		user-select: none
+		transition: all $transition
+	.add-block .count-block span:hover
+		background-color: $blue
+		color: #FFF
+	.add-block .count-block .items-count
+		font-size: 18px
+		font-weight: 500
+		width: calc(100% - 100px)
+		text-align: center
+		border: none
+	.add-block .button
+		width: 169px
+		text-align: center
+
+	+screen-is-576
+		.add-block .button
+			text-align: left
+			width: auto
+
+	.add-block .button span,
+	.add-block .button::before
+		padding: 13px 30px 14px 30px
+
+	+screen-is-992
+		.add-block .button span,
+		.add-block .button::before
+			padding: 13px 45px
+
+	+screen-is-1200
+		.add-block .button span,
+		.add-block .button::before
+			padding: 13px 83px
+
+	input[type=number]::-webkit-outer-spin-button
+	input[type=number]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	input[type=number]
+		-moz-appearance: textfield
+
+.product-info-tabs
+	margin-top: 40px
+
++screen-is-992
+	.product-info-tabs
+		margin-top: 70px
+
++screen-is-1200
+	.product-info-tabs
+		margin-top: 85px
+
+.product-info-tabs
+	.tabs-header__title
+		display: inline-block
+		color: #82868A
+		font-size: 13px
+		font-weight: 700
+		text-transform: uppercase
+		background-color: transparent
+		padding: 15px 25px
+		cursor: pointer
+		transition: all $transition
+	.tabs-header__title:hover
+		color: $blue
+	.tabs-header__title.active
+		color: #FFF
+		background-color: $blue
+	.tabs-content
+		margin-top: 30px
+	.form-block
+		margin-top: 40px
+
+	+screen-is-768
+		.form-block
+			margin-top: 50px
+
+	+screen-is-992
+		.form-block
+			margin-top: 70px
+
+	+screen-is-1200
+		.form-block
+			margin-top: 90px
+
+	.form-block .title
+		letter-spacing: -0.050em
+		margin-bottom: 38px
+	.form-block .title span
+		color: $blue
+	.form-block .comment-form
+		margin: 0 -15px
+	.primary-table:not(:last-of-type)
+		margin-bottom: 30px
+
+	/* primary-table */
+
+.primary-table
+	display: table
+	border-collapse: collapse
+	width: 100%
+
+.primary-table
+	.thead
+		display: table-header-group
+		border-bottom: 1px solid #E5E5E5
+	.tbody
+		display: table-row-group
+	.title
+		color: #333
+	.table-row
+		display: table-row
+	.table-cell
+		display: table-cell
+		vertical-align: middle
+		color: #777777
+		padding: 10px 15px
+
+	+screen-is-768
+		.table-cell
+			padding: 15px 20px
+
+	.tbody .table-row:nth-of-type(even)
+		background-color: #F9F9F9
+
+.specifications-table
+	.table-cell
+		width: 50%

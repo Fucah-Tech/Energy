@@ -1,0 +1,122 @@
+/* header--style-3 */
+
+.header--style-3
+	display: flex
+	align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	max-width: 1540px
+	z-index: 3
+	min-height: 69px
+	background-color: transparent!important
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.1)
+
++screen-is-992
+	.header--style-3
+		position: absolute
+		box-shadow: none
+		left: 50%
+		transform: translateX(-50%)
+
+.header--style-3
+	.button
+		display: none
+
+	+screen-is-992
+		.button
+			display: inline-block
+
+	.button::before,
+	.button span
+		padding: 11px 30px
+
+	+screen-is-992
+		.button
+			display: inline-block
+
+	+screen-is-1200
+		.button::before,
+		.button span
+			padding: 15px 45px
+
+	+screen-is-1366
+		.button::before,
+		.button span
+			padding: 21px 56px
+
+	.container-fluid
+		padding: 0
+	.top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 15px
+		background-color: #FFF
+
+	+screen-is-1200
+		.top
+			padding: 10px 0 10px 45px
+
+	.lower-line
+		display: none
+
+	+screen-is-992
+		.lower-line
+			display: flex
+			justify-content: space-between
+			background-color: #25272A
+			font-size: 14px
+			line-height: 30px
+			font-weight: 500
+			padding: 13px 48px 12px 48px
+			width: 100%
+
+	.lower-line .contacts-block
+		display: flex
+	.lower-line .contacts-block p
+		color: #FFF
+		margin: 0
+	.lower-line .contacts-block a
+		display: inline-block
+		color: #FFF
+		text-decoration: none
+		position: relative
+	.lower-line .phones-block,
+	.lower-line .mail-block
+		margin-left: 59px
+	.lower-line .phones-block a:not(:last-of-type)
+		margin-right: 15px
+	.lower-line .contacts-block a::after
+		content: ""
+		display: block
+		width: 0
+		height: 2px
+		background: $blue
+		position: absolute
+		bottom: -10px
+		left: 0
+		transition: width $transition
+	.lower-line .contacts-block a:hover::after
+		width: 100%
+	.socials-primary a
+		color: $blue
+		font-size: 16px
+	.socials-primary a:hover
+		color: #FFF
+	.lang-select
+		z-index: 3
+		margin-right: 0px
+
+	+screen-is-992
+		.lang-select
+			margin-right: 25px
+
+	+screen-is-1200
+		.lang-select
+			margin-right: 30px
+
+	+screen-is-1200
+		.lang-block
+			margin-right: 10px

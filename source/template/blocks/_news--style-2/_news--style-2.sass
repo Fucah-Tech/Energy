@@ -1,0 +1,134 @@
+/* news--style-2 */
+
+.news--style-2
+	.heading
+		text-align: left
+		max-width: 100%
+		margin: 0
+	.button-holder
+		text-align: left
+		margin-top: 15px
+
+	+screen-is-768
+		.button-holder
+			text-align: right
+			margin-top: 0
+
+	.button span,
+	.button::before
+		padding: 11px 40px
+
+.news-item--style-2
+	position: relative
+
+.news-item--style-2:hover
+	.img-bg
+		transform: scale(1.2)
+	.overlay
+		background-color: rgba(13, 115, 252, 0.55)
+
+/* news-item--aside */
+
+.news-item--aside
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.news-item--aside:not(:last-of-type)
+	margin-bottom: 30px
+
+.news-item--aside
+	.img-holder
+		height: 100px
+		width: 100px
+
+	+screen-is-576
+		.img-holder
+			height: 135px
+			width: 135px
+
+	+screen-is-1200
+		.img-holder
+			height: 170px
+			width: 170px
+
+	.img-bg
+		z-index: -1
+	.description
+		width: calc(100% - 115px)
+
+	+screen-is-576
+		.description
+			width: calc(100% - 165px)
+
+	+screen-is-1200
+		.description
+			width: calc(100% - 200px)
+
+	.description .date
+		color: #C7CCD4
+		font-size: 11px
+		line-height: 27px
+		text-transform: uppercase
+		opacity: 0.7
+		display: block
+	.description a
+		color: #333
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: -0.050em
+		text-decoration: none
+		transition: color $transition
+
+	+screen-is-576
+		.description a
+			font-size: 20px
+
+	+screen-is-1200
+		.description a
+			font-size: 25px
+
+	.description a:hover
+		color: $blue
+
+/* news-item--style-2 */
+
+.news-item--style-2
+	margin-bottom: 50px
+
++screen-is-992
+	.news-item--style-2
+		margin-bottom: 0
+
+.news-item--style-2
+	.img-holder
+		padding-top: percentage(466/570)
+	.img-bg
+		z-index: -1
+		transition: transform $transition
+	.overlay
+		transition: background-color $transition
+	.description
+		background-color: #333
+		padding: 20px 30px 20px 30px
+	.description .date
+		color: #FFF
+		font-size: 11px
+		line-height: 27px
+		text-transform: uppercase
+		opacity: 0.7
+		display: block
+	.description a
+		color: #FFF
+		font-size: 20px
+		font-weight: 700
+		letter-spacing: -0.050em
+		text-decoration: none
+		transition: color $transition
+
+	+screen-is-1200
+		.description a
+			font-size: 25px
+
+	.description a:hover
+		color: $blue

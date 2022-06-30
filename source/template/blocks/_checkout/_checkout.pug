@@ -1,0 +1,98 @@
+// checkout start
+
+section.section.shopping-checkout
+	.container
+		.row
+			.col-12
+				.checkout
+
+					// top line start
+					.top-line
+						span.text #[span Returning customer?] #[a(href="#") Click here to login]
+						span.close
+							+svg('close')
+					// top line end
+
+					// billing form start
+					form.billing-form(action="javascript:void(0);")
+						.row
+							.col-lg-6.col-md-10.offset-md-1.offset-lg-0
+								h4.title Billing Details
+								.row
+									.col-sm-6
+										label.input-label
+											input.form-field.input.input-name(type="text" name="first-name" required)
+											span First Name #[span.required *]
+									.col-sm-6
+										label.input-label
+											input.form-field.input.input-name(type="text" name="last-name" required)
+											span Last Name #[span.required *]
+									.col-12
+										label.input-label
+											input.form-field.input.input-company(type="text" name="company-name" required)
+											span Company Name
+									.col-sm-6
+										label.input-label
+											input.form-field.input.input-email(type="email" name="email" required)
+											span Email #[span.required *]
+									.col-sm-6
+										label.input-label
+											input.form-field.input.input-phone(type="tel" name="phone-number" required)
+											span Phone #[span.required *]
+									.col-12
+										label.input-label
+											input.form-field.input.input-country(type="text" name="country-name" required)
+											span Country #[span.required *]
+									.col-12
+										label.input-label
+											input.form-field.input.input-address(type="text" name="address-name" required)
+											span Address #[span.required *]
+									.col-12
+										label.input-label
+											input.form-field.input.input-town(type="text" name="town-name" required)
+											span Town / City #[span.required *]
+									.col-12
+										label.textarea-label
+											textarea.form-field.textarea(name="comment")
+											span Comments
+							.col-lg-6.col-md-10.offset-md-1.offset-lg-0
+								.payment-block
+									h4.title Payment Methdot
+									.radio-block
+										label
+											span Direct Bank Transfer
+											input.input-radio(type="radio" name="payment-method" value="Direct Bank Transfer" checked)
+											span.radio-mask
+										p Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.
+									.radio-block
+										label
+											span Cheque Payment
+											input.input-radio(type="radio" value="Cheque Payment" name="payment-method")
+											span.radio-mask
+									.radio-block
+										label
+											span Cash on Delivery
+											input.input-radio(type="radio" value="Cash on Delivery" name="payment-method")
+											span.radio-mask
+
+									// shopping totals start
+									.shopping-totals
+										h4.title Cart Totals
+										.total-item
+											span.subtitle Subtotal:
+											span.value $ 4350.00
+										.total-item
+											span.subtitle Sale:
+											span.value $ 100.00
+										.total-item
+											span.subtitle Total:
+											span.value $ 4250.00
+									// shopping totals end
+
+						.row
+							.col-lg-12.col-md-10.offset-md-1.offset-lg-0
+								.button-holder
+									button.button.button--transparent(type="submit" data-hover="Confirm and Place order")
+										span Confirm and Place order
+					// billing form end
+// checkout end

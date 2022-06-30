@@ -1,0 +1,99 @@
+/* promo--style-3 */
+
+.promo--style-3
+	position: relative
+
+.promo--style-3
+	.slider-nav
+		width: 100%
+		max-width: 1540px
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		justify-content: flex-start
+		bottom: 160px
+		padding-left: 15px
+
+	+screen-is-768
+		.slider-nav
+			justify-content: flex-end
+			bottom: 66px
+			padding-right: 15px
+
+	+screen-is-1600
+		.slider-nav
+			padding-right: 0
+
+	.slick-dots li button
+		background-color: #FFF
+	.slick-dots li.slick-active
+		border: 2px solid #FFF
+	.slider-nav .inner-holder
+		display: inline-flex
+		align-items: center
+		position: relative
+		z-index: 2
+	.paging-info
+		color: #FFF
+		font-size: 13px
+		font-weight: 700
+		position: relative
+		top: 2px
+	.slick-dots::after
+		content: ""
+		display: inline-flex
+		height: 1px
+		width: 92px
+		background-color: #BCBEC1
+		margin: 0 29px
+		align-self: center
+
+	+screen-is-576
+		.slick-dots::after
+			width: 111px
+
+	.video-block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 300px
+		height: 140px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	+screen-is-768
+		.video-block
+			width: 310px
+			height: 175px
+
+	.video-block a
+		text-decoration: none
+	.video-block .img-holder
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+	.video-block i
+		position: relative
+		z-index: 2
+		cursor: pointer
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		background-color: #333
+		color: #FFF
+		font-size: 18px
+		height: 56px
+		width: 56px
+		border-radius: 50%
+		transition: all $transition
+	.video-block i:hover
+		color: $blue
+		background-color: #FFF

@@ -1,0 +1,96 @@
+/* cart dropdown */
+
+.cart-dropdown
+	width: 100%
+	max-width: 560px
+	background-color: #FFFFFF
+	box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.06)
+	border-top: 1px solid #F3F6F8
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+	transition: all $transition
+
+.cart-dropdown
+	.items-holder
+		height: 603px
+		overflow-y: scroll
+	.cart-item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 1px solid #F3F6F8
+		padding: 40px
+	.remove
+		cursor: pointer
+		color: $blue
+		height: 40px
+		width: 40px
+		line-height: 40px
+		text-align: center
+		background-color: #EFF2F5
+		transition: all $transition
+	.remove:hover
+		background-color: $blue
+		color: #FFF
+	.remove
+		font-size: 11px
+	.cart-item .item-block
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: calc(100% - 60px)
+	.cart-item .item-block .img-bg
+		z-index: 1
+	.cart-item .text-holder
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	.cart-item .text-holder p
+		color: #C7CCD4
+		font-size: 13px
+		letter-spacing: -0.050em
+		margin: 0
+	.cart-item .text-holder a
+		display: inline-block
+		margin: 3px 0
+		color: #333
+		font-size: 16px
+		font-weight: 700
+		letter-spacing: -0.050em
+		transition: color $transition
+		text-decoration: none
+	.cart-item .text-holder a:hover
+		color: $blue
+	.cart-item .img-holder
+		height: 120px
+		width: 90px
+		position: relative
+	.cart-item .img-holder .img-bg
+		object-fit: contain
+		font-family: 'object-fit: contain'
+	.cart-item .text-holder
+		width: calc(100% - 178px)
+	.cart-item .count
+		color: #82868A
+		font-weight: 700
+		letter-spacing: -0.050em
+	.cart-lower
+		padding: 35px 40px 40px 40px
+	.lower .subtitle,
+	.lower .value
+		font-weight: 500
+		letter-spacing: -0.050em
+	.buttons-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 25px
+	.button
+		font-weight: 500
+	.button--filled span,
+	.button--filled::before
+		padding: 13px 50px
+	.button--transparent span,
+	.button--transparent::before
+		padding: 11px 46px

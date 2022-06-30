@@ -1,0 +1,503 @@
+/* intro start */
+
+/* intro header */
+
+.intro-header
+	width: 100%
+	padding: 20px 15px
+	position: fixed
+	top: 0
+	z-index: 4
+	background-color: #fff
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px 2px
+	.button
+		border: none
+		display: none
+	.block-left
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.hamburger
+		margin-left: auto
+	.intro-menu li a::before
+		background: #FFF
+
+	+screen-is-992
+		.button
+			display: inline-block
+
+	.button span
+		background-color: $blue
+		color: #FFF
+	.button::before
+		background-color: #25272A
+
+	+screen-is-992
+
+		.logo-block .logo span
+			color: #FFF
+			transition: color .3s
+
++screen-is-992
+	.intro-header
+		transition: all $transition
+		background-color: transparent
+		box-shadow: none
+		min-height: 70px
+
++screen-is-1200
+	.intro-header
+		padding: 30px
+
+.intro-header.fixed-header
+	background: #FFF
+	padding: 15px
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px 2px
+	transition: all .3s
+	.logo-block .logo span,
+	.intro-menu li a
+		color: #1E1E1E
+	.intro-menu li a::before
+		background: $blue
+
++screen-is-992
+	.intro-header.fixed-header
+		padding: 10px 30px 3px 30px
+
+.intro-header.fixed-header
+	.intro-menu li a
+		padding: 14px 0 10px 0
+	.button span,
+	.button::before
+		padding: 15px 56px
+
+.intro-menu
+	display: none
+	padding: 0
+	margin: 0
+	li
+		padding-left: 0
+	li:not(:last-of-type)
+		margin-right: 40px
+	li a
+		display: inline-block
+		position: relative
+		color: #FFF
+		font-size: 13px
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		padding: 22px 0
+		transition: color $transition
+	li::before
+		display: none
+	li a::before
+		content: ""
+		display: inline-block
+		width: 0%
+		height: 2px
+		background: $blue
+		position: absolute
+		top: 0
+		left: 0
+		transition: width $transition
+	li a:hover::before
+		width: 100%
+
++screen-is-992
+	.intro-menu
+		display: inline-flex
+
+/* intro promo */
+
+.intro-promo
+	position: relative
+
+.intro-promo
+	.align-container
+		height: 400px
+		padding: 70px 0
+
+	+screen-is-992
+		.align-container
+			height: 700px
+			padding: 200px 0
+
+	+screen-is-1200
+		.align-container
+			height: 900px
+
+	.title
+		color: #FFF
+		font-size: 30px
+
+	+screen-is-576
+		.title
+			font-size: 42px
+
+	+screen-is-992
+		.title
+			font-size: 50px
+
+	+screen-is-1200
+		.title
+			font-size: 60px
+
+	.title span
+		font-weight: 100
+	.button
+		margin-top: 25px
+
+/* intro demos */
+
+.intro-demos
+	position: relative
+
++screen-is-1366
+
+	.intro-demos::before
+		content: ""
+		display: block
+		width: 40%
+		height: 62%
+		background: #EFF2F5
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+
+.intro-demos
+	.primary-heading
+		max-width: 100%
+		margin: 0
+		text-align: left
+	.icon-block
+		display: none
+		color: #FFF
+		font-size: 27px
+		background: #424242
+		padding: 10px 15px
+		margin-bottom: 19px
+
+	+screen-is-576
+		.icon-block
+			display: inline-block
+
+	+screen-is-992
+		.icon-block
+			padding: 23px
+			margin-bottom: 12px
+
+	.demos-holder
+		width: 100%
+		max-width: 1550px
+		margin: 0 auto
+		padding: 0 15px
+	.demos-holder img
+		width: 100%
+		height: auto
+		box-shadow: 0 3px 15px 2px rgba(0,0,0,.1)
+	.demos-holder .top
+		transition: transform $transition
+	.demos-holder .top:hover
+		transform: translateY(-30px)
+	.description
+		text-align: center
+		margin-top: 40px
+
+	+screen-is-576
+		.description
+			margin-top: 50px
+
+	+screen-is-992
+		.description
+			margin-top: 70px
+
+	.description .title
+		color: $blue
+		font-size: 20px
+		font-weight: 700
+	.description .title span
+		color: #333
+	.demo-item
+		margin-bottom: 50px
+	.demo-item .button
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		transition: opacity $transition
+	.demos-holder .top:hover .button
+		opacity: 1
+
+/* intro counts */
+
+.intro-counts
+	.count-holder
+		display: inline-flex
+		align-items: center
+	.sub
+		color: $blue
+		font-size: 80px
+		line-height: 70px
+		font-weight: 700
+	.description
+		letter-spacing: 0.2em
+
+	+screen-is-992
+		.description
+			letter-spacing: 0.8em
+
+/* intro pages */
+
+.intro-pages::before
+	content: ""
+	display: block
+	height: 65%
+	width: 100%
+	background-color: $blue
+	position: absolute
+	top: 0
+	left: 0
+
++screen-is-768
+	.intro-pages::before
+		width: 55%
+
++screen-is-1366
+	.intro-pages::before
+		left: 60px
+
+.intro-pages
+	.top-dots .pages-slider-dots
+		display: none
+
+	+screen-is-768
+		.top-dots .pages-slider-dots
+			display: inline-flex
+
+	.lower-dots
+		padding: 0 15px
+		text-align: center
+		margin-top: 20px
+	.primary-heading
+		max-width: 100%
+		margin: 0
+		text-align: left
+		color: #FFF
+	.primary-heading .title
+		color: #72A5F8
+	.primary-heading .subtitle
+		color: #FFF
+	.primary-heading .subtitle::before
+		display: none
+
+	+screen-is-1366
+		.slider-holder
+			margin-left: calc((100% - 1170px)/ 2)
+			overflow: hidden
+			padding: 15px 0 0 15px
+			margin-bottom: -15px
+
+	.slider-wrapper
+		width: 100%
+		max-width: 1170px
+		margin: 0 auto
+
+	+screen-is-1366
+		.slider-wrapper
+			margin: 0
+
+.pages-slider
+
+	+screen-is-1366
+		.slick-list
+			overflow: visible
+			margin: 0 - 15px
+
+	img
+		width: 100%
+		height: auto
+		box-shadow: 0 3px 10px 2px rgba(0,0,0,.1)
+	a
+		outline: none
+	.slider-item
+		vertical-align: top
+	.slick-slide
+		transition: opacity $transition
+		padding: 15px
+		outline: none
+	.slick-slide:not(.slick-active)
+		opacity: 0.5
+	.description
+		text-align: center
+		transition: opacity $transition
+		margin-top: 30px
+	.slick-slide:not(.slick-active) .description
+		opacity: 0
+	.description .title
+		color: $blue
+		font-size: 20px
+		font-weight: 700
+		margin-bottom: 0
+	.description .title span
+		color: #333
+
+/* intro features */
+
+.intro-features-item:not(:last-of-type)
+	margin-bottom: 70px
+
++screen-is-768
+
+	.intro-features-item:not(:last-of-type)
+		margin-bottom: 100px
+
+.intro-features-item:nth-of-type(even)
+	flex-direction: column-reverse
+
+.intro-features-item:nth-of-type(odd)
+	flex-direction: column
+
++screen-is-768
+	.intro-features-item
+		flex-direction: row!important
+
+.intro-features-item
+	img
+		width: 100%
+		height: auto
+		margin-bottom: 30px
+
+	+screen-is-768
+		img
+			margin-bottom: 0
+
+	.count
+		display: inline-block
+		margin-bottom: 5px
+		color: $blue
+		font-size: 11px
+		font-weight: 700
+	.with--line
+		margin-top: 0px
+
+	+screen-is-768
+		.with--line
+			margin-top: 20px
+
+	.title
+		font-size: 24px
+		margin-bottom: 14px
+
+	+screen-is-992
+		.title
+			font-size: 30px
+
+/* intro used */
+
+.used
+	.title
+		margin-bottom: 10px
+
+.technologies-item
+	height: 80px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 2px solid #EFEFEF
+	padding: 0 15px
+	margin-top: 30px
+
++screen-is-992
+	.technologies-item
+		height: 125px
+
+.technologies-item
+	img
+		filter: grayscale(1)
+		transition: filter $transition
+
+.technologies-item:hover
+	img
+		filter: grayscale(0)
+
+/* intro footer */
+
+.intro-footer
+	background-color: #25272A
+	padding:
+
+.intro-footer
+	.primary-heading
+		margin-bottom: 40px
+	.primary-heading .subtitle
+		color: #FFF
+		margin-top: 0
+		letter-spacing: -0.050em
+	.primary-heading .subtitle span
+		color: #FFF
+	.primary-heading .subtitle span:last-of-type
+		color: $blue
+	.button
+		border: 2px solid $blue
+		width: 100%
+		max-width: 370px
+	.button::before
+		background-color: transparent
+	.button span,
+	.button::before
+		padding: 11px 50px
+	.copyright
+		margin-top: 50px
+		margin-bottom: 0
+
+	+screen-is-768
+		.copyright
+			margin-top: 70px
+
+	+screen-is-992
+		.copyright
+			margin-top: 90px
+
+	+screen-is-1200
+		.copyright
+			margin-top: 110px
+
+/* intro mobile menu */
+
+.intro-mobile-menu
+	margin: 0
+
+.intro-mobile-menu
+	display: inline-flex
+	flex-direction: column
+	margin: 0
+	list-style-type: none
+	li
+		padding: 0
+	li::before
+		display: none
+	> li:not(:last-of-type)
+		margin-bottom: 5px
+	> li > a
+		position: relative
+		color: #FFF
+		font-size: 13px
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		padding: 5px 0
+	> li > a::after
+		content: ""
+		display: block
+		height: 2px
+		width: 0%
+		position: absolute
+		bottom: 0px
+		left: 0
+		background-color: $blue
+		transition: width $transition
+	> li:hover > a::after
+		width: 100%

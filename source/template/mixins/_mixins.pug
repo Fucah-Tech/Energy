@@ -1,0 +1,56 @@
+//- transparent button
+
+mixin btn-transp(text)
+	a.button.button--transparent(href='#', data-hover=text)
+		span=text
+
+//- filled button
+
+mixin btn-filled(text)
+	a.button.button--filled(href='#', data-hover=text)
+		span=text
+
+//- black button
+
+mixin btn-black(text)
+	a.button.button--black(href='#', data-hover=text)
+		span=text
+
+//- link with line
+
+mixin with-line(text)
+	a.with--line(href="#")
+		span=text
+
+//- primary heading
+
+mixin primary-heading(title, black, blue)
+	h3.title=title
+	h5.subtitle #[span=black] #[span=blue]
+
+//- promo primary content
+
+mixin promo-primary(text)
+	.container
+		.row
+			.col-12
+				.align-container
+					.align-item
+						span R-energy
+						h1.title=text
+
+//- shop promo
+
+mixin shop-promo(text)
+	.container
+		.row
+			.col-12
+				.align-container
+					.align-item
+						h1.title=text
+
+//- svg icon
+
+mixin svg(id)
+	svg.icon
+		use(xlink:href="#" + id)

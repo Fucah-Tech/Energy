@@ -1,0 +1,33 @@
+extends ../layouts/primary-inner-map.pug
+
+block vars
+
+	-var page = 'faq'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/contacts.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/contacts.jpg' alt='img')
+
+	+promo-primary('Frequently Asked Questions')
+
+block main
+
+	include ../blocks/_faq/_faq
+
+	include ../blocks/_banner/_banner
+
+	include ../blocks/_map-section/_map-section
+
+block footer
+
+	include ../blocks/_footer/_footer

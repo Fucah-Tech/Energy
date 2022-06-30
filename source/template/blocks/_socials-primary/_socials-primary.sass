@@ -1,0 +1,22 @@
+/* socials primary */
+
+.socials-primary
+	display: inline-flex
+	list-style: none
+	padding: 0
+	margin: 0
+	line-height: initial
+
+.socials-primary
+	li
+		padding-left: 0
+	li::before
+		display: none
+	li:not(:last-of-type)
+		margin-right: 15px
+	a
+		color: $grey
+		padding: 5px
+		transition: color $transition
+	a:hover
+		color: $blue

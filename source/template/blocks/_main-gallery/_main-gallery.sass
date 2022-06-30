@@ -1,0 +1,124 @@
+/* main gallery */
+
+.main-gallery
+	.heading
+		text-align: left
+		max-width: 100%
+		margin-bottom: 0
+	.heading p
+		display: none
+		margin-bottom: 0
+
+	+screen-is-992
+		.heading p
+			display: block
+
+	.title-button
+		display: none
+		text-align: right
+
+	+screen-is-992
+		.title-button
+			display: block
+
+	.button span,
+	.button::before
+		padding: 11px 40px
+
+	.button-block
+		text-align: center
+		margin-top: 60px
+
+	+screen-is-992
+		.button-block
+			margin-top: 0
+			text-align: right
+
+/* gallery */
+
+.gallery
+	.gallery-item
+		position: relative
+		height: 350px
+		overflow: hidden
+
+	+screen-is-992
+		.gallery-item
+			height: 380px
+
+	+screen-is-1366
+		.gallery-item
+			height: 395px
+
+	.gallery-item.large
+		height: 500px
+
+	+screen-is-992
+		.gallery-item.large
+			height: 760px
+
+	+screen-is-1366
+		.gallery-item.large
+			height: 790px
+
+	.gallery-link
+		display: block
+		height: 100%
+		text-decoration: none
+	.gallery-item img
+		z-index: -1
+		transition: transform .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	.gallery-item .overlay
+		background-color: rgba(13, 115, 252, 0.2)
+	.description
+		position: absolute
+		bottom: 0
+		right: 0
+		background-color: #FFF
+		width: 100%
+		max-width: 282px
+		padding: 23px 30px 20px 30px
+		transition: background-color .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+	+screen-is-576
+		.description
+			padding: 30px 30px 27px 30px
+
+	.description span
+		color: #333333
+		font-size: 16px
+		font-weight: 700
+		transition: color .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+	+screen-is-576
+		.description span
+			font-size: 18px
+
+	.gallery-item:hover .description
+		background-color: $blue
+	.gallery-item:hover .description span
+		color: #FFFFFF
+	.gallery-item:hover .overlay
+		background-color: rgba(13, 115, 252, 0.55)
+		transition: background-color .5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	.gallery-item:hover img
+		transform: scale(1.2)
+
+	/* main-gallery--style-3 */
+
+.main-gallery--style-3
+	.gallery-item
+		height: 420px
+	.button-block
+		text-align: center
+		margin-top: 60px
+
+	+screen-is-992
+
+		.button-block
+			margin-top: 0
+			text-align: right
+
+	.button span,
+	.button::before
+		padding: 11px 40px

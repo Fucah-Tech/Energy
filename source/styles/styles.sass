@@ -1,0 +1,971 @@
+@import "libs"
+
+@import "sprite"
+
+@import "fonts"
+
+@import "vars"
+
+@import "_mixins/_breakpoints"
+
+/* primary styles */
+
+body
+	font-family: $font-primary
+	color: $color-primary
+	font-size: 14px
+	min-height: 100vh
+	overflow-x: hidden
+	display: flex
+	padding-top: 69px
+
++screen-is-576
+	body
+		font-size: 16px
+
++screen-is-992
+	body
+		padding-top: 0
+
+.page-wrapper
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	flex-wrap: nowrap
+	min-height: 100vh
+	width: 100%
+
+main.main
+	flex: 1 0 auto
+
++screen-is-1200
+	.container
+		max-width: 1170px
+
+*::selection
+	background-color: #0D73FC
+	color: #FFF
+
+input,
+textarea
+	border-radius: 0
+
+/* button */
+
+.button
+	display: inline-block
+	color: $blue
+	border: 2px solid $blue
+	font-weight: 500
+	text-decoration: none
+	position: relative
+	z-index: 2
+	overflow: hidden
+	text-shadow: 0 0 1px rgba(255,255,255,0.3)
+	white-space: nowrap
+
+.button:hover
+	text-decoration: none
+
+.button span
+	display: block
+	padding: 21px 56px
+	background-color: #FFF
+	transition: all $transition
+
+.button::before
+	content: attr(data-hover)
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -2
+	padding: 21px 56px
+	width: 100%
+	height: 100%
+	transform: translateX(-25%)
+	transition: all $transition
+
+.button:hover span
+	transform: translateX(100%)	
+
+.button:hover::before,
+.button:focus::before
+	transform: translateX(0%)
+
+/* button--primary */
+
+.button--transparent.button--primary span,
+.button--transparent.button--primary::before
+	padding: 16px 55px
+
+.button--filled.button--primary span,
+.button--filled.button--primary::before
+	padding: 18px 55px
+
+/* button--rounded */
+
+.button--transparent.button--rounded,
+.button--filled.button--rounded
+	border-radius: 50px
+
+/* button--radius */
+
+.button--transparent.button--radius,
+.button--filled.button--radius
+	border-radius: 4px
+
+/* button--dark */
+
+.button--primary.button--dark
+	color: #FFF
+	border: none
+
+.button--primary.button--dark span,
+.button--primary.button--dark::before
+	padding: 18px 55px
+
+.button--primary.button--dark span
+	background-color: #25272A
+
+.button--primary.button--dark::before
+	background-color: #4C4D4D
+
+/* button--dark */
+
+.button--primary.button--gray
+	color: #FFF
+	border: none
+
+.button--primary.button--gray span,
+.button--primary.button--gray::before
+	padding: 18px 55px
+
+.button--primary.button--gray span
+	background-color: #4C4D4D
+
+.button--primary.button--gray::before
+	background-color: #25272A
+
+/* button transparent */
+
+.button.button--transparent::before
+	background-color: $blue
+	color: #FFF
+
+/* button filled */
+
+.button.button--filled,
+.button.button--filled::before
+	border: none
+
+.button.button--filled span
+	color: #FFF
+	background-color: $blue
+
+.button.button--filled::before
+	background-color: #25272a
+	color: #FFF
+
+/* with line */
+
+.with--line
+	display: inline-block
+	color: $blue
+	font-weight: 700
+	text-decoration: none
+	transition: color $transition
+
+.with--line:hover
+	color: #333333
+
+.with--line::after
+	content: ""
+	display: inline-block
+	width: 49px
+	height: 1px
+	background-color: $blue
+	vertical-align: middle
+	position: relative
+	transition: all $transition
+	margin-left: 12px
+
+.with--line:hover::after
+	width: 17px
+	background-color: #333
+
+/* button black */
+
+.button.button--black
+	color: #25272A
+	font-weight: 500
+	border: 2px solid #25272A
+	text-decoration: none
+
+.button.button--black span,
+.button.button--black::before
+	padding: 11px 25px
+
+.button.button--black::before
+	color: #FFF
+	background-color: #25272A
+
+.button.button--common span,
+.button.button--common::before
+	padding: 11px 30px
+
+// table centring items
+
+.align-container
+	display: table
+	width: 100%
+	height: 100%
+
+.align-item
+	display: table-cell
+	vertical-align: middle
+
+/* text center */
+
+.text-center
+	text-align: center
+
+/* primary heading */
+
+.primary-heading
+	width: 100%
+	max-width: 650px
+	margin: 0 auto 40px auto
+
++screen-is-992
+	.primary-heading
+		margin: 0 auto 50px auto
+
++screen-is-992
+	.primary-heading
+		text-align: center
+		margin: 0 auto 60px auto
+
+.primary-heading
+	.title
+		color: $blue
+		font-size: 13px
+		line-height: 27px
+		font-weight: 500
+		text-transform: uppercase
+	.subtitle
+		color: $color-primary
+		font-size: 30px
+		line-height: 40px
+		font-weight: 700
+		letter-spacing: -0.030em
+
+	+screen-is-768
+		.subtitle
+			font-size: 36px
+			line-height: 46px
+
+	+screen-is-992
+		.subtitle
+			font-size: 40px
+			line-height: 50px
+			margin: 13px 0 0 0
+			
+	p
+		margin-top: 18px
+
+// inner heading
+
+.inner-heading
+	text-align: left
+	max-width: 100%
+
+.heading-description
+	padding-top: 0px
+
+.heading-description
+	.with--line
+		margin-top: 15px
+
+.heading-description
+	margin-top: 0px
+	padding-top: 0
+
++screen-is-576
+	.heading-description
+		margin-top: 30px
+
++screen-is-992
+	.heading-description
+		margin-top: 0px
+		padding-top: 33px
+
+.heading-description
+	p:last-of-type
+		margin-bottom: 0
+
+.inner-heading 
+	.subtitle
+		color: #333
+		font-size: 30px
+		line-height: 40px
+		margin-bottom: 25px
+
+	+screen-is-576
+		.subtitle
+			font-size: 40px
+			line-height: 50px
+			margin-bottom: 0
+
+	.title-holder
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	+screen-is-576
+		.title-holder
+			flex-direction: row
+			align-items: flex-end
+
+	.title-block
+		width: 100%
+		max-width: 370px
+	.description p:last-of-type
+		margin-bottom: 0	
+	.img-block
+		display: none
+		height: 87px
+		width: 85px
+		background-color: #25272A
+		justify-content: center
+		align-items: center
+		position: relative
+		margin-bottom: 20px
+	
+	+screen-is-576
+		.img-block
+			display: flex
+			top: -9px
+			margin-bottom: 0
+
+	.img-block .icon
+		fill: #FFF
+		font-size: 37px
+
+// heading with bg
+
+.inner-heading--with-bg
+	background-color: #EFF2F5
+	padding: 70px 0
+	position: relative
+
++screen-is-768
+	.inner-heading--with-bg
+		padding: 90px 0
+
++screen-is-992
+	.inner-heading--with-bg
+		padding: 120px 0
+
++screen-is-1200
+	.inner-heading--with-bg
+		padding: 140px 0
+
+.inner-heading--with-bg
+	.heading
+		margin-bottom: 0
+
+.inner-heading--with-bg
+	.img-block
+		background-color: $blue
+	p
+		margin-top: 0
+
+// tags
+
+.tags-block
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	padding-bottom: 30px
+
+.tags-block 
+	.tag
+		position: relative
+		font-size: 13px
+		font-weight: 500
+		background-color: #F6F8F9
+		padding: 11px 40px 10px 20px
+		transition: all $transition
+		margin-bottom: 10px
+	.tag .close
+		cursor: pointer
+		font-size: 11px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 20px
+		opacity: 1
+		transition: all $transition 
+	.tag:hover
+		background-color: #25272A
+		color: #FFF
+	.tag:hover .close
+		color: #FFF
+	.tag .close:hover
+		opacity: 1	
+	.tag:not(:last-of-type)
+		margin-right: 10px
+	.name
+		font-size: 20px
+		font-weight: 700
+		margin-right: 20px
+		margin-bottom: 10px
+
+// paddings
+
+.no-padding
+	padding: 0!important
+
+.no-padding-top
+	padding-top: 0!important
+
+.no-padding-bottom
+	padding-bottom: 0!important
+
+.no-margin-bottom
+	margin-bottom: 0 !important
+
+.offset-top-10
+	margin-top: -10px !important
+
+// fancybox
+
+.fancybox-is-open .fancybox-bg
+	opacity: 1
+	background-color: rgba(37, 39, 42, 0.8)
+
+// overlay
+
+.overlay
+	position: absolute
+	height: 100%
+	width: 100%
+	background-color: rgba(13, 115, 252, 0.14)
+	top: 0
+	right: 0
+	transition: background-color $transition
+
+// img holder
+
+.img-holder
+	display: block
+	position: relative
+	overflow: hidden
+
+// img bg
+
+.img-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	margin: auto
+	object-fit: cover
+	object-position: 50% 50%
+	font-family: "object-fit: cover; object-position: 50% 50%"
+
+// img contain
+
+.img-contain
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: auto
+	transform: translate(-50%, -50%)
+	object-fit: contain
+	font-family: "object-fit: contain; object-position: 50% 50%"
+
+// offset-margin
+
+.offset-margin
+	margin-bottom: -50px!important
+
+// align end
+
+.align-self-xl-end
+	display: flex
+	align-self: flex-end
+
+.text-right
+	text-align: right
+
+.margin-top
+	margin-top: 50px !important
+
+// elements
+
+.elements
+	.element-title
+		letter-spacing: -0.050em
+		margin-bottom: 50px
+	.element-holder
+		padding: 70px 0
+	.element-holder section.section
+		padding: 0!important
+
+// elment-holder
+
++screen-is-768
+	.elements 
+		.element-holder
+			padding: 90px 0
+
++screen-is-992
+	.elements 
+		.element-holder
+			padding: 120px 0
+
++screen-is-1200
+	.elements
+		.element-holder
+			padding: 140px 0
+
+.elements--alerts
+	.alert:not(:last-of-type)
+		margin-bottom: 30px
+
+.elements--pagination
+	.pagination
+		justify-content: flex-start
+
+.elements--buttons
+	.button
+		margin-bottom: 8px
+
+// section
+
+.section
+	position: relative
+
+.section
+	padding: 70px 0
+
++screen-is-768
+	.section
+		padding: 90px 0
+
++screen-is-992
+	.section
+		padding: 120px 0
+
++screen-is-1200
+	.section
+		padding: 140px 0
+
+// margin
+
+.margin-bottom
+	margin-bottom: 30px
+
++screen-is-576
+	.margin-bottom
+		margin-bottom: 40px
+
++screen-is-768
+	.margin-bottom
+		margin-bottom: 50px
+
++screen-is-992
+	.margin-bottom
+		margin-bottom: 60px
+
+input[type=number]
+	-moz-appearance: textfield
+
+.account-elements
+	.account--form
+		margin-bottom: 50px
+
+.slick-dots
+	flex-wrap: wrap
+	justify-content: center
+
+.lower-pages-slider-dots
+	li
+		margin-bottom: 10px
+
+@keyframes animation1
+	0%
+		transform: scale(0)
+	100%
+		transform: scale(1)
+
+@keyframes animation2
+	0%
+		transform: translate(0, 0)
+	100%
+		transform: translate(19px, 0)
+
+@keyframes animation3
+	0%
+		transform: scale(1)
+	100%
+		transform: scale(0)
+
+.badge
+	display: inline-block
+	color: #FFF
+	font-size: 13px
+	font-weight: 700
+	text-transform: uppercase
+	padding: 5px 15px
+	border-radius: 0
+	position: absolute
+	z-index: 2
+
+.badge--new
+	background: #22A86D
+
+.badge--hot
+	background: #FFB00D
+
+.badge--sale
+	background: #E23F69
+
+.badge--discount
+	background: $blue
+
+.articles
+	&__inner:first-of-type
+		margin-top: 70px
+
+	+screen-is-768
+
+		&__inner:first-of-type
+			margin-top: 0px
+
+	&__inner:not(:last-of-type)
+		margin-bottom: 50px
+	&__title
+		margin-bottom: 30px
+	.tags-block
+		padding-bottom: 0
+	.cases-item .img-holder
+		min-height: 340px
+
+/* article item */
+
+.article-item
+	box-shadow: 0 3px 15px 2px rgba(0,0,0,.05)
+	margin-bottom: 50px
+
+.article-item
+	&__img
+		position: relative
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(520/750)
+	&__category
+		color: #ACAFB4
+		font-size: 12px
+		font-weight: 500
+		text-transform: uppercase
+	&__title
+		font-size: 24px
+		margin-top: 17px
+
+	+screen-is-992
+
+		&__title
+			font-size: 30px
+
+	&__link
+		color: inherit
+		text-decoration: none
+		transition: color .3s
+	&__link:hover
+		color: $blue
+	&__date
+		color: $blue
+		font-size: 12px
+		font-weight: 500
+		display: inline-flex
+		align-items: center
+	&__date .icon
+		margin-right: 8px
+	&__text
+		margin-top: 17px
+	&__text:last-of-type
+		margin-bottom: 0
+	&__details
+		padding: 32px 30px
+
+.category-list
+	margin-bottom: 0
+
+.category-list
+	&__item
+		color: #333
+		display: flex
+		padding: 0
+		font-weight: 500
+		cursor: pointer
+		transition: color .3s
+	&__item:hover
+		color: $blue
+	&__item:not(:last-of-type)
+		margin-bottom: 13px
+	&__item::before
+		display: none
+	&__item span:first-of-type
+		width: 70%
+	&__item span:nth-of-type(2)
+		color: $blue
+		width: 30%
+
+.recent-item
+	&__img
+		position: relative
+		padding-top: percentage(67/67)
+	&__title
+		margin-bottom: 0
+		line-height: 24px
+	&__title a
+		color: inherit
+		text-decoration: none
+		transition: color .3s
+	&__title a:hover
+		color: $blue
+	&__date
+		color: $blue
+		font-size: 12px
+		font-weight: 500
+
+.recent-item:first-of-type
+	margin-top: 26px
+
+.recent-item:not(:last-of-type)
+	margin-bottom: 30px
+
+.recent-comment
+	color: #82868A
+	font-weight: 500
+
+.recent-comment:not(:last-of-type)
+	margin-bottom: 8px
+
+.recent-comment a
+	color: $blue
+	text-decoration: none
+
+.article-search
+	display: flex
+	justify-content: space-between
+
+.article-search
+	&__field
+		height: 50px
+		border: none
+		border-bottom: 2px solid #D7D8D9
+		width: calc(100% - 80px)
+	&__submit
+		color: #FFF
+		border: none
+		height: 50px
+		width: 70px
+		background: $blue
+		transition: background .3s
+	&__submit:hover
+		background: #1D252B
+
+@import "../template/blocks/_typography/_typography"
+
+@import "../template/blocks/_mobile-menu/_mobile-menu"
+
+@import "../template/blocks/_menu-trigger/_menu-trigger"
+
+@import "../template/blocks/_header/_header"
+
+@import "../template/blocks/_main-menu/_main-menu"
+
+@import "../template/blocks/_main-promo/_main-promo"
+
+@import "../template/blocks/_promo-slider/_promo-slider"
+
+@import "../template/blocks/_socials-primary/_socials-primary"
+
+@import "../template/blocks/_services/_services"
+
+@import "../template/blocks/_icon-list--primary/_icon-list--primary"
+
+@import "../template/blocks/_about/_about"
+
+@import "../template/blocks/_text-section/_text-section"
+
+@import "../template/blocks/_special-offer/_special-offer"
+
+@import "../template/blocks/_pricing/_pricing"
+
+@import "../template/blocks/_main-gallery/_main-gallery"
+
+@import "../template/blocks/_pricing-table/_pricing-table"
+
+@import "../template/blocks/_cooperation/_cooperation"
+
+@import "../template/blocks/_cooperation-slider/_cooperation-slider"
+
+@import "../template/blocks/_testimonials--primary/_testimonials--primary"
+
+@import "../template/blocks/_blog/_blog"
+
+@import "../template/blocks/_banner/_banner"
+
+@import "../template/blocks/_brands/_brands"
+
+@import "../template/blocks/_brands-slider/_brands-slider"
+
+@import "../template/blocks/_map-section/_map-section"
+
+@import "../template/blocks/_contact-form/_contact-form"
+
+@import "../template/blocks/_footer/_footer"
+
+@import "../template/blocks/_promo-primary/_promo-primary"
+
+@import "../template/blocks/_about-welcome/_about-welcome"
+
+@import "../template/blocks/_video-section/_video-section"
+
+@import "../template/blocks/_statistics/_statistics"
+
+@import "../template/blocks/_team/_team"
+
+@import "../template/blocks/_team-items/_team-items"
+
+// @import "../template/blocks/_blog-inner/_blog-inner"
+
+@import "../template/blocks/_get-in-touch/_get-in-touch"
+
+@import "../template/blocks/_contacts-banner/_contacts-banner"
+
+@import "../template/blocks/_services-inner/_services-inner"
+
+@import "../template/blocks/_we-provide/_we-provide"
+
+@import "../template/blocks/_services-details/_services-details"
+
+@import "../template/blocks/_pricing--inner/_pricing--inner"
+
+@import "../template/blocks/_pricing-table--inner/_pricing-table--inner"
+
+@import "../template/blocks/_products/_products"
+
+@import "../template/blocks/_products-tabs/_products-tabs"
+
+@import "../template/blocks/_pagination/_pagination"
+
+@import "../template/blocks/_blog-detail/_blog-detail"
+
+@import "../template/blocks/_books/_books"
+
+@import "../template/blocks/_cases-details/_cases-details"
+
+@import "../template/blocks/_project-gallery/_project-gallery"
+
+@import "../template/blocks/_live-comment/_live-comment"
+
+@import "../template/blocks/_comments-block/_comments-block"
+
+@import "../template/blocks/_product-params/_product-params"
+
+@import "../template/blocks/_product-description/_product-description"
+
+@import "../template/blocks/_product-info/_product-info"
+
+@import "../template/blocks/_faq/_faq"
+
+@import "../template/blocks/_accordion/_accordion"
+
+@import "../template/blocks/_404/_404"
+
+@import "../template/blocks/_shop-header/_shop-header"
+
+@import "../template/blocks/_cart-dropdown/_cart-dropdown"
+
+@import "../template/blocks/_relevant/_relevant"
+
+@import "../template/blocks/_catalog/_catalog"
+
+@import "../template/blocks/_additional/_additional"
+
+@import "../template/blocks/_additional-slider/_additional-slider"
+
+@import "../template/blocks/_shop-product/_shop-product"
+
+@import "../template/blocks/_rating-stars/_rating-stars"
+
+@import "../template/blocks/_checkout/_checkout"
+
+@import "../template/blocks/_shopping-cart/_shopping-cart"
+
+@import "../template/blocks/_project-cases/_project-cases"
+
+@import "../template/blocks/_gallery-inner/_gallery-inner"
+
+@import "../template/blocks/_promo--style-2/_promo--style-2"
+
+@import "../template/blocks/_services--style-2/_services--style-2"
+
+@import "../template/blocks/_benefits/_benefits"
+
+@import "../template/blocks/_news--style-2/_news--style-2"
+
+@import "../template/blocks/_brands--style-2/_brands--style-2"
+
+@import "../template/blocks/_cases--style-2/_cases--style-2"
+
+@import "../template/blocks/_cases-slider/_cases-slider"
+
+@import "../template/blocks/_footer--style-2/_footer--style-2"
+
+@import "../template/blocks/_platform/_platform"
+
+@import "../template/blocks/_header--style-3/_header--style-3"
+
+@import "../template/blocks/_promo--style-3/_promo--style-3"
+
+@import "../template/blocks/_features/_features"
+
+@import "../template/blocks/_products--style-3/_products--style-3"
+
+@import "../template/blocks/_app/_app"
+
+@import "../template/blocks/_news--style-3/_news--style-3"
+
+@import "../template/blocks/_brands--with-heading/_brands--with-heading"
+
+@import "../template/blocks/_instagram/_instagram"
+
+@import "../template/blocks/_instagram-slider/_instagram-slider"
+
+@import "../template/blocks/_footer--style-3/_footer--style-3"
+
+@import "../template/blocks/_testimonials--img-left/_testimonials--img-left"
+
+@import "../template/blocks/_testimonials--img-right/_testimonials--img-right"
+
+@import "../template/blocks/_icon-list--with-btn/_icon-list--with-btn"
+
+@import "../template/blocks/_logos/_logos"
+
+@import "../template/blocks/_tabs/_tabs"
+
+@import "../template/blocks/_alerts/_alerts"
+
+@import "../template/blocks/_breadcrumbs/_breadcrumbs"
+
+@import "../template/blocks/_progress/_progress"
+
+@import "../template/blocks/_intro/_intro"

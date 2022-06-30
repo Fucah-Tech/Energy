@@ -1,0 +1,32 @@
+/* instagram slider */
+
+.instagram-slider
+	&__item
+		position: relative
+		vertical-align: top
+	.img-holder
+		display: block
+	.img-holder::before
+		content: ""
+		display: block
+		padding-top: percentage(280/318)
+	.img-holder img
+		transition: transform $transition
+	.img-holder i
+		color: #FFF
+		font-size: 18px
+		position: absolute
+		bottom: 20px
+		left: 20px
+		opacity: 0.5
+		transition: opacity $transition
+	.img-holder:hover img
+		transform: scale(1.1)
+	.img-holder:hover i
+		opacity: 1
+
+.instagram-slider-holder
+	.slick-dots
+		display: flex !important
+		justify-content: center
+		margin-top: 30px

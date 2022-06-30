@@ -1,0 +1,69 @@
+// shop header start
+
+header#header.shop-header
+	.container-fluid
+		.row.no-gutters
+			.col-12
+
+				// top line start
+				.top-line
+					.contacts-block
+						.address-block
+							p Elliott Ave, Parkville VIC 3052, Melbourne
+						.phones-block
+							a(href="tel:+31859644725") +31 85 964 47 25
+							a(href="tel:+31853255813") +31 85 325 58 13
+						.mail-block
+							a(href="mailto:r_enery@mail.com") r_enery@mail.co
+					.socials-block
+						include ../_socials-primary/_socials-primary
+				// top line end
+
+		.row.no-gutters
+			.col-12
+				.lower
+
+					// logo block start
+					.logo-block
+						a.logo(href="index.html")
+							+svg('logo')
+							span R - energy
+					// logo block end
+
+					// menu block start
+					.menu-block
+						include ../_main-menu/_main-menu
+					// menu block end
+
+					.block-right
+
+						// lang block start
+						.lang-block
+							ul.lang-select
+								li.lang-item.active #[span EN]
+									ul.sub-list
+										li.lang-item
+											a(href="#") French
+										li.lang-item
+											a(href="#") Spanish
+										li.lang-item
+											a(href="#") Deutsch
+										li.lang-item
+											a(href="#") Russian             
+						// lang block end
+
+						.user-block
+							+svg('user')
+
+						// cart block start
+						.cart-trigger
+							a(href="shopping-cart.html")
+								.cart-block
+									span.count 3
+									+svg('bag')
+							include ../_cart-dropdown/_cart-dropdown
+						// cart block end
+
+						include ../_menu-trigger/_menu-trigger
+
+// shop header end

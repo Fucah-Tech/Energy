@@ -1,0 +1,122 @@
+/* index 3 products */
+
+.products--style-3
+	position: relative
+
+.products--style-3::before
+	content: ""
+	display: none
+	height: calc(100% - 400px)
+	background-color: $blue
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: 0
+
++screen-is-1366
+	.products--style-3::before
+		width: 50px
+		display: block
+
++screen-is-1600
+	.products--style-3::before
+		width: 100px
+
+.products--style-3
+	.heading
+		text-align: left
+		max-width: 100%
+		margin-bottom: 0
+	.button-block
+		display: flex
+		flex-direction: column-reverse
+		align-items: flex-start
+		margin: 15px 0
+
+	+screen-is-576
+		.button-block
+			margin: 15px 0 0 0
+			flex-direction: row
+			align-items: center
+
+	+screen-is-992
+		.button-block
+			margin-top: 0
+			justify-content: flex-end
+			padding-top: 14px
+
+	.button-block .button
+		margin: 12px 0 30px 0
+
+	+screen-is-576
+		.button-block .button
+			margin: 0
+
+	.button span,
+	.button::before
+		padding: 11px 40px
+
+	+screen-is-992
+
+		.button span,
+		.button::before
+			padding: 11px 25px
+
+	+screen-is-1200
+		.button span,
+		.button::before
+			padding: 11px 40px
+
+	+screen-is-1200
+		.slider-holder
+			overflow: hidden
+			margin-left: calc((100% - 1170px) / 2)
+
+	.slider-wrapper
+		padding: 0 15px
+
+	+screen-is-1200
+		.slider-wrapper
+			width: 100%
+			max-width: 1170px
+			padding: 0
+
+	.products-slider-dots
+		display: flex
+		align-items: center
+	.products-slider-dots::after
+		display: none
+
+	+screen-is-992
+		.products-slider-dots::after
+			content: ""
+			display: inline-flex
+			height: 1px
+			width: 70px
+			background-color: #BCBFBF
+			margin: 0 30px
+
+	+screen-is-1200
+		.products-slider-dots::after
+			width: 147px
+
+	.product-item
+		margin-bottom: 0
+
+.products-slider
+
+	.slick-list
+		margin: 0 -15px
+
+	+screen-is-1200
+		.slick-list
+			overflow: visible
+			margin: 0
+
+	+screen-is-1200
+		.slick-track
+			margin: auto
+
+	.slick-slide
+		margin: 0 15px
+		padding-top: 10px

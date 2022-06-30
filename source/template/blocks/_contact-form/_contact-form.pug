@@ -1,0 +1,31 @@
+// contact form start
+
+form.form.js-contact-form.contact--form(autocomplete="off" action="#")
+	.container
+		.row
+			.col-12
+				.title-block
+					h3.title Get in #[span Touch]
+					span.trigger See Google Map
+		.row
+			.col-md-6
+				label.input-label
+					input.form-field.input.input-name(type="text" name="name" required)
+					span Name
+				label.input-label
+					input.form-field.input.input-mail(type="email" name="email" required)
+					span Email
+			.col-md-6
+				label.textarea-label
+					textarea.form-field.textarea(name="message")
+					span Comment
+		.row
+			.col-12
+				.button-holder
+					button.button.button--transparent(type="submit" data-hover="Send")
+						span Send
+					.trigger-holder.d-sm-none
+						span.trigger.mobile-trigger See Google Map
+					.form__note
+
+// contact form end

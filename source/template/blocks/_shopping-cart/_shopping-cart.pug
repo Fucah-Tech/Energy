@@ -1,0 +1,124 @@
+// shopping cart start
+
+section.section.shopping-cart
+	.container
+		.row
+			.col-12
+				.cart-inner
+
+					// cart heading start
+					.cart-heading
+						.product-block
+							span Product
+						.price-block
+							span Price
+						.quantity-block
+							span Quantity
+						.total-block
+							span Total Price
+						.next-block
+					// cart heading end
+
+					// cart content start
+					.cart-content
+						// cart item start
+						.cart-item
+							.product-block.inner-block
+								a(href="#").img-holder
+									img.img-bg(src="img/nav-sl-2.png" alt="product")
+								.text-holder
+									p Power: 5.5 kWp
+									a(href="#") DUOMAX twin-DEG5C.07(II)
+							.price-block.inner-block
+								span.count 1200.00 $
+							.quantity-block.inner-block
+								.count-block
+									span.minus —
+									input.items-count(type="number" value="2")
+									span.plus +
+							.total-block.inner-block
+								span.total 2400.00 $
+							.next-block.inner-block
+								span.favorites
+									+svg('heart')
+								span.remove
+									+svg('close')
+						// cart item end
+
+						// cart item start
+						.cart-item
+							.product-block.inner-block
+								a(href="#").img-holder
+									img.img-bg(src="img/product-2.png" alt="product")
+								.text-holder
+									p Power: 4.5 kWp
+									a(href="#") DUOMAX-PEG5.07
+							.price-block.inner-block
+								span.count 950.00 $
+							.quantity-block.inner-block
+								.count-block
+									span.minus —
+									input.items-count(type="number" value="1")
+									span.plus +
+							.total-block.inner-block
+								span.total 950.00 $
+							.next-block.inner-block
+								span.favorites
+									+svg('heart')
+								span.remove
+									+svg('close')
+						// cart item end
+
+						// cart item start
+						.cart-item
+							.product-block.inner-block
+								a(href="#").img-holder
+									img.img-bg(src="img/product-4.png" alt="product")
+								.text-holder
+									p Power: 5.0 kWp
+									a(href="#") DUOMAX M PLUS - DEG5(II)
+							.price-block.inner-block
+								span.count 1000.00 $
+							.quantity-block.inner-block
+								.count-block
+									span.minus —
+									input.items-count(type="number" value="1")
+									span.plus +
+							.total-block.inner-block
+								span.total 1000.00 $
+							.next-block.inner-block
+								span.favorites
+									+svg('heart')
+								span.remove
+									+svg('close')
+						// cart item end
+
+						// coupon block start
+						.coupon-block
+							span.title Coupon Code
+							.input-holder
+								input.coupon-input(type="text" required placeholder="xxxx-xx")
+							+btn-filled('Apply Coupon')
+							span.refresh
+								+svg('refresh')
+						// coupon block end
+
+						// cart totals start
+						.shopping-totals
+							h4.title Cart Totals
+							.total-item
+								span.subtitle Subtotal:
+								span.value $ 4350.00
+							.total-item
+								span.subtitle Sale:
+								span.value $ 100.00
+							.total-item
+								span.subtitle Total:
+								span.value $ 4250.00
+							.btn-holder
+								+btn-transp('Proceed to Checkout')
+						// cart totals end
+
+					// cart content end
+
+// shopping cart end

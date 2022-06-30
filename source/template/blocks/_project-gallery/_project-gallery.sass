@@ -1,0 +1,35 @@
+/* project gallery */
+
+.project-gallery-section
+	.heading
+		width: 100%
+		max-width: 100%
+		text-align: left
+
+.project-gallery
+	.slick-slide
+		outline: none
+	.gallery-item
+		position: relative
+		display: block
+		overflow: hidden
+		outline: none
+	.gallery-item::before
+		content: ""
+		display: block
+		padding-top: percentage(280/318)
+	.img-bg
+		z-index: -1
+		transition: transform $transition
+	.overlay
+		transition: background-color $transition
+	.gallery-item:hover .img-bg
+		transform: scale(1.2)
+	.gallery-item:hover .overlay
+		background-color:rgba(13, 115, 252, 0.55)!important
+
+.project-gallery-holder
+	.slick-dots
+		display: flex!important
+		justify-content: center
+		margin-top: 30px

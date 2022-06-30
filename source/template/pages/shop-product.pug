@@ -1,0 +1,31 @@
+extends ../layouts/shop.pug
+
+block vars
+
+	-var page = 'shop-product'
+
+	-var type = 'shop'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_shop-header/_shop-header
+
+block promo
+
+	picture
+		source(srcset='img/catalog-bg.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/catalog-bg.jpg' alt='img')
+
+	+shop-promo('Duomax-Peg5GT.2')
+
+block main
+
+	include ../blocks/_shop-product/_shop-product
+
+	include ../blocks/_products--style-3/_products--style-3
+
+block footer
+
+	include ../blocks/_footer/_footer

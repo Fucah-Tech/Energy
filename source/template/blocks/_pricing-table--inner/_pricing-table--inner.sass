@@ -1,0 +1,82 @@
+/* pricing table inner */
+
+.pricing-table--inner
+	.pricing-item
+		text-align: center
+		padding: 30px 15px
+		overflow: hidden
+		position: relative
+
+	+screen-is-992
+		.pricing-item
+			padding: 30px 5px 30px 20px
+			text-align: left
+
+	+screen-is-1200
+		.pricing-item
+			padding: 40px 5px 40px 20px
+
+	.pricing-item .row > div:not(:last-of-type)
+		margin-bottom: 15px
+
+	+screen-is-992
+		.pricing-item .row > div:not(:last-of-type)
+			margin-bottom: 0px
+
+	.pricing-item .ribbon
+		display: inline-block
+		height: 68px
+		width: 68px
+		background-color: $blue
+		transform: rotate(-45deg)
+		position: absolute
+		top: -39px
+		left: -39px
+	.pricing-item .ribbon .icon
+		font-size: 16px
+		position: absolute
+		bottom: 3px
+		right: 25px
+		transform: rotate(45deg)
+		fill: #FFF
+		padding: 3px
+	.pricing-item .title
+		letter-spacing: -0.050em
+	.pricing-item .title,
+	.pricing-item .description
+		margin: 0
+	.pricing-item .column
+		display: flex
+		align-items: center
+	.pricing-item .price
+		color: #0D73FC
+		font-size: 30px
+		font-weight: 700
+		letter-spacing: -0.050em
+	.pricing-item .button span,
+	.pricing-item .button::before
+		padding: 9px 15px
+
+	+screen-is-1200
+		.pricing-item .button span,
+		.pricing-item .button::before
+			padding: 11px 30px
+
+	.pricing-item:not(:last-of-type)
+		border-bottom: 1px solid #E4E6E9
+	.pricing-item.active
+		background-color: #F6F8F9
+		border-bottom: none
+		margin-top: -1px
+	.pricing-item.active .button span
+		background-color: #F6F8F9
+
+/* is--gray */
+
+.pricing-table--inner.is--gray
+	.button span
+		background-color: #EFF2F5
+	.pricing-item.active
+		background-color: #FFF
+	.pricing-item.active .button span
+		background-color: #FFF

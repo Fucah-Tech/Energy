@@ -1,0 +1,29 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'gallery'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/cases.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/cases.jpg' alt='img')
+
+	+promo-primary('Our Gallery')
+
+block main
+
+	include ../blocks/_gallery-inner/_gallery-inner
+
+block footer
+
+	include ../blocks/_footer/_footer

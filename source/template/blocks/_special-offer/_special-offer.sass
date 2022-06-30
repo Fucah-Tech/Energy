@@ -1,0 +1,76 @@
+/* special offer start */
+
+.special-offer
+	position: relative
+
+.special-offer::before
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	height: 80%
+	width: 100%
+	background-color: #EFF2F5
+
+.special-offer
+	.item-holder
+		padding-left: 10px
+
+.offer-item
+	position: relative
+	background-color: #FFFFFF
+	padding: 30px 20px 28px 45px
+	margin-bottom: 50px
+	box-shadow: 0px 3px 15px 2px rgba(0,0,0, 0.05)
+
++screen-is-576
+	.offer-item
+		padding: 30px 20px 28px 70px
+
++screen-is-1200
+	.offer-item
+		padding: 41px 20px 38px 105px
+
+.offer-item
+	.title
+		font-size: 18px
+
+	+screen-is-992
+		.title
+			font-size: 20px
+
+	.img-holder
+		height: 50px
+		width: 49px
+		background-color: $blue
+		position: absolute
+		top: -10px
+		left: -10px
+		display: flex
+		justify-content: center
+		align-items: center
+
+	+screen-is-576
+		.img-holder
+			height: 65px
+			width: 62px
+
+	+screen-is-1200
+		.img-holder
+			height: 91px
+			width: 88px
+
+	.img-holder .icon
+		font-size: 29px
+		fill: #FFF
+
+	+screen-is-576
+		.img-holder .icon
+			font-size: 37px
+
+	+screen-is-1200
+		.img-holder .icon
+			font-size: 51px
+
+	.text-holder
+		min-height: 90px

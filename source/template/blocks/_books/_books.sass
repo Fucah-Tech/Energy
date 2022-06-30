@@ -1,0 +1,62 @@
+	/* books */
+
+.books
+	position: relative
+
+.books::before
+	content: ""
+	position: absolute
+	top: -140px
+	left: 0
+	width: 100%
+	height: 140px
+	background-color: #EFF2F5
+	z-index: -1
+
+.books::after
+	content: ""
+	display: block
+	width: 100%
+	height: 50%
+	position: absolute
+	top: 0
+	left: 0
+	background-color: #EFF2F5
+	z-index: -1
+
+	/* book item */
+
+.book-item
+	background-color: #FFF
+	padding: 30px 30px 40px 30px
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+	margin-bottom: 50px
+
++screen-is-992
+	.book-item
+		padding: 60px 60px 53px 60px
+
++screen-is-1200
+	.book-item
+		padding: 80px 80px 73px 80px
+
+.book-item
+	.title a
+		color: #333
+		text-decoration: none
+		transition: color $transition
+	.title a:hover
+		color: $blue
+	.img-holder
+		padding-top: percentage(295/410)
+	.img-bg
+		object-fit: contain
+		font-family: 'object-fit: contain'
+		width: auto
+		z-index: 2
+	figcaption
+		margin-top: 25px
+	.text-holder
+		min-height: 90px
+	.with-line
+		margin-top: 10px

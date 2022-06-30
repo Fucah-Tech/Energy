@@ -1,0 +1,248 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'blog'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Our Blog')
+
+block main
+
+	section.section.articles
+		.container
+			.row
+
+				.col-md-7.col-lg-8.col-xl-8
+
+					.row
+
+						.col-12
+
+							.article-item
+								.article-item__img
+									img.img-bg(src="img/article-bg.jpg", alt="img")
+								.article-item__details
+									span.article-item__category Solar
+									h3.article-item__title 
+										a(href="#").article-item__link The Power Of Solar Energy In The Future
+									.article-item__date #[+svg('scalendar')] 31 December 2019
+									p.article-item__text Firefish spiny-back elasmobranch scorpionfish sheepshead rock beauty sand eel. Skilfish barramundi Rainbowfish lake chub smelt…
+
+						.col-12
+
+							.article-item
+								.article-item__details
+									span.article-item__category Windmill Technology
+									h3.article-item__title 
+										a(href="#").article-item__link Wind Farms Now More Affordable
+									.article-item__date #[+svg('scalendar')] 31 December 2019
+									p.article-item__text Firefish spiny-back elasmobranch scorpionfish sheepshead rock beauty sand eel. Skilfish barramundi Rainbowfish lake chub smelt…
+
+						.col-12
+
+							.article-item
+								.article-item__details
+									span.article-item__category Windmill Technology
+									h3.article-item__title 
+										a(href="#").article-item__link Wind Farms Now More Affordable
+									.article-item__date #[+svg('scalendar')] 31 December 2019
+									p.article-item__text Firefish spiny-back elasmobranch scorpionfish sheepshead rock beauty sand eel. Skilfish barramundi Rainbowfish lake chub smelt…
+
+						.col-12
+
+							.article-item
+								.article-item__img
+									img.img-bg(src="img/article-bg.jpg", alt="img")
+								.article-item__details
+									span.article-item__category Solar
+									h3.article-item__title 
+										a(href="#").article-item__link The Power Of Solar Energy In The Future
+									.article-item__date #[+svg('scalendar')] 31 December 2019
+									p.article-item__text Firefish spiny-back elasmobranch scorpionfish sheepshead rock beauty sand eel. Skilfish barramundi Rainbowfish lake chub smelt…
+
+						.col-12
+
+							.article-item
+								.article-item__details
+									span.article-item__category Windmill Technology
+									h3.article-item__title 
+										a(href="#").article-item__link Wind Farms Now More Affordable
+									.article-item__date #[+svg('scalendar')] 31 December 2019
+									p.article-item__text Firefish spiny-back elasmobranch scorpionfish sheepshead rock beauty sand eel. Skilfish barramundi Rainbowfish lake chub smelt…
+
+						.col-12.text-center
+
+							include ../blocks/_pagination/_pagination
+
+				.col-sm-8.offset-sm-2.col-md-5.offset-md-0.col-lg-4.col-xl-3
+
+					.articles__inner
+
+						form.article-search(action="javasctipt:void(0);")
+							input.article-search__field(type="search" name="article-search" placeholder="Search")
+							button.article-search__submit(type="submit")
+								+svg('search')
+
+					.articles__inner
+
+						h4.articles__title Category
+
+						ul.category-list
+							li.category-list__item
+								span Envato
+								span.text-right 2
+							li.category-list__item
+								span Ninetheme
+								span.text-right 3
+							li.category-list__item
+								span Onsite
+								span.text-right 1
+							li.category-list__item
+								span Solar
+								span.text-right 6 
+							li.category-list__item
+								span Uncategorized
+								span.text-right 12
+
+					.articles__inner
+
+						h4.articles__title Recent post
+
+						.recent-item
+
+							.row
+
+								.col-4
+
+									.recent-item__img
+
+										img.img-bg(src="img/recent-1.jpg", alt="img")
+
+								.col-8
+
+									h6.recent-item__title
+										a.recent-item__link(href="#") Wind Farms Now More Affordable
+
+									span.recent-item__date 31/12
+
+						.recent-item
+
+							.row
+
+								.col-4
+
+									.recent-item__img
+
+										img.img-bg(src="img/recent-2.jpg", alt="img")
+
+								.col-8
+
+									h6.recent-item__title
+										a.recent-item__link(href="#") Wind Farms Now More Affordable
+
+									span.recent-item__date 31/12
+
+						.recent-item
+
+							.row
+
+								.col-4
+
+									.recent-item__img
+
+										img.img-bg(src="img/recent-3.jpg", alt="img")
+
+								.col-8
+
+									h6.recent-item__title
+										a.recent-item__link(href="#") Wind Farms Now More Affordable
+
+									span.recent-item__date 31/12
+
+					.articles__inner
+
+						h4.articles__title Archive
+
+						ul.category-list
+							li.category-list__item
+								span December
+								span.text-right 2
+							li.category-list__item
+								span January
+								span.text-right 3
+							li.category-list__item
+								span October
+								span.text-right 1
+							li.category-list__item
+								span November
+								span.text-right 6 
+							li.category-list__item
+								span September
+								span.text-right 12
+
+					.articles__inner
+
+						h4.articles__title Recent comments
+
+						div.recent-comment
+							span #[a(href="#") ViralsTime] Onsite Solar To Power
+						div.recent-comment
+							span #[a(href="#") John Greybrown] On Onsite Solar
+						div.recent-comment
+							span #[a(href="#") John Greybrown] On DUOMAX PLUS
+						div.recent-comment
+							span #[a(href="#") John Greybrown] On Onsite Solar
+						div.recent-comment
+							span #[a(href="#") ViralsTime] Onsite Solar To Power
+
+					.articles__inner
+
+						h4.articles__title Tags
+
+						.tags-block
+							span.tag Solar
+								span.close
+									+svg('close')
+							span.tag Firefish
+								span.close
+									+svg('close')
+							span.tag Enva
+								span.close
+									+svg('close')
+							span.tag Solar
+								span.close
+									+svg('close')
+							span.tag Power
+								span.close
+									+svg('close')
+							span.tag Ninetheme
+								span.close
+									+svg('close')
+
+					.articles__inner
+
+						h4.articles__title Latest project
+
+						.cases-item
+							a.img-holder(href="cases-details.html")
+								.overlay
+								img.img-bg(src="img/gallery-1.jpg" alt="img")
+							.description
+								h5.title Solar Factory in NY
+								a.with--line(href="cases-details.html") Explore more
+
+block footer
+
+	include ../blocks/_footer/_footer

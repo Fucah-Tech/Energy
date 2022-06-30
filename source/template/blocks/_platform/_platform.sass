@@ -1,0 +1,33 @@
+/* platform */
+
+.platform
+	background-color: #EFF2F5
+	position: relative
+
+.platform
+	.heading
+		text-align: left
+		margin-bottom: 20px
+		max-width: none
+	.img-background
+		display: none
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 0
+		max-width: 41%
+		height: auto
+		
+
+	+screen-is-1200
+		.img-background
+			display: inline-block
+
+	.button
+		margin-top: 20px
+
+	.button::before,
+	.button span
+		padding: 13px 40px
+	.button span
+		background: #EFF2F5

@@ -1,0 +1,52 @@
+extends ../layouts/primary-map.pug
+
+block vars
+
+	-var page = 'index'
+
+	-var type = 'front'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block main
+
+	include ../blocks/_main-promo/_main-promo
+
+	include ../blocks/_services/_services
+
+	include ../blocks/_about/_about
+
+	// text section start
+
+	section.section.text-section.no-padding-bottom
+		.container
+			.row
+				.col-12
+					h3.title . Just like us
+					p.subtitle Create technology is always based on perfect relationships
+
+	// text section end
+
+	include ../blocks/_cooperation/_cooperation
+
+	include ../blocks/_main-gallery/_main-gallery
+
+	include ../blocks/_pricing/_pricing
+
+	include ../blocks/_testimonials--primary/_testimonials--primary
+
+	include ../blocks/_blog/_blog
+
+	include ../blocks/_banner/_banner
+
+	include ../blocks/_brands/_brands
+
+	include ../blocks/_map-section/_map-section
+
+block footer
+
+	include ../blocks/_footer/_footer

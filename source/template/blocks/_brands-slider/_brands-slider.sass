@@ -1,0 +1,50 @@
+/* brands slider start */
+
+.brands-holder
+	.slick-dots
+		margin-top: 40px
+
+.brands-slider
+	.slider-item
+		display: flex!important
+		justify-content: center
+		align-items: center
+		height: 50px
+
+	+screen-is-768
+		.slider-item
+			height: 60px
+
+	+screen-is-992
+		.slider-item
+			height: 70px
+
+	+screen-is-1200
+		.slider-item
+			height: 80px
+
+	.slider-item img
+		display: inline-block
+		opacity: 0.2
+		max-width: 90%
+		max-height: 50px
+		transition: opacity $transition
+
+	+screen-is-768
+		.slider-item img
+			max-height: 60px
+
+	+screen-is-992
+		.slider-item img
+			max-height: 70px
+
+	+screen-is-1200
+		.slider-item img
+			max-height: 80px
+
+	.slider-item img:hover
+		opacity: 0.9
+
+.brands-dots
+	display: flex
+	justify-content: center

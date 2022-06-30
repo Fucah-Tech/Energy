@@ -1,0 +1,325 @@
+	/* shopping cart */
+
+.shopping-cart
+	.cart-inner
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+	.cart-heading
+		border-bottom: 1px solid #F3F6F8
+		padding: 20px 30px
+
+	.cart-heading .product-block
+		margin: 0
+
+	+screen-is-992
+		.cart-heading
+			padding: 33px 40px 35px 40px
+
+	.cart-heading span
+		display: none
+
+	+screen-is-992
+		.cart-heading span
+			display: inline-block
+
+	.cart-heading .product-block span
+		display: inline-block
+	.cart-heading,
+	.cart-item
+		display: flex
+	.cart-item
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 30px 30px 40px 30px
+
+	+screen-is-992
+		.cart-item
+			text-align: left
+			flex-direction: row
+
+	.cart-item
+		border-bottom: 1px solid #F3F6F8
+
+	+screen-is-992
+		.cart-item
+			padding: 69px 40px 39px 40px
+
+	.cart-heading span
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: -0.050em
+	.cart-heading .next-block
+		display: flex
+		justify-content: flex-end
+	.product-block
+		width: 100%
+		max-width: 460px
+		flex-direction: column
+
+	+screen-is-992
+		.product-block
+			flex-direction: row
+			margin-top: -30px
+
+	.price-block
+		width: 100%
+		max-width: 155px
+	.quantity-block
+		width: 100%
+		max-width: 140px
+
+	+screen-is-1200
+		.quantity-block
+			max-width: 185px
+
+	.total-block
+		width: 100%
+		max-width: 150px
+		text-align: center
+
+	.total-block .total
+		margin: auto
+
+	+screen-is-1200
+		.total-block
+			max-width: 205px
+
+	.next-block
+		width: 100%
+		max-width: 90px
+	.next-block .favorites,
+	.next-block .remove,
+	.coupon-block .refresh
+		cursor: pointer
+		display: inline-flex
+		color: $blue
+		height: 40px
+		width: 40px
+		background-color: #EFF2F5
+		justify-content: center
+		align-items: center
+		transition: all $transition
+	.coupon-block .refresh:hover,
+	.next-block .favorites:hover,
+	.next-block .remove:hover
+		background-color: $blue
+		color: #FFF
+	.next-block .remove
+		margin-left: 10px
+		font-size: 11px
+	.cart-item .inner-block
+		display: flex
+		align-items: center
+		justify-content: center
+
+	+screen-is-992
+		.cart-item .inner-block
+			justify-content: normal
+
+	.cart-item .inner-block:not(:last-of-type)
+		margin-bottom: 15px
+
+	+screen-is-992
+		.cart-item .inner-block:not(:last-of-type)
+			margin-bottom: 0
+
+	.cart-item .product-block p
+		color: #C7CCD4
+		font-size: 13px
+		letter-spacing: -0.050em
+		margin: 0
+	.cart-item .product-block .text-holder a
+		color: #333
+		font-size: 20px
+		font-weight: 700
+		letter-spacing: -0.050em
+		transition: color $transition
+		text-decoration: none
+	.cart-item .product-block .text-holder a:hover
+		color: $blue
+	.cart-item .img-holder
+		height: 120px
+		width: 90px
+		position: relative
+
+	+screen-is-992
+		.cart-item .img-holder
+			margin-right: 30px
+			height: 100px
+			width: 70px
+
+	+screen-is-1200
+		.cart-item .img-holder
+			height: 120px
+			width: 90px
+
+	.cart-item .img-holder .img-bg
+		object-fit: contain
+		font-family: 'object-fit: contain'
+	.cart-item .text-holder
+		margin-top: 10px
+
+	+screen-is-992
+		.cart-item .text-holder
+			width: calc(100% - 120px)
+			margin-top: 0
+
+	.cart-item .count,
+	.cart-item .total
+		color: #82868A
+		font-weight: 700
+		letter-spacing: -0.050em
+	.count-block
+		display: flex
+		justify-content: space-between
+		border: 1px solid #D0D1D2
+		width: 140px
+		height: 40px
+	.count-block span
+		display: inline-flex
+		height: 38px
+		width: 38px
+		align-items: center
+		justify-content: center
+		color: #D0D1D2
+		font-size: 18px
+		font-weight: 500
+		cursor: pointer
+		user-select: none
+		transition: all $transition
+	.count-block span:hover
+		background-color: $blue
+		color: #FFF
+	.count-block .items-count
+		font-size: 18px
+		font-weight: 500
+		width: calc(100% - 100px)
+		text-align: center
+		border: none
+	input[type=number]::-webkit-outer-spin-button
+	input[type=number]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	input[type=number]
+		-moz-appearance: textfield
+		outline: none
+	.coupon-block
+		padding: 30px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		border-bottom: 1px solid #F3F6F8
+
+	+screen-is-768
+		.coupon-block
+			justify-content: flex-start
+
+	+screen-is-992
+		.coupon-block
+			padding: 40px
+
+	.coupon-block .title
+		font-size: 18px
+		font-weight: 500
+		width: 100%
+		text-align: center
+
+	+screen-is-576
+		.coupon-block .title
+			width: auto
+			margin-right: 29px
+
+	.coupon-block .input-holder
+		width: 100%
+		text-align: center
+
+	+screen-is-576
+		.coupon-block .input-holder
+			width: auto
+			text-align: left
+
+	.coupon-block input
+		height: 50px
+		width: 200px
+		border: 1px solid #D7D8D9
+		font-size: 18px
+		padding: 0 18px
+		margin-right: 11px
+		margin: 15px 0
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+
+	+screen-is-576
+		.coupon-block .input-holder
+			margin-right: 15px
+
+	+screen-is-768
+		.coupon-block input
+			margin: 0
+
+	+screen-is-992
+		.coupon-block input
+			width: 250px
+
+	.coupon-block .button span,
+	.coupon-block .button::before
+		padding: 13px 35px
+		font-weight: 500
+	.coupon-block .refresh
+		height: 47px
+		width: 47px
+
+	+screen-is-576
+		.coupon-block .refresh
+			height: 50px
+			width: 50px
+
+	+screen-is-768
+		.coupon-block .refresh
+			margin-left: auto
+
+	.shopping-totals
+		width: 100%
+		max-width: 350px
+		padding: 32px 30px 70px 30px
+		margin-top: 0
+
+	+screen-is-992
+		.shopping-totals
+			margin-left: auto
+
+	+screen-is-992
+		.shopping-totals
+			padding: 32px 40px 80px 40px
+
+	+screen-is-576
+		.shopping-totals .title
+			text-align: right
+
+	.shopping-totals .total-item .value
+		min-width: 65px
+
+	+screen-is-576
+		.shopping-totals .total-item .value
+			text-align: right
+
+	.shopping-totals .btn-holder
+		width: 100%
+		display: flex
+		margin-top: 33px
+
+	.shopping-totals .button span,
+	.shopping-totals .button::before
+		padding: 12px 30px
+		font-weight: 500
+		letter-spacing: 0
+
+	+screen-is-576
+		.shopping-totals .button span,
+		.shopping-totals .button::before
+			padding: 12px 48px
+
+	.shopping-totals .title
+		text-align: left

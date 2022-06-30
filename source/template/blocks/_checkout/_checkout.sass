@@ -1,0 +1,206 @@
+	/* checkout */
+
+.shopping-checkout
+	.checkout
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+	.top-line
+		padding: 20px 15px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		background-color: $blue
+
+	+screen-is-576
+		.top-line
+			padding: 30px 40px
+
+	.top-line .text
+		color: #FFF
+		display: inline-flex
+		flex-wrap: wrap
+		letter-spacing: 0.040em
+
+	+screen-is-576
+		.top-line .text
+			display: inline-block
+
+	.top-line .text span
+		width: 100%
+	.top-line .text
+		width: calc(100% - 50px)
+	.top-line .text a
+		color: #FFF
+		font-weight: 700
+	.top-line .close
+		cursor: pointer
+		height: 30px
+		width: 30px
+		line-height: 30px
+		text-align: center
+		font-size: 11px
+		color: $blue
+		background-color: #FFF
+		opacity: 1
+		transition: all $transition
+
+	+screen-is-576
+		.top-line .close
+			height: 40px
+			width: 40px
+			line-height: 40px
+
+	.top-line .close:hover
+		background-color: #25272A
+		color: #FFF
+	.title
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: -0.050em
+
+.billing-form
+	padding: 40px 15px 50px 15px
+
++screen-is-576
+	.billing-form
+		padding: 65px 40px 70px 40px
+
+.billing-form
+	.title
+		margin-bottom: 30px
+
+	.input
+		appearance: none
+		border: none
+		background: none
+		outline: none
+		position: relative
+	.input:valid
+		border-bottom: 1px solid #3C8EFD
+	.textarea
+		resize: none
+		border: none
+		outline: none
+		background: none
+		height: 102px
+	.input,
+	.textarea
+		font-size: 14px
+		border-bottom: 1px solid #E0E1E2
+		padding-bottom: 12px
+		transition: all $transition
+	.input::placeholder,
+	.textarea::placeholder
+		color: #A9ACAF
+	.button
+		margin-top: 18px
+		transform: translateZ(0)
+		background: none
+		padding: 0
+	.button::before,
+	.button span
+		padding: 11px 37px
+	.input-name
+		margin-bottom: 32px
+	.input:focus,
+	.textarea:focus
+		border-bottom: 1px solid $blue
+	.input-label,
+	.textarea-label
+		width: 100%
+		position: relative
+		padding-bottom: 12px
+		margin-bottom: 31px
+		z-index: 2
+	.input-label span,
+	.textarea-label span
+		display: inline-block
+		color: #A9ACAF
+		font-size: 14px
+		transition: all $transition
+	span.required
+		color: #FC0D18
+	.input-label .input,
+	.textarea-label .textarea
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	.input-label .input:focus + span,
+	.input-label .field--filled + span,
+	.textarea-label .textarea:focus + span,
+	.textarea-label .field--filled + span
+		transform: translateY(-25px)
+		font-size: 11px
+	.button-holder
+		display: flex
+		justify-content: flex-start
+		margin-top: 30px
+
+	+screen-is-992
+		.button-holder
+			justify-content: center
+			margin-top: 86px
+
+	.radio-block
+		padding-left: 25px
+		margin-bottom: 20px
+	.radio-block:last-of-type
+		margin-bottom: 53px
+	.radio-block p
+		font-size: 14px
+		line-height: 24px
+	.radio-block label
+		position: relative
+		cursor: pointer
+	.radio-block .radio-mask
+		display: inline-flex
+		height: 14px
+		width: 14px
+		border-radius: 50%
+		background-color: #EFF2F5
+		position: absolute
+		left: -25px
+		top: 4px
+		transition: background-color $transition
+	.radio-block .input-radio:checked + .radio-mask
+		background-color: $blue
+	.radio-block .input-radio
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+	.payment-block
+		margin-top: 80px
+
+	+screen-is-576
+		.payment-block
+			margin-top: 90px
+
+	+screen-is-992
+		.payment-block
+			margin-top: 0px
+
+.shopping-totals
+	margin-top: 43px
+	letter-spacing: -0.050em
+
+.shopping-totals
+	.total-item
+		display: flex
+	.total-item:first-of-type
+		margin-top: 20px
+	.total-item:not(:last-of-type)
+		margin-bottom: 28px
+	.total-item .subtitle
+		font-weight: 500
+		width: 150px
+
+	+screen-is-576
+		.total-item .subtitle
+			width: 200px
+
+	.total-item .value
+		color: #82868A
+		font-weight: 500

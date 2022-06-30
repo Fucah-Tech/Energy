@@ -1,0 +1,31 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'blog-detail'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/blog-detail.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/blog-detail.jpg' alt='img')
+
+	+promo-primary('Our Blog')
+
+block main
+
+	include ../blocks/_blog-detail/_blog-detail
+
+	include ../blocks/_live-comment/_live-comment
+
+block footer
+
+	include ../blocks/_footer/_footer

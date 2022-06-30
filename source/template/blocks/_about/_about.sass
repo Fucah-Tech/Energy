@@ -1,0 +1,175 @@
+/* about */
+
+.about
+	position: relative
+
+.about
+	.container
+		max-width: 100%
+		padding: 0
+		overflow: hidden
+
+	+screen-is-768
+		.container
+			max-width: 720px
+			padding: 0 15px
+	+screen-is-992
+		.container
+			max-width: 960px
+			padding: 0 15px
+	+screen-is-1200
+		.container
+			max-width: 1170px
+			padding: 0 15px
+
+.about
+
+	.title-block
+		background: $blue
+		padding: 30px
+
+	+screen-is-768
+		.title-block
+			margin-bottom: 0
+			width: 100%
+			max-width: 310px
+			padding: 40px 50px
+
+	.title-block .title
+		color: #B4D4FF
+		text-align: center
+		font-size: 13px
+		text-transform: uppercase
+		margin-bottom: 0
+
+	.title-block .subtitle
+		color: #FFF
+		margin-bottom: 0
+
+	+screen-is-768
+		.title-block .subtitle
+			font-size: 40px
+
+	+screen-is-992
+		.title-block
+			padding: 50px 70px
+
+	.title
+		letter-spacing: -0.050em
+
+	.bg-holder
+		display: flex
+		z-index: -1
+		height: 250px
+
+	+screen-is-576
+		.bg-holder
+			height: 400px
+
+	+screen-is-768
+		.bg-holder
+			height: 640px
+			position: absolute
+			width: 100%
+			top: 50%
+			transform: translateY(-50%)
+
+	+screen-is-992
+		.bg-holder
+			height: 740px
+
+	.bg-holder .text-holder
+		display: none
+
+	+screen-is-992
+		.bg-holder .text-holder
+			display: flex
+			align-items: center
+			width: 25%
+
+	.bg-holder .text-holder span
+		display: inline-block
+		color: #F7F7F7
+		font-size: 100px
+		line-height: 100px
+		font-weight: 700
+		transform: rotate(-90deg)
+
+	+screen-is-1200
+		.bg-holder .text-holder span
+			font-size: 130px
+			line-height: 130px
+
+	+screen-is-1600
+		.bg-holder .text-holder span
+			font-size: 164px
+			line-height: 164px
+
+	.bg-holder .img-holder
+		width: 100%
+		position: relative
+		z-index: -1
+
+	+screen-is-992
+		.bg-holder .img-holder
+			width: 75%
+
+	.bg-holder .img-holder .overlay
+		z-index: 1
+
+	/* about item */
+
+.about-item
+	position: relative
+	padding: 40px 30px 40px 30px
+	background-color: #EFF2F5
+	margin-top: 0px
+
++screen-is-576
+	.about-item
+		padding: 63px 49px 64px 49px
+
++screen-is-768
+	.about-item
+		margin-top: 200px
+
++screen-is-992
+	.about-item
+		margin-top: 270px
+
++screen-is-1200
+	.about-item
+		margin-top: 327px
+
+.about-item
+	.icon
+		display: none
+		font-size: 67px
+		fill: $blue
+		position: absolute
+		top: -33px
+		left: 25px
+	.title
+		font-size: 30px
+		margin-bottom: 22px
+
+	+screen-is-768
+		.title
+			font-size: 40px
+
+	+screen-is-768
+		.icon
+			display: inline-block
+
+	.button
+		margin-top: 18px
+
+	+screen-is-768
+		p.description
+			min-height: 150px
+
+	.button::before,
+	.button span
+		padding: 13px 40px 13px 40px
+	.button span
+		background: #EFF2F5

@@ -1,0 +1,224 @@
+.team-item
+	margin: 0 auto 50px auto
+	width: 100%
+	max-width: 300px
+
++screen-is-576
+	.team-item
+		max-width: 100%
+
+/* team-item--primary */
+
+.team-item.team-item--primary
+	transition: transform $transition
+
+.team-item.team-item--primary:hover
+	transform: translateY(-20px)
+
+.team-item.team-item--primary:hover
+	.socials-primary li
+		opacity: 1
+		visibility: visible
+		transform: translateX(0px)
+
+.team-item.team-item--primary
+	.img-holder
+		height: 350px
+		position: relative
+
+	+screen-is-768
+		.img-holder
+			height: 400px
+
+	+screen-is-992
+		.img-holder
+			height: 450px
+
+	+screen-is-1200
+		.img-holder
+			height: 504px
+
+	.img-holder img
+		filter: grayscale(100%)
+	.description
+		color: #FFF
+		position: absolute
+		bottom: 0
+		right: 0
+		display: inline-flex
+		flex-direction: column
+		background-color: $blue
+		padding: 8px 15px
+		min-width: 215px
+
+	+screen-is-768
+		.description
+			padding: 24px 30px 24px 30px
+
+	.name
+		font-size: 20px
+		font-weight: 700
+	.position
+		font-size: 14px
+		opacity: 0.5
+	.socials-primary
+		flex-direction: column
+		margin: 16px 0 0 16px
+	.socials-primary li
+		text-align: center
+		opacity: 0
+		visibility: hidden
+		transition: all $transition
+		transition-delay: .3s
+		transform: translateX(-10px)
+		margin-right: 0
+		margin-bottom: 5px
+	.socials-primary li a
+		color: $blue
+	.socials-primary li a:hover
+		color: #25272A
+
+/* team-item--rounded-img */
+
+.team-item.team-item--rounded-img
+	display: flex
+	flex-direction: column
+	align-items: center
+
++screen-is-576
+	.team-item.team-item--rounded-img
+		flex-direction: row
+		justify-content: space-between
+
+.team-item.team-item--rounded-img:hover
+	.name
+		color: $blue
+	.img-holder
+		filter: grayscale(0)
+
+.team-item.team-item--rounded-img
+	.img-holder
+		position: relative
+		width: 170px
+		height: 170px
+		border-radius: 50%
+		overflow: hidden
+		filter: grayscale(1)
+		transition: filter $transition
+	.description
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 20px
+
+	+screen-is-576
+		.description
+			width: calc(100% - 200px)
+			text-align: left
+			align-items: flex-start
+			margin-top: 0
+
+	.name
+		font-size: 18px
+		font-weight: 500
+		transition: color $transition
+	.position
+		color: $grey
+		font-size: 14px
+	.socials-holder
+		margin-top: 8px
+		margin-left: -5px
+	.socials-primary li:not(:last-of-type)
+		margin-right: 10px
+	.fa-facebook
+		color: #1C388C
+	.fa-twitter
+		color: #1C90F3
+	.fa-youtube-play
+		color: #E11717
+
+/* team-item--dark */
+
+.team-item.team-item--dark:hover
+	.name
+		color: $blue
+	.img-holder
+		background-color: rgba(0,0,0, 0.5)
+	.socials-holder
+		opacity: 1
+		visibility: visible
+		transform: translateX(0px)
+
+.team-item.team-item--dark
+	.img-holder
+		position: relative
+		height: 400px
+		display: flex
+		align-items: flex-end
+		background-color: rgba(0,0,0, 0.2)
+		transition: background-color $transition
+		overflow: hidden
+	.img-bg
+		z-index: -1
+	.description
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 0 30px 24px 30px
+	.name
+		color: #FFF
+		font-size: 18px
+		font-weight: 500
+		transition: color $transition
+	.position
+		color: rgba(255,255,255, 0.5)
+	.socials-holder
+		background-color: #25272A
+		position: absolute
+		top: 31px
+		left: 0
+		padding: 10px 25px
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-20px)
+		transition: all $transition
+	.socials-primary a
+		color: #FFF
+	.socials-primary a:hover
+		color: $blue
+
+/* team-item--grayscaled */
+
+.team-item.team-item--grayscaled:hover
+	.img-holder
+		filter: grayscale(0)
+	.name
+		color: $blue
+
+.team-item.team-item--grayscaled
+	.img-holder
+		position: relative
+		height: 270px
+		filter: grayscale(1)
+		margin-bottom: 24px
+		transition: filter $transition
+	.description
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	.fa-facebook
+		color: #1C388C
+	.fa-twitter
+		color: #1C90F3
+	.fa-youtube-play
+		color: #E11717
+	.name
+		font-size: 18px
+		font-weight: 500
+		transition: color $transition
+	.position
+		color: $grey
+		font-size: 14px
+		margin-bottom: 10px
+	.socials-holder
+		margin-left: -5px

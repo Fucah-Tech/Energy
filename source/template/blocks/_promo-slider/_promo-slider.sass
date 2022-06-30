@@ -1,0 +1,230 @@
+/* promo slider */
+
+.promo-slider
+	&__wrapper-1,
+	&__wrapper-2,
+	&__wrapper-3
+		opacity: 0
+		transition: all .6s
+		transform: translateY(30px)
+	.slick-current &__wrapper-1,
+	.slick-current &__wrapper-2,
+	.slick-current &__wrapper-3
+		opacity: 1
+		transform: translateY(0px)
+	.slick-current &__wrapper-1
+		transition-delay: .3s
+	.slick-current &__wrapper-2
+		transition-delay: .6s
+	.slick-current &__wrapper-3
+		transition-delay: .9s
+	.slider-item
+		position: relative
+		vertical-align: top
+	.slider-item .overlay
+		background-color: rgba(13, 115, 252, 0.12)
+		box-shadow: inset 0px -200px 70px -90px rgba(0,0,0, 0.35)
+	.bg-holder
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+	.align-container
+		padding: 50px 0 200px 0
+		height: 500px
+
+	+screen-is-768
+		.align-container
+			padding: 120px 0
+			height: 650px
+
+	+screen-is-1200
+		.align-container
+			padding: 150px 0
+			height: 770px
+
+	.button span,
+	.button::before
+		padding: 18px 62px
+	.title
+		color: #FFF
+		font-size: 30px
+		line-height: 40px
+		letter-spacing: -0.050em
+
+	+screen-is-576
+		.title
+			font-size: 40px
+			line-height: 50px
+
+	+screen-is-768
+		.title
+			font-size: 50px
+			line-height: 65px
+
+	+screen-is-1200
+		.title
+			font-size: 57px
+			line-height: 70px
+
+	.title span
+		font-weight: 100
+	.subtitle
+		color: #FFF
+		font-size: 18px
+		margin-top: 8px
+	.button
+		margin-top: 20px
+
+/* slider nav */
+
+.main-promo
+	.slider-nav
+		position: absolute
+		left: 0
+		width: 100%
+		bottom: 160px
+
+	+screen-is-768
+		.slider-nav
+			bottom: 55px
+
+	+screen-is-1200
+		.slider-nav
+			bottom: 63px
+
+	.slider-nav .inner-block
+		display: inline-flex
+		align-items: center
+		position: relative
+		z-index: 2
+	.paging-info
+		color: #FFF
+		font-size: 13px
+		font-weight: 700
+		position: relative
+		top: 2px
+	.slick-dots::after
+		content: ""
+		display: inline-flex
+		width: 92px
+		height: 1px
+		background-color: #BCBEC1
+		margin: 0 29px
+		align-self: center
+
+	+screen-is-576
+
+		.slick-dots::after
+			width: 111px
+
+.slick-dots
+	padding: 0
+	margin: 0
+	line-height: initial
+	display: inline-flex
+
+.slick-dots li
+	padding-left: 0
+	display: inline-flex
+	align-items: flex-start
+	list-style: none
+	height: 18px
+	width: 18px
+	border: 2px solid transparent
+	border-radius: 50%
+	transition: $transition
+	align-items: center
+	justify-content: center
+	line-height: initial
+
+.slick-dots li::before
+	display: none
+
+.slick-dots li:not(:last-of-type)
+	margin-right: 30px
+
+.slick-dots li.slick-active
+	border: 2px solid $blue
+	cursor: pointer
+
+.slick-dots li button
+	font-size: 0
+	height: 10px
+	width: 10px
+	border-radius: 50%
+	padding: 0
+	border: none
+	outline: none
+	background-color: #C7C7C7
+	transition: $transition
+	cursor: pointer
+
+.slick-dots li button:hover,
+.slick-dots li.slick-active button
+	background-color: $blue
+
+/* index 2 promo slider */
+
+.promo--style-2-slider
+	.align-container
+		padding: 50px 0 200px 0
+		height: 500px
+
+	+screen-is-992
+		.align-container
+			height: 750px
+
+	+screen-is-992
+		.align-container
+			padding: 200px 0
+			height: 870px
+
+.promo-slider
+	.item--style-2
+		text-align: center
+
+/* promo--style-3-slider */
+
+.promo--style-3-slider
+	.align-container
+		padding: 50px 0 200px 0
+		height: 500px
+
+	+screen-is-992
+		.align-container
+			height: 750px
+
+	+screen-is-992
+		.align-container
+			padding: 200px 0
+			height: 870px
+
+.promo-slider
+	.item--style-3
+		text-align: center
+	.item--style-3 .title
+		font-size: 72px
+		line-height: 1.1
+
+	+screen-is-576
+		.item--style-3 .title
+			font-size: 80px
+
+	+screen-is-768
+		.item--style-3 .title
+			font-size: 100px
+
+	+screen-is-992
+		.item--style-3 .title
+			font-size: 120px
+
+	+screen-is-1200
+		.item--style-3 .title
+			font-size: 140px
+
+	.item--style-3 .title span
+		color: $blue
+		vertical-align: middle

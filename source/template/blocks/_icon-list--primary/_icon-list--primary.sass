@@ -1,0 +1,40 @@
+/* icon list common */
+
+.icon-item
+	text-align: center
+	margin-bottom: 50px
+
+.icon-item
+	.icon
+		color: $blue
+	.title
+		font-size: 18px
+
+	+screen-is-768
+		.title
+			font-size: 20px
+
+	figcaption
+		margin-top: 25px
+	.title
+		letter-spacing: -0.050em
+
+/* icon list--primary */
+
+.icon-item.icon-item--primary
+	img
+		height: 60px
+		width: auto
+	.icon
+		font-size: 60px
+	.title
+		font-size: 18px
+
+	+screen-is-768
+		img
+			height: 72px
+			width: auto
+		.icon
+			font-size: 72px
+		.title
+			font-size: 20px

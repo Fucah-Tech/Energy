@@ -1,0 +1,60 @@
+/* cooperation slider */
+
+.cooperation-slider
+	.slider-item .top
+		position: relative
+		border-bottom: 1px solid #EBEBEB
+		padding-bottom: 20px
+		padding-left: 20px
+
+	+screen-is-1200
+		.slider-item .top
+			padding-left: 0
+
+	.slider-item .top::after
+		content: ""
+		display: inline-block
+		height: 10px
+		width: 10px
+		border: 2px solid $blue
+		background-color: #FFF
+		z-index: 2
+		position: absolute
+		bottom: -5px
+		left: 25px
+		transition: background-color $transition
+	.slick-current .top::after
+		background-color: $blue
+	.slider-item .top p
+		font-size: 20px
+		color: $blue
+		font-weight: 700
+	.slider-item .top p::before
+		content: "."
+		font-weight: 700
+	.slider-item .current
+		font-size: 40px
+	.slider-item .title
+		letter-spacing: -0.050em
+		margin-bottom: 10px
+	.slider-item .lower
+		padding-top: 22px
+		padding-left: 20px
+		padding-right: 30px
+		text-align: justify
+
+	+screen-is-1200
+		.slider-item .lower
+			padding-left: 0
+			padding-right: 100px
+
+	.slick-track
+		padding-top: 5px
+		margin-left: 0px
+
+	+screen-is-1200
+		.slick-track
+			margin-left: -115px
+
+	p:last-of-type
+		margin-bottom: 0

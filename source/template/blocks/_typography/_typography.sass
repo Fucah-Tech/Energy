@@ -1,0 +1,184 @@
+/* typography */
+
+.typography
+	.lists-holder
+		display: inline-flex
+		flex-wrap: wrap
+	.lists-holder ul
+		margin-bottom: 30px
+
+	+screen-is-768
+		.lists-holder ul
+			margin-right: 100px
+			margin-bottom: 0
+
+	.heading-block
+		margin-bottom: 26px
+	.paragraph-block,
+	.dropcap-block,
+	.blockquote-block,
+	.list-block
+		margin-bottom: 50px
+
+	+screen-is-992
+
+		.paragraph-block,
+		.dropcap-block,
+		.blockquote-block,
+		.list-block
+			margin-bottom: 76px
+
+	.dropcap-block .title
+		margin-bottom: 30px
+	.blockquote-block .title
+		margin-bottom: 33px
+	.list-block .title
+		margin-bottom: 35px
+
+h1
+	font-size: 60px
+
+h2
+	font-size: 40px
+
+h3
+	font-size: 30px
+
+h4
+	font-size: 20px
+
+h5
+	font-size: 18px
+
+h1, h2, h3, h4, h5
+	line-height: 1.2
+	font-weight: 700
+
+p
+	color: $grey
+	line-height: 24px
+
++screen-is-576
+	p
+		line-height: 30px
+
+p:not(:last-of-type)
+	margin-bottom: 27px
+
+a
+	color: $blue
+	text-decoration: underline
+
+a:hover
+	opacify: 1
+	text-decoration: none
+
+p.dropcap::first-letter
+	color: $blue
+	font-weight: 700
+	font-size: 60px
+	line-height: 1
+	float: left
+	margin: 0 30px 0 10px
+
+blockquote
+	position: relative
+	color: $grey
+	font-size: 16px
+	background-color: #FAFAFA
+	padding: 0px 0 0px 20px
+
+blockquote p
+	color: #333
+	line-height: 30px
+
+blockquote p:last-of-type
+	margin-bottom: 0
+
++screen-is-768
+	blockquote
+		font-size: 18px
+		line-height: 30px
+		padding-left: 70px
+		background: none
+
++screen-is-992
+	blockquote
+		font-size: 20px
+		line-height: 35px
+		padding-left: 100px
+
+blockquote::before
+	display: none
+
+blockquote::after
+	content: ""
+	position: absolute
+	display: block
+	height: 100%
+	width: 5px
+	background-color: $blue
+	top: 0
+	left: 0
+
++screen-is-768
+	blockquote::after
+		display: none
+
++screen-is-768
+	blockquote::before
+		content: "“"
+		display: block
+		color: $blue
+		font-size: 120px
+		position: absolute
+		left: 0
+		top: 46px
+
++screen-is-992
+	blockquote::before
+		font-size: 150px
+		top: 60px
+		left: 15px
+
+ul
+	color: $grey
+	list-style: none
+	padding: 0
+	line-height: 30px
+
+ol
+	color: $grey
+	padding-left: 20px
+	line-height: 30px
+
+ul
+	li
+		position: relative
+		padding-left: 40px
+	li::before
+		content: ""
+		display: inline-block
+		height: 1px
+		width: 16px
+		background-color: $blue
+		position: absolute
+		left: 0px
+		top: 11px
+
+.filled-text
+	color: #FFF
+	line-height: 35px
+	background-color: $blue
+	padding: 30px
+	font-size: 16px
+
++screen-is-768
+	.filled-text
+		font-size: 18px
+		padding: 40px 35px 40px 35px
+
++screen-is-992
+	.filled-text
+		font-size: 20px
+		padding: 67px 75px 70px 75px

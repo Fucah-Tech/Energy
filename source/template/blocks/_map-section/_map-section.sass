@@ -1,0 +1,52 @@
+/* map-section */
+
+.map-section
+	position: relative
+	overflow: hidden
+	padding: 0!important
+
++screen-is-992
+	.map-section
+		padding: 120px 0!important
+
++screen-is-1200
+	.map-section
+		padding: 140px 0!important
+
+.map-section
+	.map
+		min-height: 500px
+
+	+screen-is-992
+		.map
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			min-height: 710px
+
+.map-placeholder
+	color: $blue
+	font-size: 16px
+	line-height: 20px
+	text-align: center
+	margin: 0
+
+.gm-style .gm-style-iw-t
+	right: -12px!important
+
+/* google map settings */
+
+.gm-ui-hover-effect,
+.gmnoprint,
+.gm-style-cc
+	display: none!important
+
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-d
+	padding: 5px 0!important
+	box-shadow: none
+	width: 60px
+	text-align: center
+	overflow: hidden!important

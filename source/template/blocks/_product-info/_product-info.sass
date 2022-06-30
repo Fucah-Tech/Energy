@@ -1,0 +1,47 @@
+/* product info */
+
+section.section.product-info
+	position: relative
+	z-index: 4
+
+.product-info
+	.bg-holder
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 60%
+		height: 100%
+
+	+screen-is-768
+		.bg-holder
+			display: block
+
+	.title
+		line-height: 40px
+		letter-spacing: -0.050em
+		margin-bottom: 21px
+	.text-holder
+		color: #FFF
+		background-color: $blue
+		padding: 40px 30px
+		margin: 0
+
+	+screen-is-768
+		.text-holder
+			padding: 60px 50px 65px 50px
+			margin: 90px 0
+
+	+screen-is-992
+		.text-holder
+			padding: 80px 70px 65px 70px
+			margin: 120px 0
+
+	+screen-is-1200
+		.text-holder
+			padding: 105px 100px 85px 100px
+			margin: 140px 0
+
+	.text-holder .text
+		color: #FFF
+		opacity: 0.5

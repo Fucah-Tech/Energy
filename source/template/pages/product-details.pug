@@ -1,0 +1,37 @@
+extends ../layouts/primary-inner-map.pug
+
+block vars
+
+	-var page = 'product-details'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/product-details.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/product-details.jpg' alt='img')
+
+	+promo-primary('Duomax twin-DEG5c.07')
+
+block main
+
+	include ../blocks/_product-params/_product-params
+
+	include ../blocks/_product-description/_product-description
+
+	include ../blocks/_product-info/_product-info
+
+	include ../blocks/_books/_books
+
+	include ../blocks/_map-section/_map-section
+
+block footer
+
+	include ../blocks/_footer/_footer

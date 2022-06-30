@@ -1,0 +1,148 @@
+/* testimonials--primary */
+
+.testimonials
+	position: relative
+
+.testimonials.testimonials--primary
+	.slider-holder::before
+		content: ""
+		display: none
+		height: 100%
+		width: 87px
+		background-color: $blue
+		position: absolute
+		top: 0
+		left: 0
+
+	+screen-is-1366
+		.slider-holder::before
+			display: block
+
+.testimonials.testimonials--primary
+	.testimonials-top
+		display: flex
+		flex-direction: column
+
+	+screen-is-576
+		.testimonials-top
+			flex-direction: row
+
+	.slider-holder
+		position: relative
+	.wrapper
+		width: 100%
+		margin: 0 auto
+		background-color: #EFF2F5
+		padding: 70px 0 65px 0
+
+	+screen-is-576
+		.wrapper
+			padding: 97px 0 94px 0
+
+	+screen-is-1366
+		.wrapper
+			width: calc(100% - 230px)
+
+	.heading.primary-heading
+		width: 100%
+		text-align: left
+		margin-bottom: 0
+
+	+screen-is-576
+		.heading.primary-heading
+			width: calc(100% - 100px)
+
+	.quote-icon
+		position: relative
+		height: 78px
+		width: 70px
+		background-color: $blue
+		position: relative
+		margin-bottom: 25px
+
+	+screen-is-576
+		.quote-icon
+			margin-right: 30px
+			margin-bottom: 0
+
+	.quote-icon span
+		color: #FFF
+		font-size: 92px
+		line-height: 0px
+		position: absolute
+		bottom: -7px
+		right: 16px
+
+	+screen-is-768
+		.testimonials-slider
+			margin-top: 40px
+
+	.testimonials-dots
+		display: flex
+		margin: 20px 0
+
+	+screen-is-768
+		.testimonials-dots
+			padding-bottom: 10px
+			justify-content: center
+			margin: 0
+
+/* testimonials slider  */
+
+.testimonials-slider
+	.slider-item
+		padding-left: 0
+
+	+screen-is-1200
+		.slider-item
+			padding-left: 0
+
+	.slider-item p
+		color: #333
+		font-size: 18px
+		line-height: 30px
+
+	+screen-is-768
+		.slider-item p
+			font-size: 20px
+			line-height: 35px
+
+	+screen-is-1200
+		.slider-item p
+			font-size: 23px
+			line-height: 35px
+
+	.slider-item .user
+		display: inline-block
+		font-weight: 700
+		margin-top: 30px
+	.slider-item .user::before
+		content: ""
+		display: inline-block
+		height: 1px
+		width: 39px
+		background-color: $blue
+		vertical-align: middle
+		margin-right: 20px
+	.slider-item .user .position
+		color: $blue
+
++screen-is-768
+	.testimonials-primary-slider
+		.slider-item
+			padding-left: 100px
+
++screen-is-1200
+	.testimonials-primary-slider
+		.slider-item
+			padding-left: 50px
+
+/* testimonials--style-3 */
+
+.testimonials.testimonials--style-3
+	.wrapper
+		background: none
+		padding: 0
+	.slider-holder::before
+		left: auto
+		right: 0

@@ -1,0 +1,47 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'about'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/about.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/about.jpg' alt='img')
+
+	+promo-primary('About R-energy')
+
+block main
+
+	include ../blocks/_about-welcome/_about-welcome
+
+	// brands start
+
+	section.section.brands.no-padding-bottom
+		.container
+			.row
+				.col-12
+					include ../blocks/_brands-slider/_brands-slider
+
+	// brands end
+
+	include ../blocks/_text-section/_text-section
+
+	include ../blocks/_video-section/_video-section
+
+	include ../blocks/_statistics/_statistics
+
+	include ../blocks/_team/_team
+
+block footer
+
+	include ../blocks/_footer/_footer

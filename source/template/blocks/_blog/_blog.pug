@@ -1,0 +1,43 @@
+// blog start
+
+section.section.blog.no-padding-top
+	.container
+		.row
+			.col-12
+				.heading.primary-heading
+					+primary-heading('Latest blog posts', 'Awesome', 'Blog')
+	.container
+		.row.offset-margin
+			.col-md-6
+
+				// item start
+				.blog-item
+					a.img-holder(href="#")
+						.overlay
+						img.img-bg(src='img/blog-1.jpg' alt='img')
+					.content-holder
+						.ribbon
+							p . #[span.day 25]/#[span.month 12]
+						span.category Windmill Technology
+						h4.title #[a(href="#") Clean Energy without CO2]
+						.text-holder
+							p.text Pacific saury. Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout
+				// item end
+
+			.col-md-6
+
+				// item start
+				.blog-item
+					a.img-holder(href="#")
+						.overlay
+						img.img-bg(src='img/blog-2.jpg' alt='img')
+					.content-holder
+						.ribbon
+							p . #[span.day 25]/#[span.month 12]
+						span.category Solar Systems
+						h4.title #[a(href="#") Renewable Energy for Business]
+						.text-holder
+							p.text Streamer fish California halibut Pacific saury. Slickhead grunion lake trout. Canthigaster
+				// item end
+
+// blog end

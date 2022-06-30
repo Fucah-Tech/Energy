@@ -1,0 +1,156 @@
+/* relevant */
+
+.relevant-holder
+	display: flex
+	flex-direction: column
+
++screen-is-992
+	.relevant-holder
+		flex-direction: row
+
+.relevant-item
+	display: flex
+	justify-content: space-between
+	overflow: hidden
+	position: relative
+
+.relevant-item:first-of-type
+	background-position: top left
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 30px
+
++screen-is-768
+	.relevant-item:first-of-type
+		padding: 50px 55px 33px 55px
+
++screen-is-992
+	.relevant-item:first-of-type
+		width: calc(100% - 380px)
+
+.relevant-item
+	.button::before
+		background-color: #FFF
+		color: #25272A
+
+.relevant-item:last-of-type
+	background-color: $blue
+	padding: 30px
+
++screen-is-768
+	.relevant-item:last-of-type
+		padding: 50px 50px 32px 50px
+
++screen-is-992
+	.relevant-item:last-of-type
+		width: 100%
+		max-width: 380px
+
+.relevant-item
+	.ribbon
+		display: inline-block
+		background-color: #FFF
+		font-size: 13px
+		font-weight: 500
+		padding: 4px 10px 6px 10px
+		text-transform: uppercase
+		margin-bottom: 18px
+	.ribbon.event
+		color: $blue
+	.ribbon.discount
+		color: #333
+	.title
+		font-size: 32px
+		text-transform: uppercase
+
+	+screen-is-768
+		.title
+			font-size: 40px
+			font-weight: 900
+
+	+screen-is-992
+		.inner-text
+			min-height: 106px
+
+.relevant-item:first-of-type
+	.title
+		color: $blue
+	p
+		color: #FFF
+		font-size: 20px
+		text-transform: uppercase
+
+	+screen-is-768
+		p
+			font-size: 25px
+
+	.button::before,
+	.button span
+		padding: 13px 40px
+
+	+screen-is-992
+		.button::before,
+		.button span
+			padding: 13px 50px
+
+	+screen-is-1200
+		.button::before,
+		.button span
+			padding: 13px 67px
+
+	.text-holder
+		width: calc(100% - 40px)
+
+	+screen-is-992
+		.text-holder
+			width: calc(100% - 200px)
+
+	+screen-is-1200
+		.text-holder
+			width: calc(100% - 280px)
+
+	.img-holder
+		width: 100%
+		max-width: 160px
+		text-align: center
+		display: inline-flex
+		align-items: center
+		position: absolute
+		top: 50%
+		right: -100px
+		transform: translateY(-50%)
+
+	+screen-is-576
+		.img-holder
+			position: static
+			transform: translate(0)
+
+	+screen-is-992
+		.img-holder
+			max-width: 160px
+
+	+screen-is-1200
+		.img-holder
+			max-width: 240px
+
+	.img-holder img
+		display: inline-block
+		width: 100%
+		max-height: 305px
+
+.relevant-item:last-of-type
+	.title
+		color: #FFF
+	p
+		line-height: 21px
+		color: #FFF
+		opacity: 0.5
+	.button span
+		background-color: #25272A
+	.button::before,
+	.button span
+		padding: 13px 54px
+	img
+		position: absolute
+		top: 25px
+		right: 0

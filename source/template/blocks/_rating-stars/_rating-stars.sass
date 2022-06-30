@@ -1,0 +1,38 @@
+/* rating stars */
+
+.stars
+	.rating-group
+		display: inline-flex
+	.rating__icon
+		pointer-events: none
+	.rating__input
+		position: absolute !important
+		left: -9999px !important
+	.rating__label
+		cursor: pointer
+		padding: 0 0.1em
+		font-size: 22px
+		margin-bottom: 0
+		line-height: 22px
+	.rating__label--half
+		padding-right: 0
+		margin-right: -0.6em
+		z-index: 2
+	.rating__icon--star
+		color: #FBB437
+	.rating__icon--none
+		color: #eee
+	.rating__input--none:checked + .rating__label .rating__icon--none
+		color: red
+	.rating__input:checked ~ .rating__label .rating__icon--star
+		color: #F1F3F4
+	.rating-group:hover .rating__label .rating__icon--star,
+	.rating-group:hover .rating__label--half .rating__icon--star
+		color: #FBB437
+	.rating__input:hover ~ .rating__label .rating__icon--star,
+	.rating__input:hover ~ .rating__label--half .rating__icon--star
+		color: #F1F3F4
+	.rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none
+		color: #eee
+	.rating__input--none:hover + .rating__label .rating__icon--none
+		color: red

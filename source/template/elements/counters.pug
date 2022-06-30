@@ -1,0 +1,62 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'counters'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Counters')
+
+block main
+
+	section.elements
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.counter-block.counter--text-lower.counter--is-blue
+				.container
+					.row.no-gutters.counter-holder
+						.col-md-4
+
+							// statistics item start
+							.statistics-item
+								span.counter 50
+								span.description Cities
+							// statistics item end
+
+						.col-md-4
+
+							// statistics item start
+							.statistics-item
+								span.counter 700
+								span.description Projects
+							// statistics item end
+
+						.col-md-4
+
+							// statistics item start
+							.statistics-item
+								span.counter 200
+								span.description Companies
+							// statistics item end
+
+block footer
+
+	include ../blocks/_footer/_footer

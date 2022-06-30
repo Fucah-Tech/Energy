@@ -1,0 +1,133 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'alerts'
+
+	-var type = 'elements'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/elements.jpg' media='(min-width: 992px)')
+		img.img-bg(src='img/elements.jpg' alt='img')
+
+	+promo-primary('Alerts')
+
+block main
+
+	section.elements.elements--alerts
+
+		.element-holder
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 1
+
+			.container
+				.row
+					.col-12
+
+						// allert filled-success start
+						.alert.alert--filled.alert--success
+							span.alert-icon
+								+svg('confirm')
+							.text
+								span.title Well done!
+								span You successfully read this important alert message
+							span.close
+								+svg('close')
+						// allert filled-success end
+
+						// allert filled-attention start
+						.alert.alert--filled.alert--attention
+							span.alert-icon ?
+							.text
+								span.title Heads up!
+								span This alert needs your attention, but it's not super important
+							span.close
+								+svg('close')
+						// allert filled-attention end
+
+						// allert filled-warning start
+						.alert.alert--filled.alert--warning
+							span.alert-icon !
+							.text
+								span.title Warning!
+								span Better check yourself, you're not looking too good
+							span.close
+								+svg('close')
+						// allert filled-warning end
+
+						// allert filled-error start
+						.alert.alert--filled.alert--error
+							span.alert-icon
+								+svg('close')
+							.text
+								span.title Oh snap!
+								span Change a few things up and try submitting again
+							span.close
+								+svg('close')
+						// allert filled-error end
+
+		.element-holder.no-padding-top
+			.container
+				.row
+					.col-12
+						h3.element-title Variant 2
+
+			.container
+				.row
+					.col-12
+
+						// allert linear-success start
+						.alert.alert--linear.alert--success
+							span.alert-icon
+								+svg('confirm')
+							.text
+								span.title Well done!
+								span You successfully read this important alert message
+							span.close
+								+svg('close')
+						// allert linear-success end
+
+						// allert linear-attention start
+						.alert.alert--linear.alert--attention
+							span.alert-icon ?
+							.text
+								span.title Heads up!
+								span This alert needs your attention, but it's not super important
+							span.close
+								+svg('close')
+						// allert linear-attention end
+
+						// allert linear-warning start
+						.alert.alert--linear.alert--warning
+							span.alert-icon !
+							.text
+								span.title Warning!
+								span Better check yourself, you're not looking too good
+							span.close
+								+svg('close')
+						// allert linear-warning end
+
+						// allert linear-error start
+						.alert.alert--linear.alert--error
+							span.alert-icon
+								+svg('close')
+							.text
+								span.title Oh snap!
+								span Change a few things up and try submitting again
+							span.close
+								+svg('close')
+						// allert linear-error end
+
+block footer
+
+	include ../blocks/_footer/_footer

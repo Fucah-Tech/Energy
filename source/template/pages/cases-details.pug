@@ -1,0 +1,43 @@
+extends ../layouts/primary-inner.pug
+
+block vars
+
+	-var page = 'cases-details'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_mobile-menu/_mobile-menu
+
+	include ../blocks/_header/_header
+
+block promo
+
+	picture
+		source(srcset='img/cases-details.jpg' media='(min-width: 992px)')
+		img.jarallax-img.img-bg(src='img/cases-details.jpg' alt='img')
+
+	+promo-primary('Renewable Energy Station')
+
+block main
+
+	include ../blocks/_cases-details/_cases-details
+
+	include ../blocks/_project-gallery/_project-gallery
+
+	include ../blocks/_testimonials--primary/_testimonials--primary
+
+	// brands start
+
+	section.section.brands.no-padding-top
+		.container
+			.row
+				.col-12
+					include ../blocks/_brands-slider/_brands-slider
+
+	// brands end
+
+block footer
+
+	include ../blocks/_footer/_footer
